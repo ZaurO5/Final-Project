@@ -1,0 +1,55 @@
+@import './Components/catalog';
+@import './Utils/variables';
+@import './Vendors/bootstrap';
+@import './Base/reset';
+@import './Components/slider';
+@import './Base/typography';
+@import './Layout/navbar';
+@import './Layout/footer';
+@import './Layout/grid';
+@import './Pages/home';
+@import './Pages/loginAndsignup';
+@import './Pages/search';
+@import './Pages/wishlist';
+@import './Pages/basket';
+@import './Pages/details';
+
+@font-face {
+    font-family: "Istok Web";
+    src: url("../fonts/IstokWeb-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Libre Franklin";
+    src: url("../fonts/LibreFranklin-Regular.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+//--main text--//
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Istok Web", sans-serif;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    margin-top: 60px;
+}
+
+//--Title/SubTitle--//
+h1, h2, h3 {
+    font-family: "Libre Franklin", sans-serif;
+}
+

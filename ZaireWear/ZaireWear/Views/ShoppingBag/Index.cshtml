@@ -1,0 +1,49 @@
+﻿<!-- Shopping Bag -->
+<div class="basket-container">
+    <div class="basket-items">
+        <div class="basket-wrapper">
+            <div class="basket-item-image">
+                <img src="~/assets/images/012ef79872a46b707edc17ac369008d6.jpg" alt="Product Image">
+            </div>
+            <div class="basket-item-info">
+                <div class="basket-item-title">Shirt Name just for test</div>
+                <div class="basket-item-price">$99.99</div>
+                <div class="basket-item-category">Category: Shirt</div>
+                <div class="basket-item-color">Selected Color: Black</div>
+                <div class="basket-item-size">Selected Size: M</div>
+                <div class="basket-quantity">
+                    Quantity:
+                    <input type="number" value="1" min="1">
+                </div>
+                <button class="basket-remove-btn">Remove</button>
+            </div>
+        </div>
+
+        <div class="basket-wrapper">
+            <div class="basket-item-image">
+                <img src="~/assets/images/fashion-Ecommerce1.jpg" alt="Product Image">
+            </div>
+            <div class="basket-item-info">
+                <div class="basket-item-title">Pants Name just for test</div>
+                <div class="basket-item-price">$79.99</div>
+                <div class="basket-item-category">Category: Pants</div>
+                <div class="basket-item-color">Selected Color: Black</div>
+                <div class="basket-item-size">Selected Size: L</div>
+                <div class="basket-quantity">
+                    Quantity:
+                    <input type="number" value="1" min="1">
+                </div>
+                <button class="basket-remove-btn">Remove</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="basket-actions">
+        <div class="total-price">Total Price: <span>$179.98</span></div>
+        <button class="checkout-btn">Checkout</button>
+        <a asp-controller="ShoppingBag" asp-action="Wishlist">
+            <button class="favorites-btn">Go to Favorites</button>
+        </a>
+    </div>
+</div>
+<!-- Shopping Bag End -->

@@ -1,0 +1,149 @@
+.basket-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.basket-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.basket-wrapper {
+    display: flex;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    width: 100%;
+}
+
+.total-price {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+    background: #f5f5f5;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+
+.basket-item-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.basket-item-info {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.basket-item-title, 
+.basket-item-category,
+.basket-item-size, 
+.basket-item-color, 
+.basket-quantity {
+    color: black;
+}
+
+.basket-item-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.basket-item-price {
+    font-size: 20px;
+    margin: 5px 0;
+    color: #ff5722;
+}
+
+.basket-item-category {
+    font-size: 14px;
+}
+
+.product-options label {
+    color: black;
+}
+
+.color {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.color.white { background-color: white; border: 1px solid #ccc; }
+.color.black { background-color: black; }
+.color.gray { background-color: gray; }
+.color.beige { background-color: #f5f5dc; }
+.color.light-blue { background-color: #add8e6; }
+.color:hover, .color.selected {
+    border: 2px solid greenyellow;
+}
+
+.basket-quantity {
+    display: flex;
+    align-items: center;
+}
+
+.basket-quantity input {
+    width: 40px;
+    text-align: center;
+    margin-left: 10px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.basket-remove-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.basket-actions {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 700px;
+    margin-top: 20px;
+}
+
+.checkout-btn, .favorites-btn {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.checkout-btn {
+    background: green;
+    color: white;
+}
+
+.checkout-btn:hover {
+    background: darkgreen;
+}
+
+.favorites-btn {
+    background: navy;
+    color: white;
+}
+
+.favorites-btn:hover {
+    background: darkblue;
+}

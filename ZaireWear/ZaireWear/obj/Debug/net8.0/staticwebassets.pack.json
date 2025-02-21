@@ -1,0 +1,141 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\css\\main.css",
+      "PackagePath": "staticwebassets\\assets\\css\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\css\\main.css.map",
+      "PackagePath": "staticwebassets\\assets\\css\\main.css.map"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\fonts\\IstokWeb-Regular.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\IstokWeb-Regular.woff2"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\fonts\\LibreFranklin-Regular.woff2",
+      "PackagePath": "staticwebassets\\assets\\fonts\\LibreFranklin-Regular.woff2"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\images\\012ef79872a46b707edc17ac369008d6.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\012ef79872a46b707edc17ac369008d6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\images\\ZaireWearLogo.png",
+      "PackagePath": "staticwebassets\\assets\\images\\ZaireWearLogo.png"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\images\\fashion-Ecommerce1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\fashion-Ecommerce1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\images\\fashion-websites.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\fashion-websites.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\js\\colorselect.js",
+      "PackagePath": "staticwebassets\\assets\\js\\colorselect.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\js\\dropdown.js",
+      "PackagePath": "staticwebassets\\assets\\js\\dropdown.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\js\\sizeselect.js",
+      "PackagePath": "staticwebassets\\assets\\js\\sizeselect.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\js\\slideshow.js",
+      "PackagePath": "staticwebassets\\assets\\js\\slideshow.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\scss\\Base\\_reset.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\Base\\_reset.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\scss\\Base\\_typography.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\Base\\_typography.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\scss\\Components\\_catalog.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\Components\\_catalog.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\scss\\Components\\_slider.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\Components\\_slider.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\scss\\Layout\\_footer.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\Layout\\_footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\scss\\Layout\\_grid.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\Layout\\_grid.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\scss\\Layout\\_header.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\Layout\\_header.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\scss\\Layout\\_navbar.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\Layout\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\scss\\Pages\\_basket.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\Pages\\_basket.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\scss\\Pages\\_details.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\Pages\\_details.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\scss\\Pages\\_home.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\Pages\\_home.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\scss\\Pages\\_loginAndsignup.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\Pages\\_loginAndsignup.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\scss\\Pages\\_search.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\Pages\\_search.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\scss\\Pages\\_wishlist.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\Pages\\_wishlist.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\scss\\Utils\\_variables.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\Utils\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\scss\\Vendors\\_bootstrap.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\Vendors\\_bootstrap.scss"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\ZaireWear\\wwwroot\\assets\\scss\\main.scss",
+      "PackagePath": "staticwebassets\\assets\\scss\\main.scss"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ZaireWear.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.ZaireWear.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.ZaireWear.props",
+      "PackagePath": "build\\ZaireWear.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.ZaireWear.props",
+      "PackagePath": "buildMultiTargeting\\ZaireWear.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.ZaireWear.props",
+      "PackagePath": "buildTransitive\\ZaireWear.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

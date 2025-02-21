@@ -1,0 +1,131 @@
+.auth-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #2c2c2c, #8c8c8c);
+    gap: 20px;
+
+    .auth-container {
+        display: flex;
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 800px;
+        align-items: center;
+        gap: 20px;
+
+        &.reverse {
+            flex-direction: row-reverse;
+        }
+    }
+
+    .auth-form {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .auth-title {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+        color:#2c2c2c
+
+    }
+
+    .auth-input-group {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+
+        .auth-input {
+            flex: 1;
+            min-width: 48%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    }
+
+    .auth-button {
+        width: 100%;
+        padding: 12px;
+        border: none;
+        background: #333;
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background 0.3s ease;
+
+        &:hover {
+            background: #555;
+        }
+    }
+
+    .auth-links {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 12px;
+
+        a {
+            color: #333;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 14px;
+            transition: color 0.3s ease;
+            text-decoration: none;
+
+            &:hover {
+                text-decoration: none;
+                color: #777;
+            }
+        }
+    }
+
+    .auth-image {
+        width: 50%;
+        img {
+            width: 100%;
+            border-radius: 8px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .auth-container {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .auth-form,
+        .auth-image {
+            width: 100%;
+        }
+
+        .auth-input-group {
+            flex-direction: column;
+
+            .auth-input {
+                min-width: 100%;
+            }
+        }
+
+        .auth-links {
+            flex-direction: column;
+            gap: 8px;
+            align-items: center;
+        }
+    }
+}

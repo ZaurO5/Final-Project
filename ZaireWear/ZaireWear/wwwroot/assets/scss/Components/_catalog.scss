@@ -1,0 +1,133 @@
+.catalog-page {
+  .container {
+      padding: 50px 15px;
+  }
+
+  .row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+  }
+
+  // Categories Section
+  aside {
+      flex: 0 0 250px;
+      max-width: 250px;
+      margin-right: 20px;
+
+      h4 {
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin-bottom: 20px;
+      }
+
+      .list-group {
+          .list-group-item {
+              padding: 12px 18px;
+              transition: background 0.3s ease, color 0.3s ease;
+              cursor: pointer;
+
+              a {
+                  color: #333;
+                  text-decoration: none;
+                  display: block;
+                  font-weight: 600;
+              }
+
+              &:hover {
+                  background: #f1f1f1;
+              }
+          }
+      }
+  }
+
+  // Products Section
+  .col-lg-9 {
+      flex: 1;
+  }
+
+  .row-cols-md-3 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+  }
+
+  .card {
+      display: flex;
+      flex-direction: column;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #fff;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-decoration: none;
+      cursor: pointer;
+      position: relative;
+
+      &:hover {
+          transform: translateY(-4px);
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      img {
+          width: 100%;
+          height: 240px;
+          object-fit: cover;
+      }
+
+      .card-body {
+          padding: 14px;
+          text-align: center;
+
+          .card-title {
+              font-size: 1.2rem;
+              font-weight: 700;
+              color: #222;
+              margin-bottom: 5px;
+          }
+
+          .card-price {
+              font-size: 1rem;
+              font-weight: 600;
+              color: #777;
+              margin-top: 5px;
+          }
+      }
+  }
+}
+
+.catalog-page {
+    .search-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 30px;
+    
+        input {
+            width: 300px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            font-size: 1rem;
+        }
+    
+        button {
+            padding: 10px 15px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+    
+            i {
+                font-size: 1rem;
+            }
+    
+            &:hover {
+                background-color: #555;
+            }
+        }
+    }
+}

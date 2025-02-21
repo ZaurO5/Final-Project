@@ -1,0 +1,96 @@
+.favorites-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.favorites-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.favorites-card {
+    display: flex;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    width: 100%;
+}
+
+.favorites-item-image img {
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.favorites-item-info {
+    flex: 1;
+    padding-left: 20px;
+}
+
+.favorites-item-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: black;
+}
+
+.favorites-item-price {
+    font-size: 20px;
+    margin: 5px 0;
+    color: #ff5722;
+}
+
+.favorites-item-category {
+    font-size: 14px;
+    color: black;
+}
+
+.favorites-remove-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.favorites-actions {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.go-to-shop-btn, .back-to-bag-btn {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+
+.go-to-shop-btn {
+    background: navy;
+    color: white;
+}
+
+.go-to-shop-btn:hover {
+    background: darkblue;
+}
+
+.back-to-bag-btn {
+    background: red;
+    color: white;
+}
+
+.back-to-bag-btn:hover {
+    background: lightcoral;
+}

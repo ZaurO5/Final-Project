@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ZaireWear")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac37036fd408ec0988b45fe0e840c3ce129aedf0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9dd756f53dae6d1137c5cf5548011db630e937c7")]
 [assembly: System.Reflection.AssemblyProductAttribute("ZaireWear")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ZaireWear")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

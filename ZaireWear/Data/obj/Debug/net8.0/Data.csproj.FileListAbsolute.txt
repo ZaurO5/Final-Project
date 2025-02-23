@@ -14,3 +14,5 @@ C:\Users\User\OneDrive\Desktop\Final-Project\ZaireWear\Data\obj\Debug\net8.0\Dat
 C:\Users\User\OneDrive\Desktop\Final-Project\ZaireWear\Data\obj\Debug\net8.0\refint\Data.dll
 C:\Users\User\OneDrive\Desktop\Final-Project\ZaireWear\Data\obj\Debug\net8.0\Data.pdb
 C:\Users\User\OneDrive\Desktop\Final-Project\ZaireWear\Data\obj\Debug\net8.0\ref\Data.dll
+C:\Users\User\OneDrive\Desktop\Final-Project\ZaireWear\Data\bin\Debug\net8.0\Data.runtimeconfig.json
+C:\Users\User\OneDrive\Desktop\Final-Project\ZaireWear\Data\obj\Debug\net8.0\Data.genruntimeconfig.cache

@@ -1380,7 +1380,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Stripe.net/47.3.0": {
+      "Stripe.net/47.4.0": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "13.0.3",
@@ -3939,10 +3939,10 @@
         "runtime.native.system.nuspec"
       ]
     },
-    "Stripe.net/47.3.0": {
-      "sha512": "7stlwbwgKVZgRe5UWjwFTg6sMKzQ89CNkSuJ4Cp+kB9NdlCZNlWfrlfs3F251ZNovxudZKOVBP6LvJRIDX5owA==",
+    "Stripe.net/47.4.0": {
+      "sha512": "paFQ1NFjdjd3BHkYS1qOmy7T+Bz663tgAC0unsGu7GLHrWTl5SISj6ukGB6nuycV6a1GA9VZr18eCi4pWNpE2w==",
       "type": "package",
-      "path": "stripe.net/47.3.0",
+      "path": "stripe.net/47.4.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3963,7 +3963,7 @@
         "lib/netcoreapp3.1/Stripe.net.xml",
         "lib/netstandard2.0/Stripe.net.dll",
         "lib/netstandard2.0/Stripe.net.xml",
-        "stripe.net.47.3.0.nupkg.sha512",
+        "stripe.net.47.4.0.nupkg.sha512",
         "stripe.net.nuspec"
       ]
     },
@@ -6445,7 +6445,7 @@
       "Microsoft.AspNetCore.Mvc.Core >= 2.3.0",
       "Microsoft.AspNetCore.Mvc.ViewFeatures >= 2.3.0",
       "NETCore.MailKit >= 2.1.0",
-      "Stripe.net >= 47.3.0"
+      "Stripe.net >= 47.4.0"
     ]
   },
   "packageFolders": {
@@ -6520,7 +6520,7 @@
           },
           "Stripe.net": {
             "target": "Package",
-            "version": "[47.3.0, )"
+            "version": "[47.4.0, )"
           }
         },
         "imports": [

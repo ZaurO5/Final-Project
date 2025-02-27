@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "ZaireWear\Presentation.csproj", "{B9E6A1AB-878F-4119-9B81-6AEA98225291}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "Presentation\Presentation.csproj", "{B9E6A1AB-878F-4119-9B81-6AEA98225291}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core", "Common\Core.csproj", "{D34970B7-EEE3-47B1-8949-B5C8AFD58474}"
 EndProject

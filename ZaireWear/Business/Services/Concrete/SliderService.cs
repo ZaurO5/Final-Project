@@ -77,6 +77,13 @@ public class SliderService : ISliderService
         var slider = await _sliderRepository.GetAsync(id);
         if (slider == null) return false;
 
+        var existingSliders = await _sliderRepository.GetAllAsync();
+        if (existingSliders.Any(s => s.Order == model.Order && s.Id != id))
+        {
+            _modelState.AddModelError("Order", "This order number is already taken.");
+            return false;
+        }
+
         slider.Title = model.Title;
         slider.Subtitle = model.Subtitle;
         slider.ImagePath = model.ImagePath;
@@ -88,6 +95,7 @@ public class SliderService : ISliderService
 
         return true;
     }
+
 
     public async Task<bool> DeleteAsync(int id)
     {

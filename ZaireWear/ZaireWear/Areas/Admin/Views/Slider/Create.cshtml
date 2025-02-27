@@ -1,0 +1,38 @@
+﻿@using Business.ViewModels.Slider
+@model SliderCreateVM
+
+<div class="card shadow mb-4">
+    <div class="card-header">
+        <h4 class="card-title">Create New Slider</h4>
+    </div>
+    <div class="card-body">
+        <form method="post" asp-action="Create" asp-controller="Slider">
+            <div class="form-group">
+                <label asp-for="Title" class="form-label">Title</label>
+                <input asp-for="Title" class="form-control" placeholder="Enter Title" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Subtitle" class="form-label">Subtitle</label>
+                <input asp-for="Subtitle" class="form-control" placeholder="Enter Subtitle" />
+                <span asp-validation-for="Subtitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImagePath" class="form-label">Image Path</label>
+                <input asp-for="ImagePath" class="form-control" placeholder="Enter Image Path (URL or file path)" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Order" class="form-label">Order</label>
+                <input asp-for="Order" class="form-control" min="1" placeholder="Enter Order" />
+                <span asp-validation-for="Order" class="text-danger"></span>
+            </div>
+
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary btn-lg">Create</button>
+            </div>
+        </form>
+    </div>
+    <div class="card-footer text-center">
+        <a class="btn btn-danger btn-lg" asp-action="Index" asp-controller="Slider">Back</a>
+    </div>
+</div>

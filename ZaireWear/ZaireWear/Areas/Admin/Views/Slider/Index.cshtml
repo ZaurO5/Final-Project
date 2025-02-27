@@ -1,0 +1,28 @@
+﻿@using Business.ViewModels.Slider
+@model SliderIndexVM
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Sliders</h1>
+    <a class="btn btn-primary" asp-action="Create" asp-controller="Slider">Create New Slider</a>
+</div>
+
+<div class="row">
+    @foreach (var slider in Model.Sliders)
+    {
+        <div class="col-md-4">
+            <div class="card shadow mb-4">
+                <img src="~/@slider.ImagePath" class="card-img-top" alt="@slider.Title" style="height: 200px; object-fit: cover;">
+                <div class="card-body">
+                    <h5 class="card-title">@slider.Title</h5>
+                    <p class="text-muted">Order: @slider.Order</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a class="btn btn-warning btn-sm" asp-controller="Slider" asp-action="Update" asp-route-id="@slider.Id">Update</a>
+                    <form method="post" asp-controller="Slider" asp-action="Delete" asp-route-id="@slider.Id" onsubmit="return confirm('Are you sure?');" class="d-inline">
+                        <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    }
+</div>

@@ -1,6 +1,9 @@
 using Core.Entities;
 using Data;
 using Data.Contexts;
+using Data.Repositories.Abstract;
+using Data.Repositories.Base;
+using Data.Repositories.Concrete;
 using Data.UnitOfWork;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
@@ -26,7 +29,9 @@ builder.Services.AddIdentity<User, IdentityRole>(options =>
     options.Password.RequireNonAlphanumeric = true;
     options.Lockout.MaxFailedAccessAttempts = 3;
     options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
-}).AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+})
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultTokenProviders();
 
 //var emailConfiguration = builder.Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>();
 //builder.Services.AddSingleton(emailConfiguration);
@@ -36,18 +41,18 @@ builder.Services.AddIdentity<User, IdentityRole>(options =>
 #endregion
 
 #region Repositories
-
+builder.Services.AddScoped<ISliderRepository, SliderRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 #endregion
 
 #region Services
-
+builder.Services.AddScoped<ISliderService, SliderService>();
 builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
 builder.Services.AddSingleton<IUrlHelperFactory, UrlHelperFactory>();
 builder.Services.AddHttpContextAccessor();
 
-#endregion
+#endregion 
 
 #region App
 var app = builder.Build();

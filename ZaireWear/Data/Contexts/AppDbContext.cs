@@ -15,5 +15,7 @@ namespace Data.Contexts
         {
 
         }
+
+        public DbSet<Slider> Sliders { get; set; }
     }
 }

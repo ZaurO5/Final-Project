@@ -33600,8 +33600,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>yudi3t5qkr</Fingerprint>
-      <Integrity>ql0sDFIJLNoc6b4UOBpgaK7g6jd73qf8Td7nri36dnI=</Integrity>
+      <Fingerprint>jtxgwo11yr</Fingerprint>
+      <Integrity>N9/aR6d53CcD07gh2WE5ojVwZBpmQY7DzXWKbke5rsM=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\slideshow.js'))</OriginalItemSpec>

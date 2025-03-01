@@ -1,7 +1,6 @@
 ﻿using Business.ViewModels.Slider;
 using Microsoft.AspNetCore.Mvc;
 
-
 namespace Presentation.Areas.Admin.Controllers
 {
     [Area("Admin")]

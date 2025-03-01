@@ -1882,3 +1882,6 @@ wwwroot\assets\scss\Pages\_search.scss
 wwwroot\assets\scss\Pages\_wishlist.scss
 wwwroot\assets\scss\Utils\_variables.scss
 wwwroot\assets\scss\Vendors\_bootstrap.scss
+wwwroot\uploads\sliders\85a1497f-22a5-4eb9-9c44-75eed72c0d34_fashion-websites.jpg
+wwwroot\uploads\sliders\b3204a80-6e02-43c7-8579-7984185ad148_fashion-Ecommerce1.jpg
+wwwroot\uploads\sliders\b6be7f28-ec40-42ee-9649-f5156ec5cc99_012ef79872a46b707edc17ac369008d6.jpg

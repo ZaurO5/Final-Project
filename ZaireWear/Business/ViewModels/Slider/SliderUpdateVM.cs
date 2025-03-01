@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Microsoft.AspNetCore.Http;
+using System.ComponentModel.DataAnnotations;
 
 namespace Business.ViewModels.Slider
 {
@@ -10,7 +11,7 @@ namespace Business.ViewModels.Slider
 
         public string Subtitle { get; set; }
 
-        public string ImagePath { get; set; }
+        public IFormFile? ImagePath { get; set; }
 
         [Required]
         [Range(1, int.MaxValue, ErrorMessage = "Order must be at least 1")]

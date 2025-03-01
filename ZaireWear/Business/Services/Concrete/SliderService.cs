@@ -1,4 +1,5 @@
-﻿using Business.ViewModels.Slider;
+﻿using Business.Utilities.File;
+using Business.ViewModels.Slider;
 using Core.Entities;
 using Data.Repositories.Abstract;
 using Data.UnitOfWork;
@@ -9,14 +10,17 @@ public class SliderService : ISliderService
 {
     private readonly ISliderRepository _sliderRepository;
     private readonly IUnitOfWork _unitOfWork;
+    private readonly IFileService _fileService;
     private readonly ModelStateDictionary _modelState;
 
     public SliderService(ISliderRepository sliderRepository,
                          IUnitOfWork unitOfWork,
+                         IFileService fileService,
                          IActionContextAccessor actionContextAccessor)
     {
         _sliderRepository = sliderRepository;
         _unitOfWork = unitOfWork;
+        _fileService = fileService;
         _modelState = actionContextAccessor.ActionContext.ModelState;
     }
 
@@ -38,11 +42,13 @@ public class SliderService : ISliderService
             return false;
         }
 
+        var imagePath = _fileService.Upload(model.ImagePath, "uploads/sliders");
+
         var slider = new Slider
         {
             Title = model.Title,
             Subtitle = model.Subtitle,
-            ImagePath = model.ImagePath,
+            ImagePath = "/uploads/sliders/" + imagePath,
             Order = model.Order,
             IsActive = true,
             CreatedAt = DateTime.Now
@@ -54,8 +60,6 @@ public class SliderService : ISliderService
         return true;
     }
 
-
-
     public async Task<SliderUpdateVM> UpdateAsync(int id)
     {
         var slider = await _sliderRepository.GetAsync(id);
@@ -65,7 +69,6 @@ public class SliderService : ISliderService
         {
             Title = slider.Title,
             Subtitle = slider.Subtitle,
-            ImagePath = slider.ImagePath,
             Order = slider.Order
         };
     }
@@ -84,9 +87,17 @@ public class SliderService : ISliderService
             return false;
         }
 
+        if (model.ImagePath != null)
+        {
+            var oldFileName = Path.GetFileName(slider.ImagePath);
+            _fileService.Delete("uploads/sliders", oldFileName);
+
+            var newFileName = _fileService.Upload(model.ImagePath, "uploads/sliders");
+            slider.ImagePath = "/uploads/sliders/" + newFileName;
+        }
+
         slider.Title = model.Title;
         slider.Subtitle = model.Subtitle;
-        slider.ImagePath = model.ImagePath;
         slider.Order = model.Order;
         slider.ModifiedAt = DateTime.Now;
 
@@ -102,9 +113,13 @@ public class SliderService : ISliderService
         var slider = await _sliderRepository.GetAsync(id);
         if (slider == null) return false;
 
+        var fileName = Path.GetFileName(slider.ImagePath);
+        _fileService.Delete("uploads/sliders", fileName);
+
         _sliderRepository.Delete(slider);
         await _unitOfWork.CommitAsync();
 
         return true;
     }
+
 }

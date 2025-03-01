@@ -6,7 +6,7 @@
         <h4 class="card-title">Update Slider</h4>
     </div>
     <div class="card-body">
-        <form method="post" asp-action="Update" asp-controller="Slider">
+        <form method="post" asp-action="Update" asp-controller="Slider" enctype="multipart/form-data">
             <div class="form-group">
                 <label asp-for="Title" class="form-label">Title</label>
                 <input asp-for="Title" class="form-control" placeholder="Enter Title" />
@@ -19,7 +19,7 @@
             </div>
             <div class="form-group">
                 <label asp-for="ImagePath" class="form-label">Image Path</label>
-                <input asp-for="ImagePath" class="form-control" placeholder="Enter Image Path (URL or file path)" />
+                <input asp-for="ImagePath" type="file" class="form-control" />
             </div>
             <div class="form-group">
                 <label asp-for="Order" class="form-label">Order</label>

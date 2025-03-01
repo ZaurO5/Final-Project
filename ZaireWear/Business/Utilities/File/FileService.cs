@@ -1,10 +1,7 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.IO;
 
 namespace Business.Utilities.File
 {
@@ -17,13 +14,27 @@ namespace Business.Utilities.File
             _webHostEnvironment = webHostEnvironment;
         }
 
-        public string Upload(IFormFile file, string folder)
+        public string Upload(IFormFile file, string folder, string oldFileName = null)
         {
             var fileName = $"{Guid.NewGuid()}_{file.FileName}";
-            var filePath = Path.Combine(_webHostEnvironment.WebRootPath, folder, fileName);
+            var folderPath = Path.Combine(_webHostEnvironment.WebRootPath, folder);
+
+            if (!Directory.Exists(folderPath))
+            {
+                Directory.CreateDirectory(folderPath);
+            }
+
+            if (!string.IsNullOrEmpty(oldFileName))
+            {
+                Delete(folder, oldFileName);
+            }
+
+            var filePath = Path.Combine(folderPath, fileName);
 
             using (var fileStream = new FileStream(filePath, FileMode.Create, FileAccess.ReadWrite))
+            {
                 file.CopyTo(fileStream);
+            }
 
             return fileName;
         }
@@ -33,21 +44,19 @@ namespace Business.Utilities.File
             var filePath = Path.Combine(_webHostEnvironment.WebRootPath, folder, fileName);
 
             if (System.IO.File.Exists(filePath))
+            {
                 System.IO.File.Delete(filePath);
+            }
         }
 
         public bool IsImage(string contentType)
         {
-            if (contentType.Contains("image/")) return true;
-
-            return false;
+            return contentType.Contains("image/");
         }
 
         public bool IsTrueSize(long length, long maxSize = 500)
         {
-            if (length / 1024 < maxSize) return true;
-
-            return false;
+            return length / 1024 < maxSize;
         }
     }
 }

@@ -20,7 +20,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("Default"), x => x.MigrationsAssembly("Data")));
 builder.Services.AddSingleton(builder.Environment);
-builder.Services.AddSingleton<IFileService, Business.Utilities.File.FileService>();
+builder.Services.AddScoped<IFileService, FileService>();
 
 
 

@@ -4,8 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Core.Entities
-{
+namespace Core.Entities;
     public class Slider : BaseEntity
     {
         public string Title { get; set; }
@@ -14,4 +13,3 @@ namespace Core.Entities
         public int Order { get; set; }
         public bool IsActive { get; set; }
     }
-}

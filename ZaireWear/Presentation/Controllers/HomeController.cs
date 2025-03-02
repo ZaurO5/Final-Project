@@ -16,21 +16,9 @@ namespace ZaireWear.Controllers
 
         public async Task<IActionResult> Index()
         {
-            try
-            {
-                var model = await _sliderService.GetAllAsync();
-                if (model == null)
-                {
-                    return View("Error");
-                }
-
-                model.Sliders = model.Sliders.Where(s => s.IsActive).ToList();
-                return View(model);
-            }
-            catch (Exception ex)
-            {
-                return View("Error");
-            }
+            var model = await _sliderService.GetAllAsync();
+            model.Sliders = model.Sliders.Where(s => s.IsActive).ToList();
+            return View(model);
         }
     }
 }

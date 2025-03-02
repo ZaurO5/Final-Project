@@ -7453,6 +7453,18 @@
       "PackagePath": "staticwebassets\\assets\\images\\fashion-websites.jpg"
     },
     {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\images\\sliders\\37f10143-5ff2-4e59-b99c-8241f2fc0b9d_012ef79872a46b707edc17ac369008d6.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\sliders\\37f10143-5ff2-4e59-b99c-8241f2fc0b9d_012ef79872a46b707edc17ac369008d6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\images\\sliders\\4d56f209-d847-422b-ac12-4a588afa0944_fashion-Ecommerce1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\sliders\\4d56f209-d847-422b-ac12-4a588afa0944_fashion-Ecommerce1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\images\\sliders\\87bec0de-63fa-4e3c-94e4-2bcd007bae21_fashion-websites.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\sliders\\87bec0de-63fa-4e3c-94e4-2bcd007bae21_fashion-websites.jpg"
+    },
+    {
       "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\js\\colorselect.js",
       "PackagePath": "staticwebassets\\assets\\js\\colorselect.js"
     },
@@ -7535,18 +7547,6 @@
     {
       "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\scss\\main.scss",
       "PackagePath": "staticwebassets\\assets\\scss\\main.scss"
-    },
-    {
-      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\uploads\\sliders\\85a1497f-22a5-4eb9-9c44-75eed72c0d34_fashion-websites.jpg",
-      "PackagePath": "staticwebassets\\uploads\\sliders\\85a1497f-22a5-4eb9-9c44-75eed72c0d34_fashion-websites.jpg"
-    },
-    {
-      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\uploads\\sliders\\b3204a80-6e02-43c7-8579-7984185ad148_fashion-Ecommerce1.jpg",
-      "PackagePath": "staticwebassets\\uploads\\sliders\\b3204a80-6e02-43c7-8579-7984185ad148_fashion-Ecommerce1.jpg"
-    },
-    {
-      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\uploads\\sliders\\b6be7f28-ec40-42ee-9649-f5156ec5cc99_012ef79872a46b707edc17ac369008d6.jpg",
-      "PackagePath": "staticwebassets\\uploads\\sliders\\b6be7f28-ec40-42ee-9649-f5156ec5cc99_012ef79872a46b707edc17ac369008d6.jpg"
     },
     {
       "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.Presentation.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",

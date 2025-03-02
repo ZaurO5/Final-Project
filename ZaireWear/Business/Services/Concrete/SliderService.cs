@@ -29,7 +29,7 @@ public class SliderService : ISliderService
         return new SliderIndexVM { Sliders = await _sliderRepository.GetAllAsync() };
     }
 
-    public async Task<SliderCreateVM> CreateAsync() => new();
+    public Task<SliderCreateVM> CreateAsync() => Task.FromResult(new SliderCreateVM());
 
     public async Task<bool> CreateAsync(SliderCreateVM model)
     {
@@ -42,13 +42,13 @@ public class SliderService : ISliderService
             return false;
         }
 
-        var imagePath = _fileService.Upload(model.ImagePath, "uploads/sliders");
+        var imagePath = _fileService.Upload(model.ImagePath, "assets/images/sliders");
 
         var slider = new Slider
         {
             Title = model.Title,
             Subtitle = model.Subtitle,
-            ImagePath = "/uploads/sliders/" + imagePath,
+            ImagePath = "/assets/images/sliders/" + imagePath,
             Order = model.Order,
             IsActive = true,
             CreatedAt = DateTime.Now
@@ -59,6 +59,7 @@ public class SliderService : ISliderService
 
         return true;
     }
+
 
     public async Task<SliderUpdateVM> UpdateAsync(int id)
     {
@@ -90,10 +91,10 @@ public class SliderService : ISliderService
         if (model.ImagePath != null)
         {
             var oldFileName = Path.GetFileName(slider.ImagePath);
-            _fileService.Delete("uploads/sliders", oldFileName);
+            _fileService.Delete("assets/images/sliders", oldFileName);
 
-            var newFileName = _fileService.Upload(model.ImagePath, "uploads/sliders");
-            slider.ImagePath = "/uploads/sliders/" + newFileName;
+            var newFileName = _fileService.Upload(model.ImagePath, "assets/images/sliders");
+            slider.ImagePath = "/assets/images/sliders/" + newFileName;
         }
 
         slider.Title = model.Title;
@@ -114,7 +115,7 @@ public class SliderService : ISliderService
         if (slider == null) return false;
 
         var fileName = Path.GetFileName(slider.ImagePath);
-        _fileService.Delete("uploads/sliders", fileName);
+        _fileService.Delete("assets/images/sliders", fileName);
 
         _sliderRepository.Delete(slider);
         await _unitOfWork.CommitAsync();

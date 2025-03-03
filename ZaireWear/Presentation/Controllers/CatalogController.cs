@@ -1,17 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Business.Services.Abstract;
+using Microsoft.AspNetCore.Mvc;
 
 namespace ZaireWear.Controllers
 {
     public class CatalogController : Controller
     {
-        public IActionResult Index()
+        private readonly ICategoryService _categoryService;
+
+        public CatalogController(ICategoryService categoryService)
         {
-            return View();
+            _categoryService = categoryService;
         }
 
-        public IActionResult Details()
+        [HttpGet]
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var model = await _categoryService.GetAllAsync();
+            return View(model);
         }
     }
 }

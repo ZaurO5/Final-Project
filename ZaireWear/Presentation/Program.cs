@@ -1,4 +1,6 @@
 
+using Business.Services.Abstract;
+using Business.Services.Concrete;
 using Business.Utilities.File;
 using Core.Entities;
 using Data;
@@ -48,12 +50,14 @@ builder.Services.AddIdentity<User, IdentityRole>(options =>
 
 #region Repositories
 builder.Services.AddScoped<ISliderRepository, SliderRepository>();
+builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 #endregion
 
 #region Services
 builder.Services.AddScoped<ISliderService, SliderService>();
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
 builder.Services.AddSingleton<IUrlHelperFactory, UrlHelperFactory>();
 builder.Services.AddHttpContextAccessor();

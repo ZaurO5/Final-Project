@@ -51,6 +51,7 @@ builder.Services.AddIdentity<User, IdentityRole>(options =>
 #region Repositories
 builder.Services.AddScoped<ISliderRepository, SliderRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
+builder.Services.AddScoped<ISizeRepository, SizeRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 #endregion
@@ -58,6 +59,7 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 #region Services
 builder.Services.AddScoped<ISliderService, SliderService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
+builder.Services.AddScoped<ISizeService, SizeService>();
 builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
 builder.Services.AddSingleton<IUrlHelperFactory, UrlHelperFactory>();
 builder.Services.AddHttpContextAccessor();

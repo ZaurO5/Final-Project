@@ -18,5 +18,9 @@ namespace ZaireWear.Controllers
             var model = await _categoryService.GetAllAsync();
             return View(model);
         }
+        public async Task<IActionResult> Details()
+        {
+            return View();
+        }
     }
 }

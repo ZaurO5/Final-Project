@@ -1,0 +1,19 @@
+﻿@using Business.ViewModels.Color
+@model ColorUpdateVM
+
+<h2>Update Color</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="colorName">Color Name:</label>
+        <input type="text" id="colorName" name="name" class="form-control" value="@Model.Name" required />
+    </div>
+
+    <div class="form-group">
+        <label for="hexCode">Color Hex Code:</label>
+        <input type="text" id="hexCode" name="hexCode" class="form-control" value="@Model.HexCode" required />
+        <span class="text-muted">Enter hex code (e.g., #FF5733)</span>
+    </div>
+
+    <button type="submit" class="btn btn-success">Update</button>
+</form>

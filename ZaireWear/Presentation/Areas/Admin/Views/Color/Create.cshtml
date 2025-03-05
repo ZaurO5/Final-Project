@@ -1,0 +1,17 @@
+﻿@using Business.ViewModels.Color
+@model ColorCreateVM
+
+<form method="post" asp-action="Create" asp-controller="Color">
+    <div class="form-group">
+        <label asp-for="Name" class="form-label">Color Name:</label>
+        <input asp-for="Name" class="form-control" placeholder="Enter color name" />
+        <span asp-validation-for="Name" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="HexCode" class="form-label">Color Hex Code:</label>
+        <input asp-for="HexCode" class="form-control" placeholder="Enter color hex code (e.g., #FF5733)" />
+        <span asp-validation-for="HexCode" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+    <a class="btn btn-danger" asp-action="Index" asp-controller="Color">Back</a>
+</form>

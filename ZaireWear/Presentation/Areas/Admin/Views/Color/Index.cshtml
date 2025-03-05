@@ -1,0 +1,32 @@
+﻿@using Business.ViewModels.Color
+@model ColorIndexVM
+
+<div class="d-sm-flex align-items-center justify-content-between mb-4">
+    <h1 class="h3 mb-0 text-gray-800">Colors</h1>
+    <a class="btn btn-primary" asp-action="Create" asp-controller="Color">Create New Color</a>
+</div>
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Hex Code</th>
+            <th scope="col" class="text-center">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var color in Model.Colors)
+        {
+            <tr>
+                <td>@color.Name</td>
+                <td>@color.HexCode</td>
+                <td class="text-center d-flex justify-content-center">
+                    <a class="btn btn-success mx-2" asp-controller="Color" asp-action="Update" asp-route-id="@color.Id">Update</a>
+                    <form method="post" asp-controller="Color" asp-action="Delete" asp-route-id="@color.Id">
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

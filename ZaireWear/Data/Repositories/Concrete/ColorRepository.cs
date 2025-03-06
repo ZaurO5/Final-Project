@@ -20,6 +20,11 @@ namespace Data.Repositories.Concrete
             _context = context;
         }
 
+        public async Task<Color> GetByIdAsync(int id)
+        {
+            return await _context.Colors.FindAsync(id);
+        }
+
         public async Task<Color> GetByNameAsync(string name)
         {
             return await _context.Colors.FirstOrDefaultAsync(c => c.Name.ToLower() == name.ToLower());

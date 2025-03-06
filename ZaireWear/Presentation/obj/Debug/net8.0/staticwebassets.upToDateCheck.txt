@@ -1860,6 +1860,7 @@ wwwroot\assets\fonts\LibreFranklin-Regular.woff2
 wwwroot\assets\images\012ef79872a46b707edc17ac369008d6.jpg
 wwwroot\assets\images\fashion-Ecommerce1.jpg
 wwwroot\assets\images\fashion-websites.jpg
+wwwroot\assets\images\products\61206a03-cf94-427e-bad4-963507cba04a_012ef79872a46b707edc17ac369008d6.jpg
 wwwroot\assets\images\sliders\37f10143-5ff2-4e59-b99c-8241f2fc0b9d_012ef79872a46b707edc17ac369008d6.jpg
 wwwroot\assets\images\sliders\4d56f209-d847-422b-ac12-4a588afa0944_fashion-Ecommerce1.jpg
 wwwroot\assets\images\sliders\87bec0de-63fa-4e3c-94e4-2bcd007bae21_fashion-websites.jpg

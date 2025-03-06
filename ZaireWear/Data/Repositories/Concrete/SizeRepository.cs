@@ -20,6 +20,11 @@ namespace Data.Repositories.Concrete
             _context = context;
         }
 
+        public async Task<Size> GetByIdAsync(int id)
+        {
+            return await _context.Sizes.FindAsync(id);
+        }
+
         public async Task<Size> GetByNameAsync(string name)
         {
             return await _context.Sizes.FirstOrDefaultAsync(s => s.Name.ToLower() == name.ToLower());

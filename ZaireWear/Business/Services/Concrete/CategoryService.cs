@@ -30,9 +30,10 @@ namespace Business.Services.Concrete
 
         public async Task<CategoryIndexVM> GetAllAsync()
         {
+            var categories = await _categoryRepository.GetAllAsync();
             return new CategoryIndexVM
             {
-                Categories = await _categoryRepository.GetAllAsync()
+                Categories = categories
             };
         }
 

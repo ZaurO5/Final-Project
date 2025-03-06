@@ -23,8 +23,8 @@
                         <li class="dropdown">
                             <a asp-controller="Catalog" asp-action="Index" id="catalog-btn">Catalog</a>
                             <ul class="dropdown-menu">
-                                <li><a asp-controller="Catalog" asp-action="Index">Man</a></li>
-                                <li><a asp-controller="Catalog" asp-action="Index">Woman</a></li>
+                                <li><a asp-controller="Catalog" asp-action="Index" asp-route-gender="1">Man</a></li>
+                                <li><a asp-controller="Catalog" asp-action="Index" asp-route-gender="2">Woman</a></li>
                             </ul>
                         </li>
                         <li><a id="auth-link" asp-controller="Login" asp-action="Index">Log In</a></li>

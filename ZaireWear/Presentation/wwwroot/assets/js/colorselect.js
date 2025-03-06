@@ -1,18 +1,25 @@
-document.addEventListener("DOMContentLoaded", () => {
-    document.querySelectorAll(".color-options").forEach((options) => {
-        options.addEventListener("click", (event) => {
-            const button = event.target;
-            if (!button.classList.contains("color")) return;
+﻿document.addEventListener("DOMContentLoaded", () => {
+    document.addEventListener("click", (event) => {
+        const button = event.target;
+        if (!button.classList.contains("color")) return;
 
-            const product = button.closest(".basket-wrapper") || button.closest(".product-details");
+        const product = button.closest(".basket-wrapper") || button.closest(".product-details");
 
-            if (product) {
-                product.querySelectorAll(".color").forEach((color) => {
-                    color.classList.remove("selected");
-                });
+        if (product) {
+            // Убираем выделение у всех цветов
+            product.querySelectorAll(".color").forEach((color) => {
+                color.classList.remove("selected");
+            });
 
-                button.classList.add("selected");
+            // Выделяем выбранный цвет
+            button.classList.add("selected");
+
+            // Сохраняем выбранный цвет в скрытом поле
+            const selectedColor = button.getAttribute("data-color");
+            const colorInput = product.querySelector('input[name="selectedColor"]');
+            if (colorInput) {
+                colorInput.value = selectedColor;
             }
-        });
+        }
     });
 });

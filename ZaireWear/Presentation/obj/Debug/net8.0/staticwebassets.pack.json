@@ -7477,6 +7477,14 @@
       "PackagePath": "staticwebassets\\assets\\js\\dropdown.js"
     },
     {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\js\\overload.js",
+      "PackagePath": "staticwebassets\\assets\\js\\overload.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\js\\quantity.js",
+      "PackagePath": "staticwebassets\\assets\\js\\quantity.js"
+    },
+    {
       "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\js\\sizeselect.js",
       "PackagePath": "staticwebassets\\assets\\js\\sizeselect.js"
     },

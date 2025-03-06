@@ -1867,6 +1867,8 @@ wwwroot\assets\images\sliders\87bec0de-63fa-4e3c-94e4-2bcd007bae21_fashion-websi
 wwwroot\assets\images\ZaireWearLogo.png
 wwwroot\assets\js\colorselect.js
 wwwroot\assets\js\dropdown.js
+wwwroot\assets\js\overload.js
+wwwroot\assets\js\quantity.js
 wwwroot\assets\js\sizeselect.js
 wwwroot\assets\js\slideshow.js
 wwwroot\assets\scss\Base\_reset.scss

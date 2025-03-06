@@ -24,12 +24,16 @@ namespace Presentation.Areas.Admin.Controllers
             _sizeRepository = sizeRepository;
         }
 
+        #region Read
         public async Task<IActionResult> Index()
         {
             var products = await _productService.GetAllAsync();
             return View(products);
         }
 
+        #endregion
+
+        #region Create
         [HttpGet]
         public async Task<IActionResult> Create()
         {
@@ -64,6 +68,9 @@ namespace Presentation.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        #endregion
+
+        #region Update
         [HttpGet]
         public async Task<IActionResult> Update(int id)
         {
@@ -100,6 +107,9 @@ namespace Presentation.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        #endregion
+
+        #region Delete
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
@@ -108,5 +118,7 @@ namespace Presentation.Areas.Admin.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
+        #endregion
     }
 }

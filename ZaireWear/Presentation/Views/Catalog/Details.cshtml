@@ -39,8 +39,16 @@
 
                 <div class="quantity">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" min="1" value="1">
+                    <input type="number" id="quantity" name="quantity" min="1" max="@Model.StockCount" value="1">
+                    <span class="text-danger" id="quantity-error" style="display: none;">Quantity cannot exceed available stock.</span>
+                    @if (ViewData.ModelState.ContainsKey("Quantity"))
+                    {
+                        <span class="text-danger">@ViewData.ModelState["Quantity"].Errors.First().ErrorMessage</span>
+                    }
                 </div>
+
+                <input type="hidden" name="selectedSize" value="" />
+                <input type="hidden" name="selectedColor" value="" />
 
                 <div class="actions">
                     <button class="btn add-to-basket" data-id="@Model.Id" data-action="add-to-basket">

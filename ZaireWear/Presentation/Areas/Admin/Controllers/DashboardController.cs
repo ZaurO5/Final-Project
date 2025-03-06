@@ -5,9 +5,11 @@ namespace Presentation.Areas.Admin.Controllers
     [Area("Admin")]
     public class DashboardController : Controller
     {
+        #region Read
         public IActionResult Index()
         {
             return View();
         }
+        #endregion
     }
 }

@@ -46,7 +46,7 @@ namespace Business.Services.Concrete
             var products = await _productRepository.GetAllWithDetailsAsync();
             return new ProductIndexVM
             {
-                Products = products // Возвращаем список продуктов
+                Products = products
             };
         }
 

@@ -13,12 +13,16 @@ namespace Presentation.Areas.Admin.Controllers
             _sliderService = sliderService;
         }
 
+        #region Read
         public async Task<IActionResult> Index()
         {
             var model = await _sliderService.GetAllAsync();
             return View(model);
         }
 
+        #endregion
+
+        #region Create
         [HttpGet]
         public IActionResult Create()
         {
@@ -40,6 +44,9 @@ namespace Presentation.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        #endregion
+
+        #region Update
         [HttpGet]
         public async Task<IActionResult> Update(int id)
         {
@@ -64,6 +71,9 @@ namespace Presentation.Areas.Admin.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        #endregion
+
+        #region Delete
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
@@ -72,5 +82,7 @@ namespace Presentation.Areas.Admin.Controllers
 
             return RedirectToAction(nameof(Index));
         }
+
+        #endregion
     }
 }

@@ -22,6 +22,19 @@ namespace Presentation.Controllers
         }
 
         [HttpGet]
+        public async Task<IActionResult> ConfirmEmail(string email, string token)
+        {
+            var isSucceeded = await _accountService.ConfirmEmail(email, token);
+
+            if (isSucceeded)
+            {
+                return RedirectToAction(nameof(Login));
+            }
+
+            return BadRequest("Не удалось подтвердить email. Проверьте ссылку или обратитесь в поддержку.");
+        }
+
+        [HttpGet]
         public IActionResult Login(string? returnUrl = null)
         {
             ViewBag.ReturnUrl = returnUrl;
@@ -63,9 +76,24 @@ namespace Presentation.Controllers
         [HttpPost]
         public async Task<IActionResult> ResetPassword(ResetPasswordVM model)
         {
-            return await _accountService.ResetPassword(model)
-                ? RedirectToAction("Login")
-                : View(model);
+            if (!ModelState.IsValid)
+            {
+                return View(model);
+            }
+
+            var result = await _accountService.ResetPassword(model);
+
+            if (result.Succeeded)
+            {
+                return RedirectToAction("Login", "Account");
+            }
+
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(string.Empty, error.Description);
+            }
+
+            return View(model);
         }
     }
 }

@@ -23,7 +23,6 @@ namespace ZaireWear.Controllers
             var products = await _productService.GetAllAsync();
             var categories = await _categoryService.GetAllAsync();
 
-            // Фильтрация по категории
             if (categoryId.HasValue)
             {
                 products.Products = products.Products
@@ -31,7 +30,6 @@ namespace ZaireWear.Controllers
                     .ToList();
             }
 
-            // Фильтрация по гендеру
             if (gender.HasValue)
             {
                 products.Products = products.Products
@@ -39,8 +37,8 @@ namespace ZaireWear.Controllers
                     .ToList();
             }
 
-            ViewBag.SearchQuery = searchQuery; // Сохраняем поисковый запрос для отображения в форме
-            ViewBag.Gender = gender; // Сохраняем выбранный гендер для отображения в навбаре
+            ViewBag.SearchQuery = searchQuery;
+            ViewBag.Gender = gender;
 
             var model = new CatalogIndexVM
             {

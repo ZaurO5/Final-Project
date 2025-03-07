@@ -74,7 +74,9 @@ namespace Business.Services.Concrete
         {
             var user = await _userManager.FindByEmailAsync(email);
             if (user == null) return false;
-            return (await _userManager.ConfirmEmailAsync(user, token)).Succeeded;
+
+            var result = await _userManager.ConfirmEmailAsync(user, token);
+            return result.Succeeded;
         }
 
         public async Task<(bool IsSucceeded, string? returnUrl)> LoginAsync(AccountLoginVM model)
@@ -119,14 +121,22 @@ namespace Business.Services.Concrete
             return true;
         }
 
-        public async Task<bool> ResetPassword(ResetPasswordVM model)
+        public async Task<IdentityResult> ResetPassword(ResetPasswordVM model)
         {
-            if (!_modelState.IsValid) return false;
-
             var user = await _userManager.FindByEmailAsync(model.Email);
-            if (user == null) return false;
+            if (user == null)
+            {
+                return IdentityResult.Failed(new IdentityError
+                {
+                    Description = "User not found"
+                });
+            }
 
-            return (await _userManager.ResetPasswordAsync(user, model.Token, model.NewPassword)).Succeeded;
+            return await _userManager.ResetPasswordAsync(
+                user,
+                model.Token,
+                model.NewPassword
+            );
         }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using Business.ViewModels.Account;
+using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,7 +14,7 @@ namespace Business.Services.Abstract
         Task<bool> RegisterAsync(AccountRegisterVM model);
         Task<(bool IsSucceeded, string? returnUrl)> LoginAsync(AccountLoginVM model);
         Task<bool> ForgetPasswordAsync(ForgetPasswordVM model);
-        Task<bool> ResetPassword(ResetPasswordVM model);
+        Task<IdentityResult> ResetPassword(ResetPasswordVM model);
         Task LogoutAsync();
     }
 }

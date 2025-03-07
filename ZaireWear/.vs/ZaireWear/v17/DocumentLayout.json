@@ -1,32 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\utilities\\emailhandler\\concrete\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\utilities\\emailhandler\\concrete\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\utilities\\emailhandler\\models\\emailconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\utilities\\emailhandler\\models\\emailconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\utilities\\emailhandler\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\utilities\\emailhandler\\models\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|solutionrelative:data\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -34,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -51,84 +26,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Utilities\\EmailHandler\\Concrete\\EmailService.cs",
-              "RelativeDocumentMoniker": "Business\\Utilities\\EmailHandler\\Concrete\\EmailService.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Utilities\\EmailHandler\\Concrete\\EmailService.cs",
-              "RelativeToolTip": "Business\\Utilities\\EmailHandler\\Concrete\\EmailService.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB8AAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T00:07:20.092Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "EmailConfiguration.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Utilities\\EmailHandler\\Models\\EmailConfiguration.cs",
-              "RelativeDocumentMoniker": "Business\\Utilities\\EmailHandler\\Models\\EmailConfiguration.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Utilities\\EmailHandler\\Models\\EmailConfiguration.cs",
-              "RelativeToolTip": "Business\\Utilities\\EmailHandler\\Models\\EmailConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T00:07:17.959Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Message.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Utilities\\EmailHandler\\Models\\Message.cs",
-              "RelativeDocumentMoniker": "Business\\Utilities\\EmailHandler\\Models\\Message.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Utilities\\EmailHandler\\Models\\Message.cs",
-              "RelativeToolTip": "Business\\Utilities\\EmailHandler\\Models\\Message.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T00:07:15.915Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AccountController.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Controllers\\AccountController.cs",
-              "RelativeDocumentMoniker": "Presentation\\Controllers\\AccountController.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Controllers\\AccountController.cs",
-              "RelativeToolTip": "Presentation\\Controllers\\AccountController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-07T00:06:28.073Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Views\\Shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Presentation\\Views\\Shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Views\\Shared\\_Layout.cshtml",
-              "RelativeToolTip": "Presentation\\Views\\Shared\\_Layout.cshtml",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAADIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-06T23:37:41.596Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DbInitializer.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\DbInitializer.cs",
-              "RelativeDocumentMoniker": "Data\\DbInitializer.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\DbInitializer.cs",
-              "RelativeToolTip": "Data\\DbInitializer.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAA1wBoAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-06T23:24:44.475Z",
-              "EditorCaption": ""
             }
           ]
         },

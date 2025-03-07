@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Presentation.Areas.Admin.Controllers
 {
-    [Authorize]
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class DashboardController : Controller
     {
         #region Read

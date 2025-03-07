@@ -1,10 +1,12 @@
 ﻿using Business.Services.Abstract;
 using Business.ViewModels.Color;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Presentation.Areas.Admin.Controllers
 {
     [Area("Admin")]
+    [Authorize(Roles = "Admin")]
     public class ColorController : Controller
     {
         private readonly IColorService _colorService;

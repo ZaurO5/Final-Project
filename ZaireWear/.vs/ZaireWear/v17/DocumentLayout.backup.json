@@ -1,7 +1,68 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\areas\\admin\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\areas\\admin\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\areas\\admin\\views\\user\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\areas\\admin\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\areas\\admin\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\viewmodels\\user\\userlistvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\viewmodels\\user\\userlistvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\viewmodels\\account\\accountregistervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\viewmodels\\account\\accountregistervm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\account\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\views\\account\\forgetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\account\\forgetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\viewmodels\\account\\resetpasswordvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\viewmodels\\account\\resetpasswordvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\viewmodels\\account\\forgetpasswordvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\viewmodels\\account\\forgetpasswordvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\viewmodels\\account\\accountloginvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\viewmodels\\account\\accountloginvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\services\\concrete\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\services\\concrete\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\services\\abstract\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\services\\abstract\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +70,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,6 +87,201 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml*",
+              "RelativeToolTip": "Presentation\\Areas\\Admin\\Views\\Shared\\_Layout.cshtml*",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAFcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-07T21:51:34.997Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Areas\\Admin\\Views\\User\\Index.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Areas\\Admin\\Views\\User\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Areas\\Admin\\Views\\User\\Index.cshtml",
+              "RelativeToolTip": "Presentation\\Areas\\Admin\\Views\\User\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-07T21:44:44.651Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Areas\\Admin\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Areas\\Admin\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Areas\\Admin\\Controllers\\UserController.cs",
+              "RelativeToolTip": "Presentation\\Areas\\Admin\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAACMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T21:43:05.245Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserListVM.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\ViewModels\\User\\UserListVM.cs",
+              "RelativeDocumentMoniker": "Business\\ViewModels\\User\\UserListVM.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\ViewModels\\User\\UserListVM.cs",
+              "RelativeToolTip": "Business\\ViewModels\\User\\UserListVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T21:42:27.993Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "Presentation\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Program.cs",
+              "RelativeToolTip": "Presentation\\Program.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T21:36:19.308Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountRegisterVM.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\ViewModels\\Account\\AccountRegisterVM.cs",
+              "RelativeDocumentMoniker": "Business\\ViewModels\\Account\\AccountRegisterVM.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\ViewModels\\Account\\AccountRegisterVM.cs",
+              "RelativeToolTip": "Business\\ViewModels\\Account\\AccountRegisterVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T21:37:07.583Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Register.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Views\\Account\\Register.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Account\\Register.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Views\\Account\\Register.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Account\\Register.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-07T21:38:17.973Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-07T21:38:11.878Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ForgetPassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Views\\Account\\ForgetPassword.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Account\\ForgetPassword.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Views\\Account\\ForgetPassword.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Account\\ForgetPassword.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-07T21:38:05.231Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T21:37:46.081Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ResetPasswordVM.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\ViewModels\\Account\\ResetPasswordVM.cs",
+              "RelativeDocumentMoniker": "Business\\ViewModels\\Account\\ResetPasswordVM.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\ViewModels\\Account\\ResetPasswordVM.cs",
+              "RelativeToolTip": "Business\\ViewModels\\Account\\ResetPasswordVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T21:37:26.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "ForgetPasswordVM.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\ViewModels\\Account\\ForgetPasswordVM.cs",
+              "RelativeDocumentMoniker": "Business\\ViewModels\\Account\\ForgetPasswordVM.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\ViewModels\\Account\\ForgetPasswordVM.cs",
+              "RelativeToolTip": "Business\\ViewModels\\Account\\ForgetPasswordVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T21:37:18.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AccountLoginVM.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\ViewModels\\Account\\AccountLoginVM.cs",
+              "RelativeDocumentMoniker": "Business\\ViewModels\\Account\\AccountLoginVM.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\ViewModels\\Account\\AccountLoginVM.cs",
+              "RelativeToolTip": "Business\\ViewModels\\Account\\AccountLoginVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T21:37:00.252Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Services\\Concrete\\AccountService.cs",
+              "RelativeDocumentMoniker": "Business\\Services\\Concrete\\AccountService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Services\\Concrete\\AccountService.cs",
+              "RelativeToolTip": "Business\\Services\\Concrete\\AccountService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T21:36:42.769Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IAccountService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Services\\Abstract\\IAccountService.cs",
+              "RelativeDocumentMoniker": "Business\\Services\\Abstract\\IAccountService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Services\\Abstract\\IAccountService.cs",
+              "RelativeToolTip": "Business\\Services\\Abstract\\IAccountService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-07T21:36:37.384Z",
+              "EditorCaption": ""
             }
           ]
         },

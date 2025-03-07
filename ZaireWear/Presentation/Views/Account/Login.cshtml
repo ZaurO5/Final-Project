@@ -1,0 +1,26 @@
+﻿@using Business.ViewModels.Account
+@model AccountLoginVM
+
+<div class="auth-wrapper">
+    <div class="auth-container">
+        <form asp-action="Login" method="post" class="auth-form">
+            <h3 class="auth-title">Login</h3>
+            <div class="auth-input-group">
+                <input asp-for="Email" type="text" placeholder="Email Address" class="auth-input">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="auth-input-group">
+                <input asp-for="Password" type="password" placeholder="Password" class="auth-input">
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <button type="submit" class="auth-button">Confirm</button>
+            <div class="auth-links">
+                <a asp-action="ForgetPassword">Forgot Password?</a>
+                <a asp-action="Register">Register</a>
+            </div>
+        </form>
+        <div class="auth-image">
+            <img src="~/assets/images/012ef79872a46b707edc17ac369008d6.jpg" alt="Login Image">
+        </div>
+    </div>
+</div>

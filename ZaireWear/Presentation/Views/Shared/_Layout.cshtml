@@ -27,7 +27,22 @@
                                 <li><a asp-controller="Catalog" asp-action="Index" asp-route-gender="2">Woman</a></li>
                             </ul>
                         </li>
-                        <li><a id="auth-link" asp-controller="Login" asp-action="Index">Log In</a></li>
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <li>
+                                <form asp-controller="Account" asp-action="Logout" method="post">
+                                    <button type="submit"
+                                            class="auth-link"
+                                            style="background:none; border:none; padding:0; cursor:pointer; color: white; font-weight: bold;">
+                                        Log Out
+                                    </button>
+                                </form>
+                            </li>
+                        }
+                        else
+                        {
+                            <li><a class="auth-link" asp-controller="Account" asp-action="Login">Log In</a></li>
+                        }
                         <li><a asp-controller="ShoppingBag" asp-action="Index">Shopping Bag</a></li>
                     </ul>
                 </div>

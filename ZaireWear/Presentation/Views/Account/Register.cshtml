@@ -1,0 +1,35 @@
+﻿@using Business.ViewModels.Account
+@model AccountRegisterVM
+
+<div class="auth-wrapper">
+    <div class="auth-container reverse">
+        <div class="auth-image">
+            <img src="~/assets/images/fashion-Ecommerce1.jpg" alt="Register Image">
+        </div>
+        <form asp-action="Register" method="post" class="auth-form">
+            <h3 class="auth-title">Register</h3>
+            <div class="auth-input-group">
+                <input asp-for="FirstName" type="text" placeholder="First Name" class="auth-input">
+                <input asp-for="LastName" type="text" placeholder="Last Name" class="auth-input">
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="auth-input-group">
+                <input asp-for="Email" type="text" placeholder="Email Address" class="auth-input">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="auth-input-group">
+                <input asp-for="Password" type="password" placeholder="Password" class="auth-input">
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="auth-input-group">
+                <input asp-for="ConfirmPassword" type="password" placeholder="Confirm Password" class="auth-input">
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <button type="submit" class="auth-button">Confirm</button>
+            <div class="auth-links">
+                <a asp-action="Login">Already have an account?</a>
+            </div>
+        </form>
+    </div>
+</div>

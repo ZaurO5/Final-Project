@@ -1,6 +1,9 @@
 
 using Business.Services.Abstract;
 using Business.Services.Concrete;
+using Business.Utilities.EmailHandler.Abstract;
+using Business.Utilities.EmailHandler.Concrete;
+using Business.Utilities.EmailHandler.Models;
 using Business.Utilities.File;
 using Core.Entities;
 using Data;
@@ -41,9 +44,9 @@ builder.Services.AddIdentity<User, IdentityRole>(options =>
     .AddEntityFrameworkStores<AppDbContext>()
     .AddDefaultTokenProviders();
 
-//var emailConfiguration = builder.Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>();
-//builder.Services.AddSingleton(emailConfiguration);
-//builder.Services.AddSingleton<IEmailService, EmailService>();
+var emailConfiguration = builder.Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>();
+builder.Services.AddSingleton(emailConfiguration);
+builder.Services.AddScoped<IEmailService, EmailService>();
 
 //builder.Services.Configure<StripeSettings>(builder.Configuration.GetSection("Stripe"));
 #endregion
@@ -64,6 +67,7 @@ builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ISizeService, SizeService>();
 builder.Services.AddScoped<IColorService, ColorService>();
 builder.Services.AddScoped<IProductService, ProductService>();
+builder.Services.AddScoped<IAccountService, AccountService>();
 builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
 builder.Services.AddSingleton<IUrlHelperFactory, UrlHelperFactory>();
 builder.Services.AddHttpContextAccessor();
@@ -97,7 +101,7 @@ app.MapControllerRoute(
     pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 //StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe")["SecretKey"];
 

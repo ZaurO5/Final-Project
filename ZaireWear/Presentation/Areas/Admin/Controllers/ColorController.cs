@@ -10,6 +10,7 @@ namespace Presentation.Areas.Admin.Controllers
     public class ColorController : Controller
     {
         private readonly IColorService _colorService;
+        private const int PageSize = 10;
 
         public ColorController(IColorService colorService)
         {
@@ -19,10 +20,18 @@ namespace Presentation.Areas.Admin.Controllers
         #region Read
 
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
             var model = await _colorService.GetAllAsync();
-            return View(model);
+            var paginatedColors = model.Colors
+                .Skip((page - 1) * PageSize)
+                .Take(PageSize)
+                .ToList();
+
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = (int)Math.Ceiling(model.Colors.Count / (double)PageSize);
+
+            return View(new ColorIndexVM { Colors = paginatedColors });
         }
 
         #endregion

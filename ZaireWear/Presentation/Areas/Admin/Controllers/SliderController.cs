@@ -9,6 +9,7 @@ namespace Presentation.Areas.Admin.Controllers
     public class SliderController : Controller
     {
         private readonly ISliderService _sliderService;
+        private const int PageSize = 3;
 
         public SliderController(ISliderService sliderService)
         {
@@ -16,10 +17,18 @@ namespace Presentation.Areas.Admin.Controllers
         }
 
         #region Read
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
             var model = await _sliderService.GetAllAsync();
-            return View(model);
+            var paginatedSliders = model.Sliders
+                .Skip((page - 1) * PageSize)
+                .Take(PageSize)
+                .ToList();
+
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = (int)Math.Ceiling(model.Sliders.Count / (double)PageSize);
+
+            return View(new SliderIndexVM { Sliders = paginatedSliders });
         }
 
         #endregion

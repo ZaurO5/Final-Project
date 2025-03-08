@@ -10,6 +10,7 @@ namespace Presentation.Areas.Admin.Controllers
     public class CategoryController : Controller
     {
         private readonly ICategoryService _categoryService;
+        private const int PageSize = 5;
 
         public CategoryController(ICategoryService categoryService)
         {
@@ -19,10 +20,18 @@ namespace Presentation.Areas.Admin.Controllers
         #region Read
 
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
             var model = await _categoryService.GetAllAsync();
-            return View(model);
+            var paginatedCategories = model.Categories
+                .Skip((page - 1) * PageSize)
+                .Take(PageSize)
+                .ToList();
+
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = (int)Math.Ceiling(model.Categories.Count / (double)PageSize);
+
+            return View(new CategoryIndexVM { Categories = paginatedCategories });
         }
 
         #endregion

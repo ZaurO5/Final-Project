@@ -14,6 +14,7 @@ namespace Presentation.Areas.Admin.Controllers
         private readonly ICategoryRepository _categoryRepository;
         private readonly IColorRepository _colorRepository;
         private readonly ISizeRepository _sizeRepository;
+        private const int PageSize = 9;
 
         public ProductController(IProductService productService,
                                  ICategoryRepository categoryRepository,
@@ -27,10 +28,18 @@ namespace Presentation.Areas.Admin.Controllers
         }
 
         #region Read
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
-            var products = await _productService.GetAllAsync();
-            return View(products);
+            var model = await _productService.GetAllAsync();
+            var paginatedProducts = model.Products
+                .Skip((page - 1) * PageSize)
+                .Take(PageSize)
+                .ToList();
+
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = (int)Math.Ceiling(model.Products.Count / (double)PageSize);
+
+            return View(new ProductIndexVM { Products = paginatedProducts });
         }
 
         #endregion

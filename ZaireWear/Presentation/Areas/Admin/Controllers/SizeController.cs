@@ -10,6 +10,7 @@ namespace Presentation.Areas.Admin.Controllers
     public class SizeController : Controller
     {
         private readonly ISizeService _sizeService;
+        private const int PageSize = 5;
 
         public SizeController(ISizeService sizeService)
         {
@@ -19,10 +20,18 @@ namespace Presentation.Areas.Admin.Controllers
         #region Read
 
         [HttpGet]
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1)
         {
             var model = await _sizeService.GetAllAsync();
-            return View(model);
+            var paginatedSizes = model.Sizes
+                .Skip((page - 1) * PageSize)
+                .Take(PageSize)
+                .ToList();
+
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = (int)Math.Ceiling(model.Sizes.Count / (double)PageSize);
+
+            return View(new SizeIndexVM { Sizes = paginatedSizes });
         }
 
         #endregion

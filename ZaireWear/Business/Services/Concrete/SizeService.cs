@@ -36,9 +36,9 @@ namespace Business.Services.Concrete
             };
         }
 
-        public async Task<Size> GetAsync(int id)
+        public async Task<Size> GetByIdAsync(int id)
         {
-            return await _sizeRepository.GetAsync(id);
+            return await _sizeRepository.GetByIdAsync(id);
         }
 
         public async Task<bool> CreateAsync(SizeCreateVM model)
@@ -66,7 +66,7 @@ namespace Business.Services.Concrete
 
         public async Task<SizeUpdateVM> UpdateAsync(int id)
         {
-            var size = await _sizeRepository.GetAsync(id);
+            var size = await _sizeRepository.GetByIdAsync(id);
             if (size is null) return null;
 
             return new SizeUpdateVM
@@ -79,7 +79,7 @@ namespace Business.Services.Concrete
         {
             if (!_modelState.IsValid) return false;
 
-            var size = await _sizeRepository.GetAsync(id);
+            var size = await _sizeRepository.GetByIdAsync(id);
             if (size is null)
             {
                 _modelState.AddModelError(string.Empty, "Size is unavailable");
@@ -104,7 +104,7 @@ namespace Business.Services.Concrete
 
         public async Task<bool> DeleteAsync(int id)
         {
-            var size = await _sizeRepository.GetAsync(id);
+            var size = await _sizeRepository.GetByIdAsync(id);
             if (size is null) return false;
 
             _sizeRepository.Delete(size);

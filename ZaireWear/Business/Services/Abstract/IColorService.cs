@@ -11,7 +11,7 @@ namespace Business.Services.Abstract
     public interface IColorService
     {
         Task<ColorIndexVM> GetAllAsync();
-        Task<Color> GetAsync(int id);
+        Task<Color> GetByIdAsync(int id);
         Task<bool> CreateAsync(ColorCreateVM model);
         Task<ColorUpdateVM> UpdateAsync(int id);
         Task<bool> UpdateAsync(int id, ColorUpdateVM model);

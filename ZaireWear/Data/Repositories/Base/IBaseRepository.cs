@@ -11,7 +11,7 @@ namespace Data.Repositories.Base;
 public interface IBaseRepository<T> where T : BaseEntity
 {
 	Task<List<T>> GetAllAsync();
-	Task<T> GetAsync(int id);
+	Task<T> GetByIdAsync(int id);
 	//Task<T> Get(Expression<Func<T>>)
 	//GetPaginatedData(int size, int page)
 	Task CreateAsync(T data);

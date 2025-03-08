@@ -11,7 +11,7 @@ namespace Business.Services.Abstract
     public interface ISizeService
     {
         Task<SizeIndexVM> GetAllAsync();
-        Task<Size> GetAsync(int id);
+        Task<Size> GetByIdAsync(int id);
         Task<bool> CreateAsync(SizeCreateVM model);
         Task<SizeUpdateVM> UpdateAsync(int id);
         Task<bool> UpdateAsync(int id, SizeUpdateVM model);

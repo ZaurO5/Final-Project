@@ -63,7 +63,7 @@ public class SliderService : ISliderService
 
     public async Task<SliderUpdateVM> UpdateAsync(int id)
     {
-        var slider = await _sliderRepository.GetAsync(id);
+        var slider = await _sliderRepository.GetByIdAsync(id);
         if (slider == null) return null;
 
         return new SliderUpdateVM
@@ -78,7 +78,7 @@ public class SliderService : ISliderService
     {
         if (!_modelState.IsValid) return false;
 
-        var slider = await _sliderRepository.GetAsync(id);
+        var slider = await _sliderRepository.GetByIdAsync(id);
         if (slider == null) return false;
 
         var existingSliders = await _sliderRepository.GetAllAsync();
@@ -111,7 +111,7 @@ public class SliderService : ISliderService
 
     public async Task<bool> DeleteAsync(int id)
     {
-        var slider = await _sliderRepository.GetAsync(id);
+        var slider = await _sliderRepository.GetByIdAsync(id);
         if (slider == null) return false;
 
         var fileName = Path.GetFileName(slider.ImagePath);

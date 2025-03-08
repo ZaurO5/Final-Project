@@ -37,9 +37,9 @@ namespace Business.Services.Concrete
             };
         }
 
-        public async Task<Category> GetAsync(int id)
+        public async Task<Category> GetByIdAsync(int id)
         {
-            return await _categoryRepository.GetAsync(id);
+            return await _categoryRepository.GetByIdAsync(id);
         }
 
         public async Task<bool> CreateAsync(CategoryCreateVM model)
@@ -67,7 +67,7 @@ namespace Business.Services.Concrete
 
         public async Task<CategoryUpdateVM> UpdateAsync(int id)
         {
-            var category = await _categoryRepository.GetAsync(id);
+            var category = await _categoryRepository.GetByIdAsync(id);
             if (category is null) return null;
 
 
@@ -83,7 +83,7 @@ namespace Business.Services.Concrete
         {
             if (!_modelState.IsValid) return false;
 
-            var category = await _categoryRepository.GetAsync(id);
+            var category = await _categoryRepository.GetByIdAsync(id);
             if (category is null)
             {
                 _modelState.AddModelError(string.Empty, "Category is Unavailable");
@@ -108,7 +108,7 @@ namespace Business.Services.Concrete
 
         public async Task<bool> DeleteAsync(int id)
         {
-            var category = await _categoryRepository.GetAsync(id);
+            var category = await _categoryRepository.GetByIdAsync(id);
             if (category is null) return false;
 
             _categoryRepository.Delete(category);

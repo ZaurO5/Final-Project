@@ -23,7 +23,7 @@ public class BaseRepository<T> : IBaseRepository<T> where T : BaseEntity
 		return await _table.ToListAsync();
 	}
 
-	public async Task<T> GetAsync(int id)
+	public async Task<T> GetByIdAsync(int id)
 	{
 		return await _table.FindAsync(id);
 	}

@@ -36,9 +36,9 @@ namespace Business.Services.Concrete
             };
         }
 
-        public async Task<Color> GetAsync(int id)
+        public async Task<Color> GetByIdAsync(int id)
         {
-            return await _colorRepository.GetAsync(id);
+            return await _colorRepository.GetByIdAsync(id);
         }
 
         public async Task<bool> CreateAsync(ColorCreateVM model)
@@ -67,7 +67,7 @@ namespace Business.Services.Concrete
 
         public async Task<ColorUpdateVM> UpdateAsync(int id)
         {
-            var color = await _colorRepository.GetAsync(id);
+            var color = await _colorRepository.GetByIdAsync(id);
             if (color is null) return null;
 
             return new ColorUpdateVM
@@ -81,7 +81,7 @@ namespace Business.Services.Concrete
         {
             if (!_modelState.IsValid) return false;
 
-            var color = await _colorRepository.GetAsync(id);
+            var color = await _colorRepository.GetByIdAsync(id);
             if (color is null)
             {
                 _modelState.AddModelError(string.Empty, "Color is unavailable");
@@ -107,7 +107,7 @@ namespace Business.Services.Concrete
 
         public async Task<bool> DeleteAsync(int id)
         {
-            var color = await _colorRepository.GetAsync(id);
+            var color = await _colorRepository.GetByIdAsync(id);
             if (color is null) return false;
 
             _colorRepository.Delete(color);

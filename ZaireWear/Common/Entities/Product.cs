@@ -1,4 +1,4 @@
-﻿using Core.Constants;
+﻿using Core.Constants.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;

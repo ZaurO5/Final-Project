@@ -1,6 +1,6 @@
 ﻿using Business.Services.Abstract;
 using Business.ViewModels.Catalog;
-using Core.Constants;
+using Core.Constants.Enums;
 using MailKit.Search;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,6 +10,7 @@ namespace ZaireWear.Controllers
     {
         private readonly IProductService _productService;
         private readonly ICategoryService _categoryService;
+        private const int PageSize = 9;
 
         public CatalogController(IProductService productService, ICategoryService categoryService)
         {
@@ -18,7 +19,7 @@ namespace ZaireWear.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Index(int? categoryId, string searchQuery, int? gender)
+        public async Task<IActionResult> Index(int? categoryId, string searchQuery, int? gender, int page = 1)
         {
             var products = await _productService.GetAllAsync();
             var categories = await _categoryService.GetAllAsync();
@@ -37,12 +38,21 @@ namespace ZaireWear.Controllers
                     .ToList();
             }
 
+            var totalItems = products.Products.Count;
+            var pagedProducts = products.Products
+                .Skip((page - 1) * PageSize)
+                .Take(PageSize)
+                .ToList();
+
             ViewBag.SearchQuery = searchQuery;
             ViewBag.Gender = gender;
+            ViewBag.CurrentPage = page;
+            ViewBag.TotalPages = (int)Math.Ceiling(totalItems / (double)PageSize);
+            ViewBag.CategoryId = categoryId;
 
             var model = new CatalogIndexVM
             {
-                Products = products.Products,
+                Products = pagedProducts,
                 Categories = categories.Categories
             };
 

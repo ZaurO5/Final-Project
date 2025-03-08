@@ -1,4 +1,4 @@
-﻿using Core.Constants;
+﻿using Core.Constants.Enums;
 using Core.Entities;
 using Microsoft.AspNetCore.Identity;
 using System;

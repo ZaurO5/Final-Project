@@ -6,13 +6,26 @@
     <div class="container py-5">
         <!-- Search Bar in Center -->
         <form method="get" asp-action="Index" class="search-container text-center mb-4">
-            <input type="text" name="searchQuery" id="search-input" class="form-control d-inline-block w-50"
-                   placeholder="Search products..." value="@ViewBag.SearchQuery">
-            <input type="hidden" name="gender" value="@ViewBag.Gender" />
-            <input type="hidden" name="categoryId" value="@ViewBag.CategoryId" />
-            <button type="submit" id="search-btn" class="btn btn-primary"><i class="fas fa-search"></i></button>
+            <div class="input-group justify-content-center rounded-pill" style="max-width: 600px;">
+                <input type="text"
+                       name="searchQuery"
+                       id="search-input"
+                       class="form-control rounded-pill-end-0 border-end-0"
+                       placeholder="Search products..."
+                       value="@ViewBag.SearchQuery"
+                       aria-label="Search products"
+                       style="border-radius: 20px 0 0 20px;">
+                <input type="hidden" name="gender" value="@ViewBag.Gender" />
+                <input type="hidden" name="categoryId" value="@ViewBag.CategoryId" />
+                <button type="submit"
+                        id="search-btn"
+                        class="btn btn-primary rounded-pill-start-0 border-start-0"
+                        aria-label="Search button"
+                        style="border-radius: 0 20px 20px 0;">
+                    <i class="fas fa-search"></i>
+                </button>
+            </div>
         </form>
-
         <div class="row">
             <!-- Sidebar: Categories -->
             <aside class="col-lg-3">

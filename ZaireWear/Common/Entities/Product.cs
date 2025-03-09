@@ -19,4 +19,4 @@ namespace Core.Entities;
         public ICollection<ProductSizes> ProductSizes { get; set; }
         public ICollection<BasketProduct> BasketProducts { get; set; }
         public ICollection<FavoriteProduct> FavoriteProducts { get; set; }
-}
+    }

@@ -38,6 +38,14 @@ namespace ZaireWear.Controllers
                     .ToList();
             }
 
+            if (!string.IsNullOrWhiteSpace(searchQuery))
+            {
+                var query = searchQuery.Trim().ToLower();
+                products.Products = products.Products
+                    .Where(p => p.Title.ToLower().Contains(query))
+                    .ToList();
+            }
+
             var totalItems = products.Products.Count;
             var pagedProducts = products.Products
                 .Skip((page - 1) * PageSize)

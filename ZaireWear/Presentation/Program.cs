@@ -39,29 +39,21 @@ builder.Services.AddIdentity<User, IdentityRole>(options =>
     options.Lockout.MaxFailedAccessAttempts = 3;
     options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
 
-    // 1. Явно переопределяем провайдер токенов
-    options.Tokens.PasswordResetTokenProvider = "CustomReset";
+    options.Tokens.PasswordResetTokenProvider = TokenOptions.DefaultProvider;
 })
 .AddEntityFrameworkStores<AppDbContext>()
-.AddDefaultTokenProviders()
-// 2. Добавляем кастомный провайдер с уникальным именем
-.AddTokenProvider<DataProtectorTokenProvider<User>>("CustomReset");
+.AddDefaultTokenProviders();
 
-// 3. Настройка времени жизни через прямое указание типа
 builder.Services.Configure<DataProtectionTokenProviderOptions>(options =>
 {
     options.TokenLifespan = TimeSpan.FromMinutes(15);
 });
 
-// 4. Фикс для Data Protection без миграций
-builder.Services.AddDataProtection()
-    .SetApplicationName("YourApp")
-    .PersistKeysToFileSystem(new DirectoryInfo(Path.Combine(Directory.GetCurrentDirectory(), "keys")));
-
 var emailConfiguration = builder.Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>();
 builder.Services.AddSingleton(emailConfiguration);
 builder.Services.AddScoped<IEmailService, EmailService>();
 #endregion
+
 
 #region Repositories
 builder.Services.AddScoped<ISliderRepository, SliderRepository>();

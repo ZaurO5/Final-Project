@@ -42,62 +42,87 @@ namespace Business.Services.Concrete
         {
             if (!_modelState.IsValid) return false;
 
-            var user = new User
+            try
             {
-                Email = model.Email,
-                UserName = model.Email,
-                FirstName = model.FirstName,
-                LastName = model.LastName
-            };
+                var user = new User
+                {
+                    Email = model.Email,
+                    UserName = model.Email,
+                    FirstName = model.FirstName,
+                    LastName = model.LastName
+                };
+                var result = await _userManager.CreateAsync(user, model.Password);
 
-            var result = await _userManager.CreateAsync(user, model.Password);
-            if (!result.Succeeded)
+                if (!result.Succeeded)
+                {
+                    foreach (var error in result.Errors)
+                        _modelState.AddModelError(string.Empty, error.Description);
+                    return false;
+                }
+
+                var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                var urlHelper = _urlHelperFactory.GetUrlHelper(new ActionContext(
+                    _httpContextAccessor.HttpContext,
+                    _httpContextAccessor.HttpContext.GetRouteData(),
+                    new Microsoft.AspNetCore.Mvc.Abstractions.ActionDescriptor()
+                ));
+                var url = urlHelper.Action("ConfirmEmail", "Account", new { token, email = user.Email }, "https");
+                _emailService.SendMessage(new Message(new List<string> { user.Email }, "Email Confirmation", url));
+
+                return true;
+            }
+            catch (Exception ex)
             {
-                foreach (var error in result.Errors)
-                    _modelState.AddModelError(string.Empty, error.Description);
+                _modelState.AddModelError(string.Empty, "Error during registration. Please try again.");
                 return false;
             }
-
-            var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-            var urlHelper = _urlHelperFactory.GetUrlHelper(new ActionContext(
-                _httpContextAccessor.HttpContext,
-                _httpContextAccessor.HttpContext.GetRouteData(),
-                new Microsoft.AspNetCore.Mvc.Abstractions.ActionDescriptor()
-            ));
-            var url = urlHelper.Action("ConfirmEmail", "Account", new { token, email = user.Email }, "https");
-            _emailService.SendMessage(new Message(new List<string> { user.Email }, "Email Confirmation", url));
-
-            return true;
         }
-
         public async Task<bool> ConfirmEmail(string email, string token)
         {
-            var user = await _userManager.FindByEmailAsync(email);
-            if (user == null) return false;
-
-            var result = await _userManager.ConfirmEmailAsync(user, token);
-            return result.Succeeded;
+            try
+            {
+                var user = await _userManager.FindByEmailAsync(email);
+                if (user == null)
+                {
+                    _modelState.AddModelError(string.Empty, "User not found.");
+                    return false;
+                }
+                return (await _userManager.ConfirmEmailAsync(user, token)).Succeeded;
+            }
+            catch (Exception)
+            {
+                _modelState.AddModelError(string.Empty, "Error confirming email.");
+                return false;
+            }
         }
 
         public async Task<(bool IsSucceeded, string? returnUrl)> LoginAsync(AccountLoginVM model)
         {
             if (!_modelState.IsValid) return (false, null);
 
-            var user = await _userManager.FindByEmailAsync(model.Email);
-            if (user is null)
+            try
             {
-                _modelState.AddModelError(string.Empty, "Wrong Email or Password");
+                var user = await _userManager.FindByEmailAsync(model.Email);
+                if (user is null)
+                {
+                    _modelState.AddModelError(string.Empty, "Wrong Email or Password");
+                    return (false, null);
+                }
+
+                var result = await _signInManager.PasswordSignInAsync(user, model.Password, false, false);
+                if (!result.Succeeded)
+                {
+                    _modelState.AddModelError(string.Empty, "Wrong Email or Password");
+                    return (false, null);
+                }
+
+                return (true, "/Home/Index");
+            }
+            catch (Exception)
+            {
+                _modelState.AddModelError(string.Empty, "Login error. Please try again.");
                 return (false, null);
             }
-
-            var result = await _signInManager.PasswordSignInAsync(user, model.Password, false, false);
-            if (!result.Succeeded)
-            {
-                _modelState.AddModelError(string.Empty, "Wrong Email or Password");
-                return (false, null);
-            }
-
-            return (true, "/Home/Index");
         }
 
         public async Task LogoutAsync() => await _signInManager.SignOutAsync();
@@ -106,37 +131,50 @@ namespace Business.Services.Concrete
         {
             if (!_modelState.IsValid) return false;
 
-            var user = await _userManager.FindByEmailAsync(model.Email);
-            if (user == null) return false;
+            try
+            {
+                var user = await _userManager.FindByEmailAsync(model.Email);
+                if (user == null) return false;
 
-            var token = await _userManager.GeneratePasswordResetTokenAsync(user);
-            var urlHelper = _urlHelperFactory.GetUrlHelper(new ActionContext(
-                _httpContextAccessor.HttpContext,
-                _httpContextAccessor.HttpContext.GetRouteData(),
-                new Microsoft.AspNetCore.Mvc.Abstractions.ActionDescriptor()
-            ));
-            var url = urlHelper.Action("ResetPassword", "Account", new { token, email = user.Email }, "https");
-            _emailService.SendMessage(new Message(new List<string> { user.Email }, "Reset Password", url));
+                var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+                var urlHelper = _urlHelperFactory.GetUrlHelper(new ActionContext(
+                    _httpContextAccessor.HttpContext,
+                    _httpContextAccessor.HttpContext.GetRouteData(),
+                    new Microsoft.AspNetCore.Mvc.Abstractions.ActionDescriptor()
+                ));
+                var url = urlHelper.Action("ResetPassword", "Account", new { token, email = user.Email }, "https");
+                _emailService.SendMessage(new Message(new List<string> { user.Email }, "Reset Password", url));
 
-            return true;
+                return true;
+            }
+            catch (Exception)
+            {
+                _modelState.AddModelError(string.Empty, "Error processing password reset.");
+                return false;
+            }
         }
 
         public async Task<IdentityResult> ResetPassword(ResetPasswordVM model)
         {
-            var user = await _userManager.FindByEmailAsync(model.Email);
-            if (user == null)
+            try
+            {
+                var user = await _userManager.FindByEmailAsync(model.Email);
+                if (user == null)
+                {
+                    return IdentityResult.Failed(new IdentityError
+                    {
+                        Description = "User not found"
+                    });
+                }
+                return await _userManager.ResetPasswordAsync(user, model.Token, model.NewPassword);
+            }
+            catch (Exception)
             {
                 return IdentityResult.Failed(new IdentityError
                 {
-                    Description = "User not found"
+                    Description = "Error resetting password"
                 });
             }
-
-            return await _userManager.ResetPasswordAsync(
-                user,
-                model.Token,
-                model.NewPassword
-            );
         }
     }
 }

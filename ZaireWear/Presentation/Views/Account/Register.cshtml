@@ -1,12 +1,17 @@
 ﻿@using Business.ViewModels.Account
 @model AccountRegisterVM
 
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
 <div class="auth-wrapper">
     <div class="auth-container reverse">
         <div class="auth-image">
             <img src="~/assets/images/fashion-Ecommerce1.jpg" alt="Register Image">
         </div>
         <form asp-action="Register" method="post" class="auth-form">
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
             <h3 class="auth-title">Register</h3>
             <div class="auth-input-group">
                 <input asp-for="FirstName" type="text" placeholder="First Name" class="auth-input">

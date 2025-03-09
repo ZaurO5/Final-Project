@@ -63,21 +63,24 @@ namespace Presentation.Areas.Admin.Controllers
                 ViewBag.Categories = await _categoryRepository.GetAllAsync();
                 ViewBag.Colors = await _colorRepository.GetAllAsync();
                 ViewBag.Sizes = await _sizeRepository.GetAllAsync();
+                TempData["Error"] = "Please correct the form errors.";
                 return View(model);
             }
 
             var result = await _productService.CreateAsync(model);
             if (!result)
             {
-                ModelState.AddModelError(string.Empty, "Failed to create product.");
                 ViewBag.Categories = await _categoryRepository.GetAllAsync();
                 ViewBag.Colors = await _colorRepository.GetAllAsync();
                 ViewBag.Sizes = await _sizeRepository.GetAllAsync();
+                TempData["Error"] = "Error occurred while creating product.";
                 return View(model);
             }
 
+            TempData["Success"] = "Product created successfully!";
             return RedirectToAction(nameof(Index));
         }
+
 
         #endregion
 
@@ -102,19 +105,21 @@ namespace Presentation.Areas.Admin.Controllers
                 ViewBag.Categories = await _categoryRepository.GetAllAsync();
                 ViewBag.Colors = await _colorRepository.GetAllAsync();
                 ViewBag.Sizes = await _sizeRepository.GetAllAsync();
+                TempData["Error"] = "Please correct the form errors.";
                 return View(model);
             }
 
             var result = await _productService.UpdateAsync(id, model);
             if (!result)
             {
-                ModelState.AddModelError(string.Empty, "Failed to update product.");
                 ViewBag.Categories = await _categoryRepository.GetAllAsync();
                 ViewBag.Colors = await _colorRepository.GetAllAsync();
                 ViewBag.Sizes = await _sizeRepository.GetAllAsync();
+                TempData["Error"] = "Error occurred while updating product.";
                 return View(model);
             }
 
+            TempData["Success"] = "Product updated successfully!";
             return RedirectToAction(nameof(Index));
         }
 
@@ -125,8 +130,14 @@ namespace Presentation.Areas.Admin.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var result = await _productService.DeleteAsync(id);
-            if (!result) return NotFound();
-
+            if (!result)
+            {
+                TempData["Error"] = "Error occurred while deleting product.";
+            }
+            else
+            {
+                TempData["Success"] = "Product deleted successfully!";
+            }
             return RedirectToAction(nameof(Index));
         }
 

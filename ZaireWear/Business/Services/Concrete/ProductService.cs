@@ -43,147 +43,208 @@ namespace Business.Services.Concrete
 
         public async Task<ProductIndexVM> GetAllAsync()
         {
-            var products = await _productRepository.GetAllWithDetailsAsync();
-            return new ProductIndexVM
+            try
             {
-                Products = products
-            };
+                var products = await _productRepository.GetAllWithDetailsAsync();
+                return new ProductIndexVM { Products = products };
+            }
+            catch (Exception)
+            {
+                _modelState.AddModelError(string.Empty, "Error occurred while retrieving products.");
+                return new ProductIndexVM { Products = new List<Product>() };
+            }
         }
 
         public async Task<Product> GetByIdWithDetailsAsync(int id)
         {
-            return await _productRepository.GetByIdWithDetailsAsync(id);
+            try
+            {
+                return await _productRepository.GetByIdWithDetailsAsync(id);
+            }
+            catch (Exception)
+            {
+                _modelState.AddModelError(string.Empty, "Error occurred while retrieving the product.");
+                return null;
+            }
         }
 
         public async Task<ProductCreateVM> CreateAsync()
         {
-            var categories = await _categoryRepository.GetAllAsync();
-            var colors = await _colorRepository.GetAllAsync();
-            var sizes = await _sizeRepository.GetAllAsync();
-
-            return new ProductCreateVM
+            try
             {
-                CategoryIds = new List<int>(),
-                ColorIds = new List<int>(),
-                SizeIds = new List<int>()
-            };
+                var categories = await _categoryRepository.GetAllAsync();
+                var colors = await _colorRepository.GetAllAsync();
+                var sizes = await _sizeRepository.GetAllAsync();
+
+                return new ProductCreateVM
+                {
+                    CategoryIds = new List<int>(),
+                    ColorIds = new List<int>(),
+                    SizeIds = new List<int>()
+                };
+            }
+            catch (Exception)
+            {
+                _modelState.AddModelError(string.Empty, "Error occurred while preparing the creation form.");
+                return new ProductCreateVM();
+            }
         }
 
         public async Task<bool> CreateAsync(ProductCreateVM model)
         {
             if (!_modelState.IsValid) return false;
-
-            var imagePath = _fileService.Upload(model.ImagePath, "assets/images/products");
-
-            var product = new Product
+            try
             {
-                Title = model.Title,
-                Price = model.Price,
-                Description = model.Description,
-                ImagePath = "/assets/images/products/" + imagePath,
-                StockCount = model.StockCount,
-                Gender = model.Gender,
-                ProductCategories = new List<ProductCategories>(),
-                ProductColors = new List<ProductColors>(),
-                ProductSizes = new List<ProductSizes>()
-            };
+                var imagePath = _fileService.Upload(model.ImagePath, "assets/images/products");
 
-            foreach (var categoryId in model.CategoryIds)
-            {
-                var category = await _categoryRepository.GetByIdAsync(categoryId);
-                if (category != null)
+                var product = new Product
                 {
-                    product.ProductCategories.Add(new ProductCategories { CategoryId = categoryId, Product = product });
-                }
-            }
+                    Title = model.Title,
+                    Price = model.Price,
+                    Description = model.Description,
+                    ImagePath = "/assets/images/products/" + imagePath,
+                    StockCount = model.StockCount,
+                    Gender = model.Gender,
+                    ProductCategories = new List<ProductCategories>(),
+                    ProductColors = new List<ProductColors>(),
+                    ProductSizes = new List<ProductSizes>()
+                };
 
-            foreach (var colorId in model.ColorIds)
-            {
-                var color = await _colorRepository.GetByIdAsync(colorId);
-                if (color != null)
+                foreach (var categoryId in model.CategoryIds)
                 {
-                    product.ProductColors.Add(new ProductColors { ColorId = colorId, Product = product });
+                    var category = await _categoryRepository.GetByIdAsync(categoryId);
+                    if (category != null)
+                    {
+                        product.ProductCategories.Add(new ProductCategories { CategoryId = categoryId, Product = product });
+                    }
                 }
-            }
 
-            foreach (var sizeId in model.SizeIds)
-            {
-                var size = await _sizeRepository.GetByIdAsync(sizeId);
-                if (size != null)
+                foreach (var colorId in model.ColorIds)
                 {
-                    product.ProductSizes.Add(new ProductSizes { SizeId = sizeId, Product = product });
+                    var color = await _colorRepository.GetByIdAsync(colorId);
+                    if (color != null)
+                    {
+                        product.ProductColors.Add(new ProductColors { ColorId = colorId, Product = product });
+                    }
                 }
+
+                foreach (var sizeId in model.SizeIds)
+                {
+                    var size = await _sizeRepository.GetByIdAsync(sizeId);
+                    if (size != null)
+                    {
+                        product.ProductSizes.Add(new ProductSizes { SizeId = sizeId, Product = product });
+                    }
+                }
+
+                await _productRepository.AddAsync(product);
+                await _unitOfWork.CommitAsync();
+
+                return true;
             }
+            catch (Exception)
+            {
 
-            await _productRepository.AddAsync(product);
-            await _unitOfWork.CommitAsync();
-
-            return true;
+                _modelState.AddModelError(string.Empty, "Error occurred while saving the product.");
+                return false;
+            }
         }
 
         public async Task<ProductUpdateVM> UpdateAsync(int id)
         {
-            var product = await _productRepository.GetByIdWithDetailsAsync(id);
-            if (product == null) return null;
-
-            return new ProductUpdateVM
+            try
             {
-                Id = product.Id,
-                Title = product.Title,
-                Price = product.Price,
-                Description = product.Description,
-                StockCount = product.StockCount,
-                Gender = product.Gender,
-                CategoryIds = product.ProductCategories.Select(pc => pc.CategoryId).ToList(),
-                ColorIds = product.ProductColors.Select(pc => pc.ColorId).ToList(),
-                SizeIds = product.ProductSizes.Select(ps => ps.SizeId).ToList()
-            };
+                var product = await _productRepository.GetByIdWithDetailsAsync(id);
+                if (product == null)
+                {
+                    _modelState.AddModelError(string.Empty, "Product not found.");
+                    return null;
+                }
+
+                return new ProductUpdateVM
+                {
+                    Id = product.Id,
+                    Title = product.Title,
+                    Price = product.Price,
+                    Description = product.Description,
+                    StockCount = product.StockCount,
+                    Gender = product.Gender,
+                    CategoryIds = product.ProductCategories.Select(pc => pc.CategoryId).ToList(),
+                    ColorIds = product.ProductColors.Select(pc => pc.ColorId).ToList(),
+                    SizeIds = product.ProductSizes.Select(ps => ps.SizeId).ToList()
+                };
+
+            }
+            catch (Exception)
+            {
+
+                _modelState.AddModelError(string.Empty, "Error occurred while preparing the edit form.");
+                return null;
+            }
+           
         }
 
         public async Task<bool> UpdateAsync(int id, ProductUpdateVM model)
         {
             if (!_modelState.IsValid) return false;
 
-            var product = await _productRepository.GetByIdWithDetailsAsync(id);
-            if (product == null) return false;
-
-            if (model.ImagePath != null)
+            try
             {
-                var oldFileName = Path.GetFileName(product.ImagePath);
-                _fileService.Delete("assets/images/products", oldFileName);
+                var product = await _productRepository.GetByIdWithDetailsAsync(id);
+                if (product == null) return false;
 
-                var newFileName = _fileService.Upload(model.ImagePath, "assets/images/products");
-                product.ImagePath = "/assets/images/products/" + newFileName;
+                if (model.ImagePath != null)
+                {
+                    var oldFileName = Path.GetFileName(product.ImagePath);
+                    _fileService.Delete("assets/images/products", oldFileName);
+
+                    var newFileName = _fileService.Upload(model.ImagePath, "assets/images/products");
+                    product.ImagePath = "/assets/images/products/" + newFileName;
+                }
+
+                product.Title = model.Title;
+                product.Price = model.Price;
+                product.Description = model.Description;
+                product.StockCount = model.StockCount;
+                product.Gender = model.Gender;
+
+                product.ProductCategories = model.CategoryIds.Select(id => new ProductCategories { ProductId = product.Id, CategoryId = id }).ToList();
+                product.ProductColors = model.ColorIds.Select(id => new ProductColors { ProductId = product.Id, ColorId = id }).ToList();
+                product.ProductSizes = model.SizeIds.Select(id => new ProductSizes { ProductId = product.Id, SizeId = id }).ToList();
+
+                _productRepository.Update(product);
+                await _unitOfWork.CommitAsync();
+
+                return true;
             }
-
-            product.Title = model.Title;
-            product.Price = model.Price;
-            product.Description = model.Description;
-            product.StockCount = model.StockCount;
-            product.Gender = model.Gender;
-
-            product.ProductCategories = model.CategoryIds.Select(id => new ProductCategories { ProductId = product.Id, CategoryId = id }).ToList();
-            product.ProductColors = model.ColorIds.Select(id => new ProductColors { ProductId = product.Id, ColorId = id }).ToList();
-            product.ProductSizes = model.SizeIds.Select(id => new ProductSizes { ProductId = product.Id, SizeId = id }).ToList();
-
-            _productRepository.Update(product);
-            await _unitOfWork.CommitAsync();
-
-            return true;
+            catch (Exception)
+            {
+                _modelState.AddModelError(string.Empty, "Error occurred while updating the product.");
+                return false;
+            }
         }
 
         public async Task<bool> DeleteAsync(int id)
         {
-            var product = await _productRepository.GetByIdWithDetailsAsync(id);
-            if (product == null) return false;
 
-            var fileName = Path.GetFileName(product.ImagePath);
-            _fileService.Delete("assets/images/products", fileName);
+            try
+            {
+                var product = await _productRepository.GetByIdWithDetailsAsync(id);
+                if (product == null) return false;
 
-            _productRepository.Delete(product);
-            await _unitOfWork.CommitAsync();
+                var fileName = Path.GetFileName(product.ImagePath);
+                _fileService.Delete("assets/images/products", fileName);
 
-            return true;
+                _productRepository.Delete(product);
+                await _unitOfWork.CommitAsync();
+
+                return true;
+            }
+            catch (Exception)
+            {
+                _modelState.AddModelError(string.Empty, "Error occurred while deleting the product.");
+                return false;
+            }
         }
     }
 }

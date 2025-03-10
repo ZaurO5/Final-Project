@@ -16,7 +16,6 @@ namespace Presentation.Areas.Admin.Controllers
             _sliderService = sliderService;
         }
 
-        #region Read
         public async Task<IActionResult> Index(int page = 1)
         {
             var model = await _sliderService.GetAllAsync();
@@ -31,69 +30,64 @@ namespace Presentation.Areas.Admin.Controllers
             return View(new SliderIndexVM { Sliders = paginatedSliders });
         }
 
-        #endregion
-
-        #region Create
         [HttpGet]
-        public IActionResult Create()
-        {
-            return View();
-        }
+        public IActionResult Create() => View();
 
         [HttpPost]
         public async Task<IActionResult> Create(SliderCreateVM model)
         {
-            if (!ModelState.IsValid) return View(model);
+            if (!ModelState.IsValid)
+            {
+                TempData["Error"] = "Fix validation errors.";
+                return View(model);
+            }
 
             var result = await _sliderService.CreateAsync(model);
             if (!result)
             {
-                ModelState.AddModelError(string.Empty, "Failed to create slider.");
+                TempData["Error"] = ModelState.IsValid ? "Unknown error." : "Check fields.";
                 return View(model);
             }
 
+            TempData["Success"] = "Slider created!";
             return RedirectToAction(nameof(Index));
         }
 
-        #endregion
-
-        #region Update
         [HttpGet]
         public async Task<IActionResult> Update(int id)
         {
             var model = await _sliderService.UpdateAsync(id);
             if (model == null) return NotFound();
-
             return View(model);
         }
 
         [HttpPost]
         public async Task<IActionResult> Update(int id, SliderUpdateVM model)
         {
-            if (!ModelState.IsValid) return View(model);
+            if (!ModelState.IsValid)
+            {
+                TempData["Error"] = "Fix validation errors.";
+                return View(model);
+            }
 
             var result = await _sliderService.UpdateAsync(id, model);
             if (!result)
             {
-                ModelState.AddModelError(string.Empty, "Failed to update slider.");
+                TempData["Error"] = ModelState.IsValid ? "Slider not found." : "Check fields.";
                 return View(model);
             }
 
+            TempData["Success"] = "Slider updated!";
             return RedirectToAction(nameof(Index));
         }
 
-        #endregion
-
-        #region Delete
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
             var result = await _sliderService.DeleteAsync(id);
-            if (!result) return NotFound();
-
+            if (!result) TempData["Error"] = "Slider not found or error.";
+            else TempData["Success"] = "Slider deleted!";
             return RedirectToAction(nameof(Index));
         }
-
-        #endregion
     }
 }

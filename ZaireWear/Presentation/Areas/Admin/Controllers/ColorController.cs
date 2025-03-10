@@ -22,16 +22,24 @@ namespace Presentation.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Index(int page = 1)
         {
-            var model = await _colorService.GetAllAsync();
-            var paginatedColors = model.Colors
-                .Skip((page - 1) * PageSize)
-                .Take(PageSize)
-                .ToList();
+            try
+            {
+                var model = await _colorService.GetAllAsync();
+                var paginatedColors = model.Colors
+                    .Skip((page - 1) * PageSize)
+                    .Take(PageSize)
+                    .ToList();
 
-            ViewBag.CurrentPage = page;
-            ViewBag.TotalPages = (int)Math.Ceiling(model.Colors.Count / (double)PageSize);
+                ViewBag.CurrentPage = page;
+                ViewBag.TotalPages = (int)Math.Ceiling(model.Colors.Count / (double)PageSize);
 
-            return View(new ColorIndexVM { Colors = paginatedColors });
+                return View(new ColorIndexVM { Colors = paginatedColors });
+            }
+            catch
+            {
+                TempData["Error"] = "Error loading colors";
+                return RedirectToAction("Index", "Home");
+            }
         }
 
         #endregion
@@ -47,9 +55,20 @@ namespace Presentation.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(ColorCreateVM model)
         {
-            var isSucceeded = await _colorService.CreateAsync(model);
-            if (isSucceeded) return RedirectToAction(nameof(Index));
+            if (!ModelState.IsValid)
+            {
+                TempData["Error"] = "Please correct the errors";
+                return View(model);
+            }
 
+            var result = await _colorService.CreateAsync(model);
+            if (result)
+            {
+                TempData["Success"] = "Color created successfully!";
+                return RedirectToAction(nameof(Index));
+            }
+
+            TempData["Error"] = "Error creating color";
             return View(model);
         }
 
@@ -61,15 +80,31 @@ namespace Presentation.Areas.Admin.Controllers
         public async Task<IActionResult> Update(int id)
         {
             var model = await _colorService.UpdateAsync(id);
+            if (model == null)
+            {
+                TempData["Error"] = "Color not found";
+                return RedirectToAction(nameof(Index));
+            }
             return View(model);
         }
 
         [HttpPost]
         public async Task<IActionResult> Update(int id, ColorUpdateVM model)
         {
-            var isSucceeded = await _colorService.UpdateAsync(id, model);
-            if (isSucceeded) return RedirectToAction(nameof(Index));
+            if (!ModelState.IsValid)
+            {
+                TempData["Error"] = "Please correct the errors";
+                return View(model);
+            }
 
+            var result = await _colorService.UpdateAsync(id, model);
+            if (result)
+            {
+                TempData["Success"] = "Color updated successfully!";
+                return RedirectToAction(nameof(Index));
+            }
+
+            TempData["Error"] = "Error updating color";
             return View(model);
         }
 
@@ -80,10 +115,16 @@ namespace Presentation.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
-            var isSucceeded = await _colorService.DeleteAsync(id);
-            if (isSucceeded) return RedirectToAction(nameof(Index));
-
-            return NotFound();
+            var result = await _colorService.DeleteAsync(id);
+            if (result)
+            {
+                TempData["Success"] = "Color deleted successfully!";
+            }
+            else
+            {
+                TempData["Error"] = "Error deleting color";
+            }
+            return RedirectToAction(nameof(Index));
         }
 
         #endregion

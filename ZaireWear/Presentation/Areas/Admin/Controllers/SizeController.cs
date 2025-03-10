@@ -22,22 +22,29 @@ namespace Presentation.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Index(int page = 1)
         {
-            var model = await _sizeService.GetAllAsync();
-            var paginatedSizes = model.Sizes
-                .Skip((page - 1) * PageSize)
-                .Take(PageSize)
-                .ToList();
+            try
+            {
+                var model = await _sizeService.GetAllAsync();
+                var paginatedSizes = model.Sizes
+                    .Skip((page - 1) * PageSize)
+                    .Take(PageSize)
+                    .ToList();
 
-            ViewBag.CurrentPage = page;
-            ViewBag.TotalPages = (int)Math.Ceiling(model.Sizes.Count / (double)PageSize);
+                ViewBag.CurrentPage = page;
+                ViewBag.TotalPages = (int)Math.Ceiling(model.Sizes.Count / (double)PageSize);
 
-            return View(new SizeIndexVM { Sizes = paginatedSizes });
+                return View(new SizeIndexVM { Sizes = paginatedSizes });
+            }
+            catch
+            {
+                TempData["Error"] = "Error loading sizes";
+                return RedirectToAction("Index", "Home");
+            }
         }
 
         #endregion
 
         #region Create
-
         [HttpGet]
         public IActionResult Create()
         {
@@ -47,9 +54,20 @@ namespace Presentation.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(SizeCreateVM model)
         {
-            var isSucceeded = await _sizeService.CreateAsync(model);
-            if (isSucceeded) return RedirectToAction(nameof(Index));
+            if (!ModelState.IsValid)
+            {
+                TempData["Error"] = "Please correct the errors";
+                return View(model);
+            }
 
+            var result = await _sizeService.CreateAsync(model);
+            if (result)
+            {
+                TempData["Success"] = "Size created successfully!";
+                return RedirectToAction(nameof(Index));
+            }
+
+            TempData["Error"] = "Error creating size";
             return View(model);
         }
 
@@ -61,15 +79,31 @@ namespace Presentation.Areas.Admin.Controllers
         public async Task<IActionResult> Update(int id)
         {
             var model = await _sizeService.UpdateAsync(id);
+            if (model == null)
+            {
+                TempData["Error"] = "Size not found";
+                return RedirectToAction(nameof(Index));
+            }
             return View(model);
         }
 
         [HttpPost]
         public async Task<IActionResult> Update(int id, SizeUpdateVM model)
         {
-            var isSucceeded = await _sizeService.UpdateAsync(id, model);
-            if (isSucceeded) return RedirectToAction(nameof(Index));
+            if (!ModelState.IsValid)
+            {
+                TempData["Error"] = "Please correct the errors";
+                return View(model);
+            }
 
+            var result = await _sizeService.UpdateAsync(id, model);
+            if (result)
+            {
+                TempData["Success"] = "Size updated successfully!";
+                return RedirectToAction(nameof(Index));
+            }
+
+            TempData["Error"] = "Error updating size";
             return View(model);
         }
 
@@ -80,10 +114,16 @@ namespace Presentation.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
-            var isSucceeded = await _sizeService.DeleteAsync(id);
-            if (isSucceeded) return RedirectToAction(nameof(Index));
-
-            return NotFound();
+            var result = await _sizeService.DeleteAsync(id);
+            if (result)
+            {
+                TempData["Success"] = "Size deleted successfully!";
+            }
+            else
+            {
+                TempData["Error"] = "Error deleting size";
+            }
+            return RedirectToAction(nameof(Index));
         }
 
         #endregion

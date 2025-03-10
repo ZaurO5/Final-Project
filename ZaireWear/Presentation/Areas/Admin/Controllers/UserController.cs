@@ -18,7 +18,7 @@ namespace Presentation.Areas.Admin.Controllers
         {
             _userManager = userManager;
         }
-
+        #region Read
         public async Task<IActionResult> Index(int page = 1)
         {
             var query = _userManager.Users
@@ -42,5 +42,6 @@ namespace Presentation.Areas.Admin.Controllers
 
             return View(users);
         }
+        #endregion
     }
 }

@@ -22,16 +22,24 @@ namespace Presentation.Areas.Admin.Controllers
         [HttpGet]
         public async Task<IActionResult> Index(int page = 1)
         {
-            var model = await _categoryService.GetAllAsync();
-            var paginatedCategories = model.Categories
-                .Skip((page - 1) * PageSize)
-                .Take(PageSize)
-                .ToList();
+            try
+            {
+                var model = await _categoryService.GetAllAsync();
+                var paginatedCategories = model.Categories
+                    .Skip((page - 1) * PageSize)
+                    .Take(PageSize)
+                    .ToList();
 
-            ViewBag.CurrentPage = page;
-            ViewBag.TotalPages = (int)Math.Ceiling(model.Categories.Count / (double)PageSize);
+                ViewBag.CurrentPage = page;
+                ViewBag.TotalPages = (int)Math.Ceiling(model.Categories.Count / (double)PageSize);
 
-            return View(new CategoryIndexVM { Categories = paginatedCategories });
+                return View(new CategoryIndexVM { Categories = paginatedCategories });
+            }
+            catch
+            {
+                TempData["Error"] = "Error loading categories";
+                return RedirectToAction("Index", "Home");
+            }
         }
 
         #endregion
@@ -47,8 +55,23 @@ namespace Presentation.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CategoryCreateVM model)
         {
-            var isSucceeded = await _categoryService.CreateAsync(model);
-            if (isSucceeded) return RedirectToAction(nameof(Index));
+            if (!ModelState.IsValid)
+            {
+                TempData["Error"] = "Please correct the errors";
+                return View(model);
+            }
+
+            var result = await _categoryService.CreateAsync(model);
+            if (result)
+            {
+                TempData["Success"] = "Category created successfully!";
+                return RedirectToAction(nameof(Index));
+            }
+
+            // Добавляем ошибки из ModelState в TempData
+            var errors = ModelState.Values.SelectMany(v => v.Errors)
+                                         .Select(e => e.ErrorMessage);
+            TempData["Error"] = string.Join("; ", errors);
 
             return View(model);
         }
@@ -67,9 +90,20 @@ namespace Presentation.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Update(int id, CategoryUpdateVM model)
         {
-            var isSucceeded = await _categoryService.UpdateAsync(id, model);
-            if (isSucceeded) return RedirectToAction(nameof(Index));
+            if (!ModelState.IsValid)
+            {
+                TempData["Error"] = "Please correct the errors";
+                return View(model);
+            }
 
+            var result = await _categoryService.UpdateAsync(id, model);
+            if (result)
+            {
+                TempData["Success"] = "Category updated successfully!";
+                return RedirectToAction(nameof(Index));
+            }
+
+            TempData["Error"] = "Error updating category";
             return View(model);
         }
 
@@ -80,10 +114,16 @@ namespace Presentation.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Delete(int id)
         {
-            var isSucceeded = await _categoryService.DeleteAsync(id);
-            if (isSucceeded) return RedirectToAction(nameof(Index));
-
-            return NotFound();
+            var result = await _categoryService.DeleteAsync(id);
+            if (result)
+            {
+                TempData["Success"] = "Category deleted successfully!";
+            }
+            else
+            {
+                TempData["Error"] = "Error deleting category";
+            }
+            return RedirectToAction(nameof(Index));
         }
 
         #endregion

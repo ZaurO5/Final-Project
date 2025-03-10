@@ -1,13 +1,41 @@
 ﻿@using Business.ViewModels.Size
 @model SizeUpdateVM
 
+@if (TempData["Error"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        @TempData["Error"]
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+}
+
 <form method="post" asp-action="Update" asp-controller="Size">
-	<div class="form-group">
-		<label asp-for="Name" class="form-label"></label>
-		<input asp-for="Name" class="form-control" placeholder="Enter name" />
-		<span asp-validation-for="Name" class="text-danger"></span>
-	</div>
-	<br />
-	<button type="submit" class="btn btn-primary">Update</button>
-	<a class="btn btn-danger" asp-action="Index" asp-controller="Size">Back</a>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Update Size</h6>
+        </div>
+        <div class="card-body">
+            <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="Name" class="font-weight-bold">Size Name</label>
+                <input asp-for="Name" class="form-control" placeholder="Enter size name" />
+                <span asp-validation-for="Name" class="text-danger small"></span>
+            </div>
+
+            <div class="form-group text-right">
+                <button type="submit" class="btn btn-success btn-icon-split">
+                    <span class="icon text-white-50">
+                        <i class="fas fa-check"></i>
+                    </span>
+                    <span class="text">Update</span>
+                </button>
+                <a class="btn btn-secondary" asp-action="Index" asp-controller="Size">
+                    <i class="fas fa-arrow-left mr-2"></i>Back to List
+                </a>
+            </div>
+        </div>
+    </div>
 </form>

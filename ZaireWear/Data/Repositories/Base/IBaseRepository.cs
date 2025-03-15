@@ -12,8 +12,6 @@ public interface IBaseRepository<T> where T : BaseEntity
 {
 	Task<List<T>> GetAllAsync();
 	Task<T> GetByIdAsync(int id);
-	//Task<T> Get(Expression<Func<T>>)
-	//GetPaginatedData(int size, int page)
 	Task CreateAsync(T data);
 	void Update(T data);
 	void Delete(T data);

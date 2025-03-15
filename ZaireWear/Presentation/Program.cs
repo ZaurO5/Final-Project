@@ -15,6 +15,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Routing;
 using Microsoft.EntityFrameworkCore;
+using Stripe;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -25,7 +26,7 @@ builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(
     builder.Configuration.GetConnectionString("Default"),
     x => x.MigrationsAssembly("Data")));
 builder.Services.AddSingleton(builder.Environment);
-builder.Services.AddScoped<IFileService, FileService>();
+builder.Services.AddSingleton<IFileService, Business.Utilities.File.FileService>();
 
 builder.Services.AddIdentity<User, IdentityRole>(options =>
 {
@@ -61,6 +62,10 @@ builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 builder.Services.AddScoped<ISizeRepository, SizeRepository>();
 builder.Services.AddScoped<IColorRepository, ColorRepository>();
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+builder.Services.AddScoped<IOrderRepository, OrderRepository>();
+builder.Services.AddScoped<IOrderProductRepository, OrderProductRepository>();
+builder.Services.AddScoped<IBasketProductRepository, BasketProductRepository>();
+builder.Services.AddScoped<IBasketRepository, BasketRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 #endregion
@@ -70,8 +75,10 @@ builder.Services.AddScoped<ISliderService, SliderService>();
 builder.Services.AddScoped<ICategoryService, CategoryService>();
 builder.Services.AddScoped<ISizeService, SizeService>();
 builder.Services.AddScoped<IColorService, ColorService>();
-builder.Services.AddScoped<IProductService, ProductService>();
-builder.Services.AddScoped<IAccountService, AccountService>();
+builder.Services.AddScoped<IProductService, Business.Services.Concrete.ProductService>();
+builder.Services.AddScoped<IAccountService, Business.Services.Concrete.AccountService>();
+builder.Services.AddScoped<IPaymentService, PaymentService>();
+builder.Services.AddScoped<IBasketService, BasketService>();
 builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
 builder.Services.AddSingleton<IUrlHelperFactory, UrlHelperFactory>();
 builder.Services.AddHttpContextAccessor();
@@ -107,7 +114,7 @@ app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
-//StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe")["SecretKey"];
+StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe")["SecretKey"];
 
 app.Run();
 

@@ -1,7 +1,244 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\wwwroot\\assets\\js\\basket.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\wwwroot\\assets\\js\\basket.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\data\\repositories\\abstract\\ibasketproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|solutionrelative:data\\repositories\\abstract\\ibasketproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\data\\repositories\\concrete\\basketproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|solutionrelative:data\\repositories\\concrete\\basketproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\data\\repositories\\concrete\\basketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|solutionrelative:data\\repositories\\concrete\\basketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\services\\concrete\\basketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\services\\concrete\\basketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\views\\basket\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\basket\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\views\\catalog\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\catalog\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\data\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|solutionrelative:data\\migrations\\appdbcontextmodelsnapshot.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\data\\repositories\\abstract\\ibasketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|solutionrelative:data\\repositories\\abstract\\ibasketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\data\\migrations\\20250311220507_basketupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|solutionrelative:data\\migrations\\20250311220507_basketupdate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\data\\migrations\\20250302221139_basketandbasketproductsadded.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|solutionrelative:data\\migrations\\20250302221139_basketandbasketproductsadded.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\controllers\\basketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\basketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\services\\abstract\\ibasketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\services\\abstract\\ibasketservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\viewmodels\\basket\\basketupdatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\viewmodels\\basket\\basketupdatevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\viewmodels\\basket\\basketpagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\viewmodels\\basket\\basketpagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\viewmodels\\basket\\basketindexvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\viewmodels\\basket\\basketindexvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\services\\concrete\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\services\\concrete\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\data\\contexts\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|solutionrelative:data\\contexts\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\views\\basket\\wishlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\basket\\wishlist.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\data\\repositories\\concrete\\colorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|solutionrelative:data\\repositories\\concrete\\colorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\services\\concrete\\colorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\services\\concrete\\colorservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\wwwroot\\assets\\js\\quantity.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\wwwroot\\assets\\js\\quantity.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\wwwroot\\assets\\js\\dropdown.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\wwwroot\\assets\\js\\dropdown.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\wwwroot\\assets\\js\\colorandsizeselect.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\wwwroot\\assets\\js\\colorandsizeselect.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\common\\entities\\size.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|solutionrelative:common\\entities\\size.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\common\\entities\\productsizes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|solutionrelative:common\\entities\\productsizes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\common\\entities\\color.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|solutionrelative:common\\entities\\color.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\common\\entities\\productcolors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|solutionrelative:common\\entities\\productcolors.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\common\\entities\\productcategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|solutionrelative:common\\entities\\productcategories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\common\\entities\\orderproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|solutionrelative:common\\entities\\orderproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\common\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|solutionrelative:common\\entities\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\common\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|solutionrelative:common\\entities\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\common\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|solutionrelative:common\\entities\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\common\\entities\\basketproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|solutionrelative:common\\entities\\basketproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\common\\entities\\basket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|solutionrelative:common\\entities\\basket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\viewmodels\\request\\addproductrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\viewmodels\\request\\addproductrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\paymentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\services\\abstract\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\services\\abstract\\iaccountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\common\\entities\\favoriteproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|solutionrelative:common\\entities\\favoriteproduct.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\common\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D34970B7-EEE3-47B1-8949-B5C8AFD58474}|Common\\Core.csproj|solutionrelative:common\\entities\\baseentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\data\\repositories\\concrete\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|solutionrelative:data\\repositories\\concrete\\productrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\data\\repositories\\concrete\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|solutionrelative:data\\repositories\\concrete\\orderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\data\\repositories\\concrete\\orderproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|solutionrelative:data\\repositories\\concrete\\orderproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\data\\repositories\\abstract\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|solutionrelative:data\\repositories\\abstract\\iorderrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\data\\repositories\\abstract\\iorderproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|solutionrelative:data\\repositories\\abstract\\iorderproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\services\\abstract\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\services\\abstract\\iproductservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\services\\abstract\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\services\\abstract\\ipaymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\views\\payment\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\payment\\success.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\views\\payment\\cancel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\views\\payment\\cancel.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\utilities\\stripe\\stripesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\utilities\\stripe\\stripesettings.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\services\\concrete\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\services\\concrete\\paymentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\data\\repositories\\concrete\\sizerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|solutionrelative:data\\repositories\\concrete\\sizerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\data\\repositories\\abstract\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{42C2221D-B15D-4511-938D-C67876B4E186}|Data\\Data.csproj|solutionrelative:data\\repositories\\abstract\\iproductrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\business\\services\\concrete\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{164254F9-D0E7-45B6-A54C-131E716F54C7}|Business\\Business.csproj|solutionrelative:business\\services\\concrete\\productservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\wwwroot\\assets\\js\\slideshow.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\wwwroot\\assets\\js\\slideshow.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear\\presentation\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B9E6A1AB-878F-4119-9B81-6AEA98225291}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\checkoutcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +246,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,6 +263,756 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "basket.js",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\js\\basket.js",
+              "RelativeDocumentMoniker": "Presentation\\wwwroot\\assets\\js\\basket.js",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\js\\basket.js",
+              "RelativeToolTip": "Presentation\\wwwroot\\assets\\js\\basket.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-12T18:06:29.785Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "IBasketProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Abstract\\IBasketProductRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\Abstract\\IBasketProductRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Abstract\\IBasketProductRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\Abstract\\IBasketProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T20:44:42.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "BasketProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Concrete\\BasketProductRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\Concrete\\BasketProductRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Concrete\\BasketProductRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\Concrete\\BasketProductRepository.cs",
+              "ViewState": "AgIAACAAAAAAAAAAAAAIwD4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T20:45:30.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BasketRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Concrete\\BasketRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\Concrete\\BasketRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Concrete\\BasketRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\Concrete\\BasketRepository.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAwB4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T20:45:40.777Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BasketService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Services\\Concrete\\BasketService.cs",
+              "RelativeDocumentMoniker": "Business\\Services\\Concrete\\BasketService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Services\\Concrete\\BasketService.cs",
+              "RelativeToolTip": "Business\\Services\\Concrete\\BasketService.cs",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAUwHMAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T18:05:40.155Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Views\\Basket\\Index.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Basket\\Index.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Views\\Basket\\Index.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Basket\\Index.cshtml",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-12T18:08:14.525Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Views\\Catalog\\Details.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Catalog\\Details.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Views\\Catalog\\Details.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Catalog\\Details.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-12T18:07:24.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AppDbContextModelSnapshot.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeDocumentMoniker": "Data\\Migrations\\AppDbContextModelSnapshot.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Migrations\\AppDbContextModelSnapshot.cs",
+              "RelativeToolTip": "Data\\Migrations\\AppDbContextModelSnapshot.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T00:58:56.728Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "IBasketRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Abstract\\IBasketRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\Abstract\\IBasketRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Abstract\\IBasketRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\Abstract\\IBasketRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA4AAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T21:27:53.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "20250311220507_BasketUpdate.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Migrations\\20250311220507_BasketUpdate.cs",
+              "RelativeDocumentMoniker": "Data\\Migrations\\20250311220507_BasketUpdate.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Migrations\\20250311220507_BasketUpdate.cs",
+              "RelativeToolTip": "Data\\Migrations\\20250311220507_BasketUpdate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T00:18:19.542Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "20250302221139_BasketAndBasketProductsAdded.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Migrations\\20250302221139_BasketAndBasketProductsAdded.cs",
+              "RelativeDocumentMoniker": "Data\\Migrations\\20250302221139_BasketAndBasketProductsAdded.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Migrations\\20250302221139_BasketAndBasketProductsAdded.cs",
+              "RelativeToolTip": "Data\\Migrations\\20250302221139_BasketAndBasketProductsAdded.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-15T00:18:22.691Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "BasketController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Controllers\\BasketController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\BasketController.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Controllers\\BasketController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\BasketController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T18:02:49.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "IBasketService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Services\\Abstract\\IBasketService.cs",
+              "RelativeDocumentMoniker": "Business\\Services\\Abstract\\IBasketService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Services\\Abstract\\IBasketService.cs",
+              "RelativeToolTip": "Business\\Services\\Abstract\\IBasketService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T18:05:33.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "BasketUpdateVM.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\ViewModels\\Basket\\BasketUpdateVM.cs",
+              "RelativeDocumentMoniker": "Business\\ViewModels\\Basket\\BasketUpdateVM.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\ViewModels\\Basket\\BasketUpdateVM.cs",
+              "RelativeToolTip": "Business\\ViewModels\\Basket\\BasketUpdateVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T18:06:12.772Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "BasketPageVM.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\ViewModels\\Basket\\BasketPageVM.cs",
+              "RelativeDocumentMoniker": "Business\\ViewModels\\Basket\\BasketPageVM.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\ViewModels\\Basket\\BasketPageVM.cs",
+              "RelativeToolTip": "Business\\ViewModels\\Basket\\BasketPageVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T18:06:06.733Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "BasketIndexVM.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\ViewModels\\Basket\\BasketIndexVM.cs",
+              "RelativeDocumentMoniker": "Business\\ViewModels\\Basket\\BasketIndexVM.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\ViewModels\\Basket\\BasketIndexVM.cs",
+              "RelativeToolTip": "Business\\ViewModels\\Basket\\BasketIndexVM.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T18:06:00.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Services\\Concrete\\AccountService.cs",
+              "RelativeDocumentMoniker": "Business\\Services\\Concrete\\AccountService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Services\\Concrete\\AccountService.cs",
+              "RelativeToolTip": "Business\\Services\\Concrete\\AccountService.cs",
+              "ViewState": "AgIAAHsAAAAAAAAAAAArwJEAAAA2AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T22:36:39.334Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAADgvzYAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-12T18:14:58.152Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Contexts\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\Contexts\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Contexts\\AppDbContext.cs",
+              "RelativeToolTip": "Data\\Contexts\\AppDbContext.cs",
+              "ViewState": "AgIAAE4AAAAAAAAAAAAuwGMAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T23:46:55.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Wishlist.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Views\\Basket\\Wishlist.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Basket\\Wishlist.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Views\\Basket\\Wishlist.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Basket\\Wishlist.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-12T20:47:10.508Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "Presentation\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Program.cs",
+              "RelativeToolTip": "Presentation\\Program.cs",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAAAHUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T23:37:24.331Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "ColorRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Concrete\\ColorRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\Concrete\\ColorRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Concrete\\ColorRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\Concrete\\ColorRepository.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAnwBYAAAAOAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T22:34:48.162Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "colorandsizeselect.js",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\js\\colorandsizeselect.js",
+              "RelativeDocumentMoniker": "Presentation\\wwwroot\\assets\\js\\colorandsizeselect.js",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\js\\colorandsizeselect.js",
+              "RelativeToolTip": "Presentation\\wwwroot\\assets\\js\\colorandsizeselect.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-12T18:06:59.425Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "quantity.js",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\js\\quantity.js",
+              "RelativeDocumentMoniker": "Presentation\\wwwroot\\assets\\js\\quantity.js",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\js\\quantity.js",
+              "RelativeToolTip": "Presentation\\wwwroot\\assets\\js\\quantity.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-12T18:07:05.963Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "ColorService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Services\\Concrete\\ColorService.cs",
+              "RelativeDocumentMoniker": "Business\\Services\\Concrete\\ColorService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Services\\Concrete\\ColorService.cs",
+              "RelativeToolTip": "Business\\Services\\Concrete\\ColorService.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAlwBwAAABJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T22:37:42.174Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "dropdown.js",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\js\\dropdown.js",
+              "RelativeDocumentMoniker": "Presentation\\wwwroot\\assets\\js\\dropdown.js",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\js\\dropdown.js",
+              "RelativeToolTip": "Presentation\\wwwroot\\assets\\js\\dropdown.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-14T22:58:24.655Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "Size.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\Size.cs",
+              "RelativeDocumentMoniker": "Common\\Entities\\Size.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\Size.cs",
+              "RelativeToolTip": "Common\\Entities\\Size.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T22:00:09.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "ProductSizes.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\ProductSizes.cs",
+              "RelativeDocumentMoniker": "Common\\Entities\\ProductSizes.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\ProductSizes.cs",
+              "RelativeToolTip": "Common\\Entities\\ProductSizes.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T21:59:55.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "ProductColors.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\ProductColors.cs",
+              "RelativeDocumentMoniker": "Common\\Entities\\ProductColors.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\ProductColors.cs",
+              "RelativeToolTip": "Common\\Entities\\ProductColors.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T21:59:49.716Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "Color.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\Color.cs",
+              "RelativeDocumentMoniker": "Common\\Entities\\Color.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\Color.cs",
+              "RelativeToolTip": "Common\\Entities\\Color.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T19:54:27.333Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "OrderProduct.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\OrderProduct.cs",
+              "RelativeDocumentMoniker": "Common\\Entities\\OrderProduct.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\OrderProduct.cs",
+              "RelativeToolTip": "Common\\Entities\\OrderProduct.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T19:54:39.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "ProductCategories.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\ProductCategories.cs",
+              "RelativeDocumentMoniker": "Common\\Entities\\ProductCategories.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\ProductCategories.cs",
+              "RelativeToolTip": "Common\\Entities\\ProductCategories.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T19:54:49.697Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\Order.cs",
+              "RelativeDocumentMoniker": "Common\\Entities\\Order.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\Order.cs",
+              "RelativeToolTip": "Common\\Entities\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T19:54:32.95Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "Category.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\Category.cs",
+              "RelativeDocumentMoniker": "Common\\Entities\\Category.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\Category.cs",
+              "RelativeToolTip": "Common\\Entities\\Category.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T19:54:23.931Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "Product.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\Product.cs",
+              "RelativeDocumentMoniker": "Common\\Entities\\Product.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\Product.cs",
+              "RelativeToolTip": "Common\\Entities\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T19:54:45.695Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "BasketProduct.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\BasketProduct.cs",
+              "RelativeDocumentMoniker": "Common\\Entities\\BasketProduct.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\BasketProduct.cs",
+              "RelativeToolTip": "Common\\Entities\\BasketProduct.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T19:54:18.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "Basket.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\Basket.cs",
+              "RelativeDocumentMoniker": "Common\\Entities\\Basket.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\Basket.cs",
+              "RelativeToolTip": "Common\\Entities\\Basket.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T19:54:13.342Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "AddProductRequest.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\ViewModels\\Request\\AddProductRequest.cs",
+              "RelativeDocumentMoniker": "Business\\ViewModels\\Request\\AddProductRequest.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\ViewModels\\Request\\AddProductRequest.cs",
+              "RelativeToolTip": "Business\\ViewModels\\Request\\AddProductRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T18:24:27.841Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "IAccountService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Services\\Abstract\\IAccountService.cs",
+              "RelativeDocumentMoniker": "Business\\Services\\Abstract\\IAccountService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Services\\Abstract\\IAccountService.cs",
+              "RelativeToolTip": "Business\\Services\\Abstract\\IAccountService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T23:07:28.295Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "PaymentController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Controllers\\PaymentController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\PaymentController.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Controllers\\PaymentController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\PaymentController.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwDIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T20:33:30.116Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "FavoriteProduct.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\FavoriteProduct.cs",
+              "RelativeDocumentMoniker": "Common\\Entities\\FavoriteProduct.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\FavoriteProduct.cs",
+              "RelativeToolTip": "Common\\Entities\\FavoriteProduct.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T19:54:30.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "BaseEntity.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\BaseEntity.cs",
+              "RelativeDocumentMoniker": "Common\\Entities\\BaseEntity.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Common\\Entities\\BaseEntity.cs",
+              "RelativeToolTip": "Common\\Entities\\BaseEntity.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-14T19:54:08.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "ProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Concrete\\ProductRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\Concrete\\ProductRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Concrete\\ProductRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\Concrete\\ProductRepository.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAYwDAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T21:50:20.278Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "OrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Concrete\\OrderRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\Concrete\\OrderRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Concrete\\OrderRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\Concrete\\OrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T21:28:42.751Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "OrderProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Concrete\\OrderProductRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\Concrete\\OrderProductRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Concrete\\OrderProductRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\Concrete\\OrderProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T21:28:40.099Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "IOrderRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Abstract\\IOrderRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\Abstract\\IOrderRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Abstract\\IOrderRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\Abstract\\IOrderRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T21:28:13.233Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "IOrderProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Abstract\\IOrderProductRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\Abstract\\IOrderProductRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Abstract\\IOrderProductRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\Abstract\\IOrderProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T20:45:08.664Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "IProductService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Services\\Abstract\\IProductService.cs",
+              "RelativeDocumentMoniker": "Business\\Services\\Abstract\\IProductService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Services\\Abstract\\IProductService.cs",
+              "RelativeToolTip": "Business\\Services\\Abstract\\IProductService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T23:07:35.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "IPaymentService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Services\\Abstract\\IPaymentService.cs",
+              "RelativeDocumentMoniker": "Business\\Services\\Abstract\\IPaymentService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Services\\Abstract\\IPaymentService.cs",
+              "RelativeToolTip": "Business\\Services\\Abstract\\IPaymentService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T22:14:40.659Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "Success.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Views\\Payment\\Success.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Payment\\Success.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Views\\Payment\\Success.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Payment\\Success.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-12T21:52:20.171Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Cancel.cshtml",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Views\\Payment\\Cancel.cshtml",
+              "RelativeDocumentMoniker": "Presentation\\Views\\Payment\\Cancel.cshtml",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Views\\Payment\\Cancel.cshtml",
+              "RelativeToolTip": "Presentation\\Views\\Payment\\Cancel.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-12T21:52:05.521Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "StripeSettings.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Utilities\\Stripe\\StripeSettings.cs",
+              "RelativeDocumentMoniker": "Business\\Utilities\\Stripe\\StripeSettings.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Utilities\\Stripe\\StripeSettings.cs",
+              "RelativeToolTip": "Business\\Utilities\\Stripe\\StripeSettings.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T22:15:20.471Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "PaymentService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Services\\Concrete\\PaymentService.cs",
+              "RelativeDocumentMoniker": "Business\\Services\\Concrete\\PaymentService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Services\\Concrete\\PaymentService.cs",
+              "RelativeToolTip": "Business\\Services\\Concrete\\PaymentService.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAiwMQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T21:48:51.416Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "SizeRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Concrete\\SizeRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\Concrete\\SizeRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Concrete\\SizeRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\Concrete\\SizeRepository.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAADgvxYAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T21:59:17.381Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "IProductRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Abstract\\IProductRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\Abstract\\IProductRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Data\\Repositories\\Abstract\\IProductRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\Abstract\\IProductRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T21:50:09.738Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 55,
+              "Title": "ProductService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Services\\Concrete\\ProductService.cs",
+              "RelativeDocumentMoniker": "Business\\Services\\Concrete\\ProductService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Services\\Concrete\\ProductService.cs",
+              "RelativeToolTip": "Business\\Services\\Concrete\\ProductService.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAAYwD0AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T21:36:26.061Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 56,
+              "Title": "slideshow.js",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\js\\slideshow.js",
+              "RelativeDocumentMoniker": "Presentation\\wwwroot\\assets\\js\\slideshow.js",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\js\\slideshow.js",
+              "RelativeToolTip": "Presentation\\wwwroot\\assets\\js\\slideshow.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2025-03-12T18:11:41.62Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 57,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\appsettings.json",
+              "RelativeDocumentMoniker": "Presentation\\appsettings.json",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\appsettings.json",
+              "RelativeToolTip": "Presentation\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-03-12T20:34:30.573Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 58,
+              "Title": "CheckoutController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Controllers\\CheckoutController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\CheckoutController.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Controllers\\CheckoutController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\CheckoutController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-12T20:33:51.837Z"
             }
           ]
         },

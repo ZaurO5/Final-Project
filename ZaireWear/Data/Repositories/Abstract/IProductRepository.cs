@@ -6,12 +6,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Data.Repositories.Abstract
+namespace Data.Repositories.Abstract;
+
+public interface IProductRepository : IBaseRepository<Product>
 {
-    public interface IProductRepository : IBaseRepository<Product>
-    {
-        Task<List<Product>> GetAllWithDetailsAsync();
-        Task<Product> GetByIdWithDetailsAsync(int id);
-        Task AddAsync(Product product);
-    }
+    Task<List<Product>> GetAllWithDetailsAsync();
+    Task<Product> GetByIdWithDetailsAsync(int id);
+    Task AddAsync(Product product);
+    Task<Product> GetByIdAsync(int id);
 }

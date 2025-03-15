@@ -27,6 +27,9 @@ namespace Data.Contexts
         public DbSet<Basket> Baskets { get; set; }
         public DbSet<BasketProduct> BasketProducts { get; set; }
         public DbSet<FavoriteProduct> FavoriteProducts { get; set; }
+        public DbSet<Order> Orders { get; set; }
+        public DbSet<OrderProduct> OrderProducts { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
@@ -78,15 +81,23 @@ namespace Data.Contexts
                 .WithMany(b => b.BasketProducts)
                 .HasForeignKey(bp => bp.BasketId);
 
-            modelBuilder.Entity<BasketProduct>()
-                .HasOne(bp => bp.Product)
-                .WithMany(p => p.BasketProducts)
-                .HasForeignKey(bp => bp.ProductId);
+            modelBuilder.Entity<Basket>(b =>
+            {
+                b.HasOne(b => b.User)
+                 .WithOne(u => u.Basket)
+                 .HasForeignKey<Basket>(b => b.UserId);
 
-            modelBuilder.Entity<Basket>()
-                .HasOne(b => b.User)
-                .WithOne(u => u.Basket)
-                .HasForeignKey<Basket>(b => b.UserId);
+                b.HasMany(b => b.BasketProducts)
+                 .WithOne(bp => bp.Basket)
+                 .HasForeignKey(bp => bp.BasketId);
+            });
+
+            modelBuilder.Entity<BasketProduct>(bp =>
+            {
+                bp.HasOne(bp => bp.Product)
+                  .WithMany(p => p.BasketProducts)
+                  .HasForeignKey(bp => bp.ProductId);
+            });
 
             modelBuilder.Entity<FavoriteProduct>()
             .HasKey(fp => new { fp.UserId, fp.ProductId });
@@ -100,6 +111,19 @@ namespace Data.Contexts
                 .HasOne(fp => fp.Product)
                 .WithMany(p => p.FavoriteProducts)
                 .HasForeignKey(fp => fp.ProductId);
+
+            modelBuilder.Entity<OrderProduct>()
+            .HasKey(op => new { op.OrderId, op.ProductId });
+
+            modelBuilder.Entity<OrderProduct>()
+                .HasOne(op => op.Order)
+                .WithMany(o => o.OrderProducts)
+                .HasForeignKey(op => op.OrderId);
+
+            modelBuilder.Entity<OrderProduct>()
+                .HasOne(op => op.Product)
+                .WithMany()
+                .HasForeignKey(op => op.ProductId);
         }
     }
 }

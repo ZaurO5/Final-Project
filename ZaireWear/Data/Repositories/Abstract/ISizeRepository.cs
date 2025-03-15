@@ -6,11 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Data.Repositories.Abstract
+namespace Data.Repositories.Abstract;
+
+public interface ISizeRepository : IBaseRepository<Size>
 {
-    public interface ISizeRepository : IBaseRepository<Size>
-    {
-        Task<Size> GetByNameAsync(string name);
-        Task<Size> GetByIdAsync(int id);
-    }
+    Task<Size> GetByNameAsync(string name);
+    Task<Size> GetByIdAsync(int id);
 }

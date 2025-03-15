@@ -43,5 +43,12 @@ namespace Data.Repositories.Concrete
             await _context.Products.AddAsync(product);
             await _context.SaveChangesAsync();
         }
+
+        public async Task<Product> GetByIdAsync(int id)
+        {
+            return await _context.Products
+                .Include(p => p.BasketProducts)
+                .FirstOrDefaultAsync(p => p.Id == id);
+        }
     }
 }

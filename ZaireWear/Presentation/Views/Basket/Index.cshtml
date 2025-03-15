@@ -1,0 +1,49 @@
+﻿@using Business.ViewModels.Basket
+@model BasketIndexVM
+
+<!-- Shopping Bag -->
+<div class="basket-container">
+    <div class="basket-items">
+        @foreach (var item in Model.BasketProducts)
+        {
+            <div class="basket-wrapper" data-id="@item.Id">
+                <div class="basket-item-image">
+                    <img src="@item.Product.ImagePath" alt="@item.Product.Title">
+                </div>
+                <div class="basket-item-info">
+                    <div class="basket-item-title">@item.Product.Title</div>
+                    <div class="basket-item-price">@((item.Product.Price * item.Count).ToString("C"))</div>
+                    <div class="basket-item-category">
+                        Category: @item.Product.ProductCategories?.FirstOrDefault()?.Category?.Name
+                    </div>
+                    <div class="basket-item-color">Selected Color: @item.Color</div>
+                    <div class="basket-item-size">Selected Size: @item.Size</div>
+                    <div class="basket-quantity">
+                        Quantity:
+                        <input type="number"
+                               class="quantity-input"
+                               value="@item.Count"
+                               min="1"
+                               max="@item.Product.StockCount"
+                               data-product-id="@item.ProductId"
+                               data-color="@item.Color"
+                               data-size="@item.Size">
+                    </div>
+                    <button class="basket-remove-btn" data-id="@item.Id">Remove</button>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="basket-actions">
+        @{
+            var totalPrice = Model.BasketProducts.Sum(item => item.Product.Price * item.Count);
+        }
+        <div class="total-price">Total Price: <span>@totalPrice.ToString("C")</span></div>
+        <button class="checkout-btn">Checkout</button>
+        <a asp-controller="Wishlist" asp-action="Index">
+            <button class="favorites-btn">Go to Favorites</button>
+        </a>
+    </div>
+</div>
+<!-- Shopping Bag End -->

@@ -14,6 +14,5 @@ namespace Data.Repositories.Concrete
         {
             _context = context;
         }
-
     }
 }

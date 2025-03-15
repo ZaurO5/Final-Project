@@ -6,11 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Data.Repositories.Abstract
+namespace Data.Repositories.Abstract;
+
+public interface IColorRepository : IBaseRepository<Color>
 {
-    public interface IColorRepository : IBaseRepository<Color>
-    {
-        Task<Color> GetByNameAsync(string name);
-        Task<Color> GetByIdAsync(int id);
-    }
+    Task<Color> GetByNameAsync(string name);
+    Task<Color> GetByIdAsync(int id);
 }

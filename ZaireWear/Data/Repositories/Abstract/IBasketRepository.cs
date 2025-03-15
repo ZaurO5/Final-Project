@@ -1,0 +1,16 @@
+﻿using Core.Entities;
+using Data.Repositories.Base;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Data.Repositories.Abstract;
+
+public interface IBasketRepository : IBaseRepository<Basket>
+{
+    Task<Basket> GetBasketByUserId(string userId);
+    Task CreateBasketForUserAsync(string userId);
+    Task<Basket> GetBasketByUserIdWithDetails(string userId);
+}

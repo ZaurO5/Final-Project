@@ -7453,8 +7453,20 @@
       "PackagePath": "staticwebassets\\assets\\images\\fashion-websites.jpg"
     },
     {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\images\\products\\00a575a9-bf46-4049-bdb3-3b45de65a80b_fashion-Ecommerce1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\00a575a9-bf46-4049-bdb3-3b45de65a80b_fashion-Ecommerce1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\images\\products\\51d8ac88-0825-473f-ab55-e8fa580f1b72_fashion-Ecommerce1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\51d8ac88-0825-473f-ab55-e8fa580f1b72_fashion-Ecommerce1.jpg"
+    },
+    {
       "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\images\\products\\61206a03-cf94-427e-bad4-963507cba04a_012ef79872a46b707edc17ac369008d6.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\products\\61206a03-cf94-427e-bad4-963507cba04a_012ef79872a46b707edc17ac369008d6.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\images\\products\\d382a357-78dd-4574-abc7-85f4c175d571_fashion-Ecommerce1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\d382a357-78dd-4574-abc7-85f4c175d571_fashion-Ecommerce1.jpg"
     },
     {
       "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\images\\sliders\\37f10143-5ff2-4e59-b99c-8241f2fc0b9d_012ef79872a46b707edc17ac369008d6.jpg",
@@ -7469,24 +7481,20 @@
       "PackagePath": "staticwebassets\\assets\\images\\sliders\\87bec0de-63fa-4e3c-94e4-2bcd007bae21_fashion-websites.jpg"
     },
     {
-      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\js\\colorselect.js",
-      "PackagePath": "staticwebassets\\assets\\js\\colorselect.js"
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\js\\basket.js",
+      "PackagePath": "staticwebassets\\assets\\js\\basket.js"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\js\\colorandsizeselect.js",
+      "PackagePath": "staticwebassets\\assets\\js\\colorandsizeselect.js"
     },
     {
       "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\js\\dropdown.js",
       "PackagePath": "staticwebassets\\assets\\js\\dropdown.js"
     },
     {
-      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\js\\overload.js",
-      "PackagePath": "staticwebassets\\assets\\js\\overload.js"
-    },
-    {
       "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\js\\quantity.js",
       "PackagePath": "staticwebassets\\assets\\js\\quantity.js"
-    },
-    {
-      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\js\\sizeselect.js",
-      "PackagePath": "staticwebassets\\assets\\js\\sizeselect.js"
     },
     {
       "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\js\\slideshow.js",

@@ -11,50 +11,74 @@
             <div class="product-info">
                 <h2 class="product-name">@Model.Title</h2>
                 <h3 class="product-price">@Model.Price.ToString("0.##")$</h3>
-                <h2 class="product-category">Category: @string.Join(", ", Model.ProductCategories.Select(pc => pc.Category.Name))</h2>
 
-                <h2 class="product-description">
-                    @Model.Description
-                </h2>
+                @if (Model.ProductCategories?.Any() == true)
+                {
+                    <h2 class="product-category">
+                        Category: @string.Join(", ", Model.ProductCategories.Select(pc => pc.Category?.Name))
+                    </h2>
+                }
+
+                @if (!string.IsNullOrEmpty(Model.Description))
+                {
+                    <div class="product-description">
+                        <p>@Model.Description</p>
+                    </div>
+                }
 
                 <div class="product-options">
                     <label>Select Color:</label>
                     <div class="color-options">
-                        @foreach (var color in Model.ProductColors.Select(pc => pc.Color))
+                        @foreach (var color in Model.ProductColors?.Select(pc => pc.Color) ?? Enumerable.Empty<Color>())
                         {
-                            <button class="color" data-color="@color.Name" style="background-color: @color.HexCode;"></button>
+                            <button class="color"
+                                    data-color="@color.Name"
+                                    style="background-color: @color.HexCode; width: 40px; height: 40px; border-radius: 50%; margin: 5px;"
+                                    title="@color.Name">
+                            </button>
                         }
                     </div>
+                    <span class="text-danger color-error" style="display: none">Please select color</span>
                 </div>
 
                 <div class="product-options">
                     <label>Select Size:</label>
                     <div class="size-options">
-                        @foreach (var size in Model.ProductSizes.Select(ps => ps.Size))
+                        @foreach (var size in Model.ProductSizes?.Select(ps => ps.Size) ?? Enumerable.Empty<Size>())
                         {
-                            <button class="size" data-size="@size.Name">@size.Name</button>
+                            <button class="size"
+                                    data-size="@size.Name"
+                                    style="padding: 8px 15px; margin: 5px; border-radius: 4px;"
+                                    title="@size.Name">
+                                @size.Name
+                            </button>
                         }
                     </div>
+                    <span class="text-danger size-error" style="display: none">Please select size</span>
                 </div>
 
                 <div class="quantity">
                     <label for="quantity">Quantity:</label>
-                    <input type="number" id="quantity" name="quantity" min="1" max="@Model.StockCount" value="1">
-                    <span class="text-danger" id="quantity-error" style="display: none;">Quantity cannot exceed available stock.</span>
-                    @if (ViewData.ModelState.ContainsKey("Quantity"))
-                    {
-                        <span class="text-danger">@ViewData.ModelState["Quantity"].Errors.First().ErrorMessage</span>
-                    }
+                    <input type="number"
+                           id="quantity"
+                           name="quantity"
+                           min="1"
+                           max="@Model.StockCount"
+                           value="1"
+                           class="quantity-input">
+                    <span class="text-danger quantity-error" style="display: none;"></span>
                 </div>
 
-                <input type="hidden" name="selectedSize" value="" />
-                <input type="hidden" name="selectedColor" value="" />
+                <input type="hidden" name="selectedSize" id="selectedSize" value="" />
+                <input type="hidden" name="selectedColor" id="selectedColor" value="" />
 
                 <div class="actions">
-                    <button class="btn add-to-basket" data-id="@Model.Id" data-action="add-to-basket">
-                        Add to Shopping Bag
+                    <button class="btn add-to-basket"
+                            data-id="@Model.Id"
+                    @(Model.StockCount == 0 ? "disabled" : "")>
+                        @(Model.StockCount == 0 ? "Out of Stock" : "Add to Shopping Bag")
                     </button>
-                    <button class="btn add-to-favorites" data-id="@Model.Id" data-action="add-to-favorites">
+                    <button class="btn add-to-favorites" data-id="@Model.Id">
                         Add to Favorites
                     </button>
                 </div>
@@ -62,4 +86,11 @@
         </div>
     </div>
 </section>
-<!-- Product Details End -->
+
+<!-- Инициализация данных для JS -->
+<script>
+    window.productData = {
+        stockCount: @Model.StockCount,
+        productId: @Model.Id
+    };
+</script>

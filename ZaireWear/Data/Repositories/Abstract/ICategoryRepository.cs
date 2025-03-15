@@ -6,11 +6,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Data.Repositories.Abstract
+namespace Data.Repositories.Abstract;
+
+public interface ICategoryRepository : IBaseRepository<Category>
 {
-    public interface ICategoryRepository : IBaseRepository<Category>
-    {
-        Task<Category> GetByNameAsync(string name);
-        Task<Category> GetByIdAsync(int id);
-    }
+    Task<Category> GetByNameAsync(string name);
+    Task<Category> GetByIdAsync(int id);
 }

@@ -35,6 +35,12 @@ public class BasketRepository : BaseRepository<Basket>, IBasketRepository
         return await _context.Baskets
             .Include(b => b.BasketProducts)
                 .ThenInclude(bp => bp.Product)
+                    .ThenInclude(p => p.ProductCategories) // Include categories
+                        .ThenInclude(pc => pc.Category)     // Include category details
+            .Include(b => b.BasketProducts)
+                .ThenInclude(bp => bp.Color)            // Include color
+            .Include(b => b.BasketProducts)
+                .ThenInclude(bp => bp.Size)             // Include size
             .FirstOrDefaultAsync(b => b.UserId == userId);
     }
 

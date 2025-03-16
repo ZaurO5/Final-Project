@@ -11,14 +11,15 @@ using System.Threading.Tasks;
 
 namespace Data.Repositories.Concrete;
 
-public class BasketProductRepository : BaseRepository<BasketProduct>, IBasketProductRepository
+public class BasketProductRepository : IBasketProductRepository
 {
     private readonly AppDbContext _context;
 
-    public BasketProductRepository(AppDbContext context) : base(context)
+    public BasketProductRepository(AppDbContext context)
     {
         _context = context;
     }
+
     public async Task<List<BasketProduct>> GetBasketProductsWithProducts(int userBasketId)
     {
         return await _context.BasketProducts
@@ -27,21 +28,21 @@ public class BasketProductRepository : BaseRepository<BasketProduct>, IBasketPro
             .ToListAsync();
     }
 
-    public async Task<BasketProduct> GetByProductIdColorSizeAndUserIdAsync(
-    int productId,
-    string color,
-    string size,
-    string userId)
-    {
-        return await _context.BasketProducts
-            .Include(bp => bp.Basket)
-            .Include(bp => bp.Product)
-            .FirstOrDefaultAsync(bp =>
-                bp.ProductId == productId &&
-                bp.Color.Trim().ToLower() == color.Trim().ToLower() &&
-                bp.Size.Trim().ToLower() == size.Trim().ToLower() &&
-                bp.Basket.UserId == userId);
-    }
+    //public async Task<BasketProduct> GetByProductIdColorSizeAndUserIdAsync(
+    //int productId,
+    //int color,
+    //int size,
+    //string userId)
+    //{
+    //    return await _context.BasketProducts
+    //        .Include(bp => bp.Basket)
+    //        .Include(bp => bp.Product)
+    //        .FirstOrDefaultAsync(bp =>
+    //            bp.ProductId == productId &&
+    //            bp.Color.Trim().ToLower() == color.Trim().ToLower() &&
+    //            bp.Size.Trim().ToLower() == size.Trim().ToLower() &&
+    //            bp.Basket.UserId == userId);
+    //}
 
     public async Task<BasketProduct> GetByIdAsync(int id)
     {
@@ -51,14 +52,32 @@ public class BasketProductRepository : BaseRepository<BasketProduct>, IBasketPro
     public async Task<BasketProduct> GetByVariantAsync(
     int basketId,
     int productId,
-    string color,
-    string size)
+    int colorId,
+    int sizeId)
     {
         return await _context.BasketProducts
             .FirstOrDefaultAsync(bp =>
                 bp.BasketId == basketId &&
                 bp.ProductId == productId &&
-                bp.Color == color &&
-                bp.Size == size);
+                bp.ColorId == colorId &&
+                bp.SizeId == sizeId);
+    }
+
+    public async Task<List<BasketProduct>> GetAllAsync()
+    {
+        return await _context.BasketProducts.ToListAsync();
+    }
+
+    public async Task CreateAsync(BasketProduct data)
+    {
+        await _context.BasketProducts.AddAsync(data);
+    }
+    public void Update(BasketProduct data)
+    {
+        _context.BasketProducts.Update(data);
+    }
+    public void Delete(BasketProduct data)
+    {
+        _context.BasketProducts.Remove(data);
     }
 }

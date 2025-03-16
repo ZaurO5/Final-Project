@@ -55,13 +55,13 @@
         "IsRequired": false
       },
       {
-        "Name": "color",
-        "Type": "System.String",
+        "Name": "colorId",
+        "Type": "System.Int32",
         "IsRequired": false
       },
       {
-        "Name": "size",
-        "Type": "System.String",
+        "Name": "sizeId",
+        "Type": "System.Int32",
         "IsRequired": false
       },
       {

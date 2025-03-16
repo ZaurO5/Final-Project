@@ -2,17 +2,9 @@
 using Business.ViewModels.Basket;
 using Core.Entities;
 using Data.Repositories.Abstract;
-using Data.Repositories.Base;
-using Data.Repositories.Concrete;
 using Data.UnitOfWork;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
-using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Business.Services.Concrete;
 
@@ -50,45 +42,36 @@ public class BasketService : IBasketService
 
         return new BasketIndexVM
         {
-            BasketProducts = basket?.BasketProducts?
-                .OrderBy(bp => bp.Id)
-                .ToList() ?? new List<BasketProduct>()
+            BasketProducts = basket?.BasketProducts?.ToList() ?? new List<BasketProduct>()
         };
     }
 
     public async Task<(int statusCode, string description)> AddProductAsync(
-    int productId,
-    string color,
-    string size,
-    int quantity)
+     int productId,
+     int ColorId,
+     int SizeId,
+     int quantity)
     {
         var user = await GetCurrentUserAsync();
         if (user == null) return (401, "Требуется авторизация");
 
-        // Нормализация входных данных
-        color = color?.Trim().ToLower();
-        size = size?.Trim().ToLower();
-
         var product = await _productRepository.GetByIdAsync(productId);
         if (product == null) return (404, "Товар не найден");
 
-        // Проверка доступности варианта
-        var isValidVariant = product.ProductColors.Any(pc =>
-            pc.Color.Name.Trim().ToLower() == color)
-            && product.ProductSizes.Any(ps =>
-            ps.Size.Name.Trim().ToLower() == size);
+        product.ProductColors ??= new List<ProductColors>();
+        product.ProductSizes ??= new List<ProductSizes>();
 
-        if (!isValidVariant) return (400, "Недопустимая комбинация цвета и размера");
+        if (quantity > product.StockCount)
+            return (400, "Недостаточно товара на складе");
 
         var basket = await _basketRepository.GetBasketByUserId(user.Id)
             ?? await CreateNewBasketAsync(user.Id);
 
-        // Поиск существующей позиции
         var existingItem = await _basketProductRepository.GetByVariantAsync(
             basket.Id,
             productId,
-            color,
-            size);
+            ColorId,
+            SizeId);
 
         if (existingItem != null)
         {
@@ -104,8 +87,8 @@ public class BasketService : IBasketService
             {
                 BasketId = basket.Id,
                 ProductId = productId,
-                Color = color,
-                Size = size,
+                ColorId = ColorId,
+                SizeId = SizeId,
                 Count = quantity
             };
             await _basketProductRepository.CreateAsync(newItem);

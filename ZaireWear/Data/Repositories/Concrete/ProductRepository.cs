@@ -3,11 +3,6 @@ using Data.Contexts;
 using Data.Repositories.Abstract;
 using Data.Repositories.Base;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Data.Repositories.Concrete
 {
@@ -48,6 +43,12 @@ namespace Data.Repositories.Concrete
         {
             return await _context.Products
                 .Include(p => p.BasketProducts)
+                .Include(p => p.ProductColors) // Include the collection
+                    .ThenInclude(pc => pc.Color) // Then include Color from ProductColors
+                .Include(p => p.FavoriteProducts)
+                .Include(p => p.ProductCategories)
+                .Include(p => p.ProductSizes)
+                    .ThenInclude(ps => ps.Size)
                 .FirstOrDefaultAsync(p => p.Id == id);
         }
     }

@@ -33672,8 +33672,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>p5ic1m2n1a</Fingerprint>
-      <Integrity>E4CUujxIxom0TqiOe0dPFJtDoTlVncMBVbHuqxgS6Lc=</Integrity>
+      <Fingerprint>i77trls9q0</Fingerprint>
+      <Integrity>Qsenp1fNNwKswrBmRkLmVs2CV1u7vCltth0LBu3Irig=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\basket.js'))</OriginalItemSpec>

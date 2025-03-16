@@ -10,10 +10,15 @@ using System.Threading.Tasks;
 
 namespace Data.Repositories.Abstract;
 
-public interface IBasketProductRepository : IBaseRepository<BasketProduct>
+public interface IBasketProductRepository 
 {
-    Task<BasketProduct> GetByProductIdColorSizeAndUserIdAsync(int productId, string color, string size, string userId);
+    //Task<BasketProduct> GetByProductIdColorSizeAndUserIdAsync(int productId, string color, string size, string userId);
     Task<List<BasketProduct>> GetBasketProductsWithProducts(int userBasketId);
     Task<BasketProduct> GetByIdAsync(int id);
-    Task<BasketProduct> GetByVariantAsync(int basketId, int productId, string color, string size);
+    Task<BasketProduct> GetByVariantAsync(int basketId, int productId, int ColorId, int SizeId);
+
+    Task<List<BasketProduct>> GetAllAsync();
+    Task CreateAsync(BasketProduct data);
+    void Update(BasketProduct data);
+    void Delete(BasketProduct data);
 }

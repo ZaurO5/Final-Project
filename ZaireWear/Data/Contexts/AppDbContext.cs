@@ -74,7 +74,7 @@ namespace Data.Contexts
                 .HasForeignKey(ps => ps.SizeId);
 
             modelBuilder.Entity<BasketProduct>()
-                .HasKey(bp => new { bp.BasketId, bp.ProductId });
+                .HasKey(bp => new { bp.BasketId, bp.ProductId, bp.ColorId, bp.SizeId});
 
             modelBuilder.Entity<BasketProduct>()
                 .HasOne(bp => bp.Basket)

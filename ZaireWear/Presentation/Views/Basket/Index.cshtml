@@ -6,7 +6,7 @@
     <div class="basket-items">
         @foreach (var item in Model.BasketProducts)
         {
-            <div class="basket-wrapper" data-id="@item.Id">
+            <div class="basket-wrapper">
                 <div class="basket-item-image">
                     <img src="@item.Product.ImagePath" alt="@item.Product.Title">
                 </div>
@@ -16,8 +16,12 @@
                     <div class="basket-item-category">
                         Category: @item.Product.ProductCategories?.FirstOrDefault()?.Category?.Name
                     </div>
-                    <div class="basket-item-color">Selected Color: @item.Color</div>
-                    <div class="basket-item-size">Selected Size: @item.Size</div>
+                    <div class="basket-item-color">
+                        Selected Color: @item.Color?.Name
+                    </div>
+                    <div class="basket-item-size">
+                        Selected Size: @item.Size?.Name
+                    </div>
                     <div class="basket-quantity">
                         Quantity:
                         <input type="number"
@@ -26,13 +30,14 @@
                                min="1"
                                max="@item.Product.StockCount"
                                data-product-id="@item.ProductId"
-                               data-color="@item.Color"
-                               data-size="@item.Size">
+                               data-color="@item.Color?.Name"
+                               data-size="@item.Size?.Name">
                     </div>
-                    <button class="basket-remove-btn" data-id="@item.Id">Remove</button>
+                    <button class="basket-remove-btn">Remove</button>
                 </div>
             </div>
         }
+
     </div>
 
     <div class="basket-actions">

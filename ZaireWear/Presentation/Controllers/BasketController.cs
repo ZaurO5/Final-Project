@@ -35,14 +35,14 @@ public class BasketController : Controller
     [HttpPost("AddProduct")] // Явное указание маршрута
     public async Task<IActionResult> AddProduct(
          [FromForm] int productId,
-         [FromForm] string color,
-         [FromForm] string size,
+         [FromForm] int colorId,
+         [FromForm] int sizeId,
          [FromForm] int quantity)
     {
         var result = await _basketService.AddProductAsync(
             productId,
-            color,
-            size,
+            colorId,
+            sizeId,
             quantity);
 
         return Json(result);

@@ -22440,17 +22440,17 @@
       <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-pf32zIiEKiPeCydTC\u002BdnL7r/A0Uc4ahrM7l9kQ6Ep6o="}]]]></EndpointProperties>
       <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=3600, must-revalidate"},{"Name":"Content-Length","Value":"621457"},{"Name":"Content-Type","Value":"image/png"},{"Name":"ETag","Value":"\u0022pf32zIiEKiPeCydTC\u002BdnL7r/A0Uc4ahrM7l9kQ6Ep6o=\u0022"},{"Name":"Last-Modified","Value":"Wed, 12 Feb 2025 21:30:13 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
+    <StaticWebAssetEndpoint Include="_content/Presentation/assets/js/basket.i77trls9q0.js">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\basket.js'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"i77trls9q0"},{"Name":"integrity","Value":"sha256-Qsenp1fNNwKswrBmRkLmVs2CV1u7vCltth0LBu3Irig="},{"Name":"label","Value":"_content/Presentation/assets/js/basket.js"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2498"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022Qsenp1fNNwKswrBmRkLmVs2CV1u7vCltth0LBu3Irig=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 21:19:29 GMT"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Presentation/assets/js/basket.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\basket.js'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-E4CUujxIxom0TqiOe0dPFJtDoTlVncMBVbHuqxgS6Lc="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2642"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022E4CUujxIxom0TqiOe0dPFJtDoTlVncMBVbHuqxgS6Lc=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 01:10:51 GMT"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/Presentation/assets/js/basket.p5ic1m2n1a.js">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\basket.js'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"p5ic1m2n1a"},{"Name":"integrity","Value":"sha256-E4CUujxIxom0TqiOe0dPFJtDoTlVncMBVbHuqxgS6Lc="},{"Name":"label","Value":"_content/Presentation/assets/js/basket.js"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"2642"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022E4CUujxIxom0TqiOe0dPFJtDoTlVncMBVbHuqxgS6Lc=\u0022"},{"Name":"Last-Modified","Value":"Sat, 15 Mar 2025 01:10:51 GMT"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-Qsenp1fNNwKswrBmRkLmVs2CV1u7vCltth0LBu3Irig="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Accept-Ranges","Value":"bytes"},{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"2498"},{"Name":"Content-Type","Value":"text/javascript"},{"Name":"ETag","Value":"\u0022Qsenp1fNNwKswrBmRkLmVs2CV1u7vCltth0LBu3Irig=\u0022"},{"Name":"Last-Modified","Value":"Sun, 16 Mar 2025 21:19:29 GMT"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/Presentation/assets/js/colorandsizeselect.js">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\colorandsizeselect.js'))</AssetFile>

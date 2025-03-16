@@ -30,9 +30,9 @@
     // Добавление в корзину
     $('.add-to-basket').click(function () {
         const productId = window.productData.productId;
-        const color = $('#selectedColor').val();
-        const size = $('#selectedSize').val();
-        const quantity = $('#quantity').val();
+        const color = $('#selectedColor').value;
+        const size = $('#selectedSize').value;
+        const quantity = $('#quantity').value;
 
         let hasError = false;
 

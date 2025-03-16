@@ -302,8 +302,7 @@
               "RelativeToolTip": "Presentation\\Views\\Basket\\Index.cshtml",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-03-16T14:03:13.213Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-16T14:03:13.213Z"
             },
             {
               "$type": "Document",
@@ -313,7 +312,7 @@
               "RelativeDocumentMoniker": "Presentation\\Views\\Catalog\\Details.cshtml",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Views\\Catalog\\Details.cshtml",
               "RelativeToolTip": "Presentation\\Views\\Catalog\\Details.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAA1AAAAAAAAAA==",
+              "ViewState": "AgIAADcAAAAAAAAAAAAiwFcAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2025-03-12T18:07:24.072Z",
               "EditorCaption": ""
@@ -341,8 +340,7 @@
               "RelativeToolTip": "Business\\Services\\Concrete\\BasketService.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAAwC4AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T18:05:40.155Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-12T18:05:40.155Z"
             },
             {
               "$type": "Document",
@@ -354,8 +352,7 @@
               "RelativeToolTip": "Data\\Repositories\\Concrete\\BasketRepository.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACwAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T20:45:40.777Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-12T20:45:40.777Z"
             },
             {
               "$type": "Document",
@@ -367,8 +364,7 @@
               "RelativeToolTip": "Presentation\\Controllers\\BasketController.cs",
               "ViewState": "AgIAAB4AAAAAAAAAAAAYwD8AAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T18:02:49.799Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-12T18:02:49.799Z"
             },
             {
               "$type": "Document",
@@ -380,8 +376,7 @@
               "RelativeToolTip": "Data\\Repositories\\Concrete\\BasketProductRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T20:45:30.297Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-12T20:45:30.297Z"
             },
             {
               "$type": "Document",
@@ -393,8 +388,7 @@
               "RelativeToolTip": "Data\\Repositories\\Abstract\\IBasketRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T21:27:53.162Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-12T21:27:53.162Z"
             },
             {
               "$type": "Document",
@@ -406,8 +400,7 @@
               "RelativeToolTip": "Data\\Repositories\\Abstract\\IBasketProductRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T20:44:42.688Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-12T20:44:42.688Z"
             },
             {
               "$type": "Document",
@@ -419,8 +412,7 @@
               "RelativeToolTip": "Common\\Entities\\BasketProduct.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T19:53:03.202Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-16T19:53:03.202Z"
             },
             {
               "$type": "Document",
@@ -432,8 +424,7 @@
               "RelativeToolTip": "Business\\Services\\Abstract\\IBasketService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAuwAMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-12T18:05:33.177Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-12T18:05:33.177Z"
             },
             {
               "$type": "Document",
@@ -445,8 +436,7 @@
               "RelativeToolTip": "Common\\Entities\\ProductColors.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T21:59:49.716Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T21:59:49.716Z"
             },
             {
               "$type": "Document",
@@ -458,8 +448,7 @@
               "RelativeToolTip": "Common\\Entities\\Color.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T19:54:27.333Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T19:54:27.333Z"
             },
             {
               "$type": "Document",
@@ -471,8 +460,7 @@
               "RelativeToolTip": "Data\\Migrations\\20250316143107_UpdatedBasketProduct.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-16T14:31:08.37Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-16T14:31:08.37Z"
             },
             {
               "$type": "Document",
@@ -484,8 +472,7 @@
               "RelativeToolTip": "Common\\Entities\\Product.cs",
               "ViewState": "AgIAAAYAAAAAAAAAAIA3wAwAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T19:54:45.695Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-14T19:54:45.695Z"
             },
             {
               "$type": "Document",

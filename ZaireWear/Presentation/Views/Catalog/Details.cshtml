@@ -1,12 +1,11 @@
 ﻿@using Core.Entities
 @model Product
 
-<!-- Product Details -->
 <section class="details-page">
     <div class="container">
         <div class="product-card">
             <div class="product-image">
-                <img src="@Model.ImagePath" alt="@Model.Title">
+                <img src="@Model.ImagePath" alt="@Model.Title" style="max-width: 400px;">
             </div>
             <div class="product-info">
                 <h2 class="product-name">@Model.Title</h2>
@@ -27,54 +26,50 @@
                 }
 
                 <form asp-controller="Basket" asp-action="AddProduct" method="post">
-                    <div class="product-options">
-                        <label>Select Color:</label>
-                        <div class="color-options">
+                    <div class="product-options" style="margin: 1rem 0;">
+                        <label style="display: block; margin-bottom: 0.5rem;">Select Color:</label>
+                        <div class="color-options" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
                             @foreach (var color in Model.ProductColors?.Select(pc => pc.Color) ?? Enumerable.Empty<Color>())
                             {
-                                <label>
-                                    <input type="radio" name="colorId" value="@color.Id" required>
-                                    <span class="color"
-                                          style="background-color: @color.HexCode; width: 40px; height: 40px; border-radius: 50%; margin: 5px;"
-                                          title="@color.Name">
-                                    </span>
-                                </label>
+                                <div style="width: 40px; height: 40px; background-color: @color.HexCode; border-radius: 50%; cursor: pointer;"
+                                     onclick="document.getElementById('selectedColor').value = '@color.Id'; this.parentElement.querySelectorAll('div').forEach(el => el.style.border = 'none'); this.style.border = '2px solid #333';"
+                                     title="@color.Name">
+                                </div>
                             }
                         </div>
+                        <input type="hidden" name="colorId" id="selectedColor" required>
                     </div>
 
-                    <div class="product-options">
-                        <label>Select Size:</label>
-                        <div class="size-options">
+                    <div class="product-options" style="margin: 1rem 0;">
+                        <label style="display: block; margin-bottom: 0.5rem;">Select Size:</label>
+                        <div class="size-options" style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
                             @foreach (var size in Model.ProductSizes?.Select(ps => ps.Size) ?? Enumerable.Empty<Size>())
                             {
-                                <label>
-                                    <input type="radio" name="sizeId" value="@size.Id" required>
-                                    <span class="size"
-                                          style="padding: 8px 15px; margin: 5px; border-radius: 4px;"
-                                          title="@size.Name">
-                                        @size.Name
-                                    </span>
-                                </label>
+                                <div style="padding: 8px 15px; border: 1px solid #ddd; border-radius: 4px; cursor: pointer; color: #000000;"
+                                     onclick="document.getElementById('selectedSize').value = '@size.Id'; this.parentElement.querySelectorAll('div').forEach(el => el.style.background = 'none'); this.style.background = '#f5f5f5';"
+                                     title="@size.Name">
+                                    @size.Name
+                                </div>
                             }
                         </div>
+                        <input type="hidden" name="sizeId" id="selectedSize" required>
                     </div>
 
-                    <div class="quantity">
-                        <label for="quantity">Quantity:</label>
+                    <div class="quantity" style="margin: 1rem 0;">
+                        <label for="quantity" style="display: block; margin-bottom: 0.5rem;">Quantity:</label>
                         <input type="number"
                                id="quantity"
                                name="quantity"
                                min="1"
                                max="@Model.StockCount"
                                value="1"
-                               class="quantity-input"
+                               style="width: 80px; padding: 8px; border: 1px solid #ddd; border-radius: 4px;"
                                required>
                     </div>
 
                     <input type="hidden" name="productId" value="@Model.Id" />
 
-                    <div class="actions">
+                    <div class="actions" style="margin-top: 1rem;">
                         <button type="submit"
                                 class="btn add-to-basket @(Model.StockCount == 0 ? "disabled" : "")"
                         @(Model.StockCount == 0 ? "disabled" : "")>
@@ -85,20 +80,13 @@
 
                 <form asp-controller="Favorites" asp-action="AddToFavorites" method="post">
                     <input type="hidden" name="productId" value="@Model.Id" />
-                    <div class="actions">
-                        <button type="submit" class="btn add-to-favorites">Add to Favorites</button>
+                    <div class="actions" style="margin-top: 1rem;">
+                        <button type="submit" class="btn add-to-favorites">
+                            Add to Favorites
+                        </button>
                     </div>
                 </form>
             </div>
         </div>
     </div>
 </section>
-
-
-<!-- Инициализация данных для JS -->
-<script>
-    window.productData = {
-        stockCount: @Model.StockCount,
-        productId: @Model.Id
-    };
-</script>

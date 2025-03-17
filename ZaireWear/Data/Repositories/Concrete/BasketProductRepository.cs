@@ -28,32 +28,21 @@ public class BasketProductRepository : IBasketProductRepository
             .ToListAsync();
     }
 
-    //public async Task<BasketProduct> GetByProductIdColorSizeAndUserIdAsync(
-    //int productId,
-    //int color,
-    //int size,
-    //string userId)
-    //{
-    //    return await _context.BasketProducts
-    //        .Include(bp => bp.Basket)
-    //        .Include(bp => bp.Product)
-    //        .FirstOrDefaultAsync(bp =>
-    //            bp.ProductId == productId &&
-    //            bp.Color.Trim().ToLower() == color.Trim().ToLower() &&
-    //            bp.Size.Trim().ToLower() == size.Trim().ToLower() &&
-    //            bp.Basket.UserId == userId);
-    //}
-
-    public async Task<BasketProduct> GetByIdAsync(int id)
+    public async Task<BasketProduct> GetByIdAsync(int basketId, int productId, int colorId, int sizeId)
     {
-        return await _context.BasketProducts.FindAsync(id);
+        return await _context.BasketProducts
+            .FirstOrDefaultAsync(bp =>
+                bp.BasketId == basketId &&
+                bp.ProductId == productId &&
+                bp.ColorId == colorId &&
+                bp.SizeId == sizeId);
     }
 
     public async Task<BasketProduct> GetByVariantAsync(
-    int basketId,
-    int productId,
-    int colorId,
-    int sizeId)
+        int basketId,
+        int productId,
+        int colorId,
+        int sizeId)
     {
         return await _context.BasketProducts
             .FirstOrDefaultAsync(bp =>
@@ -72,10 +61,12 @@ public class BasketProductRepository : IBasketProductRepository
     {
         await _context.BasketProducts.AddAsync(data);
     }
+
     public void Update(BasketProduct data)
     {
         _context.BasketProducts.Update(data);
     }
+
     public void Delete(BasketProduct data)
     {
         _context.BasketProducts.Remove(data);

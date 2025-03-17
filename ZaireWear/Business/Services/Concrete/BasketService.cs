@@ -47,10 +47,10 @@ public class BasketService : IBasketService
     }
 
     public async Task<(int statusCode, string description)> AddProductAsync(
-     int productId,
-     int ColorId,
-     int SizeId,
-     int quantity)
+        int productId,
+        int ColorId,
+        int SizeId,
+        int quantity)
     {
         var user = await GetCurrentUserAsync();
         if (user == null) return (401, "Требуется авторизация");
@@ -103,16 +103,26 @@ public class BasketService : IBasketService
         var user = await GetCurrentUserAsync();
         if (user == null) return (401, "Требуется авторизация");
 
+        if (updatedProducts == null || !updatedProducts.Any())
+            return (400, "Список обновлений пуст");
+
         foreach (var item in updatedProducts)
         {
-            var basketProduct = await _basketProductRepository.GetByIdAsync(item.BasketProductId);
+            var basketProduct = await _basketProductRepository.GetByIdAsync(
+                item.BasketId,
+                item.ProductId,
+                item.ColorId,
+                item.SizeId);
+
             if (basketProduct == null) continue;
 
             var product = await _productRepository.GetByIdAsync(basketProduct.ProductId);
-            if (product == null) return (404, "Товар не найден");
+            if (product == null) return (404, $"Товар с ID {basketProduct.ProductId} не найден");
 
-            if (item.Count < 1 || item.Count > product.StockCount)
-                return (400, $"Некорректное количество для {product.Title}");
+            if (item.Count < 1)
+                return (400, $"Количество для {product.Title} не может быть меньше 1");
+            if (item.Count > product.StockCount)
+                return (400, $"Количество для {product.Title} превышает доступный запас ({product.StockCount})");
 
             basketProduct.Count = item.Count;
             _basketProductRepository.Update(basketProduct);
@@ -122,9 +132,9 @@ public class BasketService : IBasketService
         return (200, "Корзина обновлена");
     }
 
-    public async Task<(int statusCode, string description)> DeleteAsync(int id)
+    public async Task<(int statusCode, string description)> DeleteAsync(int basketId, int productId, int colorId, int sizeId)
     {
-        var basketProduct = await _basketProductRepository.GetByIdAsync(id);
+        var basketProduct = await _basketProductRepository.GetByIdAsync(basketId, productId, colorId, sizeId);
         if (basketProduct == null) return (404, "Позиция не найдена");
 
         _basketProductRepository.Delete(basketProduct);

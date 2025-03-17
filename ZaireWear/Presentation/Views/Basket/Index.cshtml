@@ -1,7 +1,8 @@
 ﻿@using Business.ViewModels.Basket
 @model BasketIndexVM
 
-<!-- Shopping Bag -->
+<div class="basket-messages" style="display: none; padding: 10px; margin: 10px 0;"></div>
+
 <div class="basket-container" style="max-height: calc(100vh - 200px); overflow-y: auto; margin: 20px 0;">
     <div class="basket-items">
         @foreach (var item in Model.BasketProducts)
@@ -12,7 +13,7 @@
                 </div>
                 <div class="basket-item-info" style="flex: 1; display: flex; flex-direction: column;">
                     <div class="basket-item-title">@item.Product.Title</div>
-                    <div class="basket-item-price">$@((item.Product.Price * item.Count).ToString("0.00"))</div>
+                    <div class="basket-item-price" data-price="@item.Product.Price">$@((item.Product.Price * item.Count).ToString("0.00"))</div>
                     <div class="basket-item-category">
                         Category: @item.Product.ProductCategories?.FirstOrDefault()?.Category?.Name
                     </div>
@@ -22,19 +23,27 @@
                     <div class="basket-item-size">
                         Selected Size: @item.Size?.Name
                     </div>
-                    <div class="basket-quantity">
+                    <div class="basket-quantity" style="display: flex; align-items: center; gap: 10px;">
                         Quantity:
                         <input type="number"
                                class="quantity-input"
                                value="@item.Count"
                                min="1"
                                max="@item.Product.StockCount"
+                               data-basket-id="@item.BasketId"
                                data-product-id="@item.ProductId"
-                               data-color="@item.Color?.Name"
-                               data-size="@item.Size?.Name"
+                               data-color-id="@item.ColorId"
+                               data-size-id="@item.SizeId"
+                               data-original-value="@item.Count"
                                style="width: 60px;">
                     </div>
-                    <button class="basket-remove-btn">Remove</button>
+                    <button class="basket-remove-btn"
+                            data-basket-id="@item.BasketId"
+                            data-product-id="@item.ProductId"
+                            data-color-id="@item.ColorId"
+                            data-size-id="@item.SizeId">
+                        Remove
+                    </button>
                 </div>
             </div>
         }
@@ -45,10 +54,12 @@
             var totalPrice = Model.BasketProducts.Sum(item => item.Product.Price * item.Count);
         }
         <div class="total-price">Total Price: <span>$@totalPrice.ToString("0.00")</span></div>
+        <button class="update-all-btn" style="padding: 5px 10px; margin: 5px;">Update All</button>
         <button class="checkout-btn">Checkout</button>
         <a asp-controller="Wishlist" asp-action="Index">
             <button class="favorites-btn">Go to Favorites</button>
         </a>
     </div>
 </div>
-<!-- Shopping Bag End -->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

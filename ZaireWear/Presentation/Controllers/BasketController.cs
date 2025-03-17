@@ -25,40 +25,54 @@ public class BasketController : Controller
     public async Task<IActionResult> Index()
     {
         var model = await _basketService.GetAllAsync();
-
-        // Для отладки
         Console.WriteLine($"Found {model.BasketProducts.Count} items in basket");
-
         return View(model);
     }
 
-    [HttpPost("AddProduct")] // Явное указание маршрута
+    [HttpPost("AddProduct")]
     public async Task<IActionResult> AddProduct(
-         [FromForm] int productId,
-         [FromForm] int colorId,
-         [FromForm] int sizeId,
-         [FromForm] int quantity)
+        [FromForm] int productId,
+        [FromForm] int colorId,
+        [FromForm] int sizeId,
+        [FromForm] int quantity)
     {
-        var result = await _basketService.AddProductAsync(
-            productId,
-            colorId,
-            sizeId,
-            quantity);
-
-        return Json(result);
+        try
+        {
+            var result = await _basketService.AddProductAsync(productId, colorId, sizeId, quantity);
+            return Json(new { statusCode = result.statusCode, description = result.description });
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(new { statusCode = 500, description = "Произошла ошибка на сервере: " + ex.Message });
+        }
     }
 
-    [HttpPost]
+    [HttpPost("UpdateCart")]
     public async Task<IActionResult> UpdateCart([FromBody] List<BasketUpdateVM> updatedProducts)
     {
-        var result = await _basketService.UpdateCartAsync(updatedProducts);
-        return Json(result);
+        try
+        {
+            var result = await _basketService.UpdateCartAsync(updatedProducts);
+            return Json(new { statusCode = result.statusCode, description = result.description });
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(new { statusCode = 500, description = "Ошибка при обновлении: " + ex.Message });
+        }
     }
 
-    [HttpPost]
-    public async Task<IActionResult> Delete(int id)
+    [HttpPost("Delete")]
+    public async Task<IActionResult> Delete([FromBody] BasketDeleteVM deleteModel)
     {
-        var result = await _basketService.DeleteAsync(id);
-        return Json(result);
+        try
+        {
+            var result = await _basketService.DeleteAsync(deleteModel.BasketId, deleteModel.ProductId, deleteModel.ColorId, deleteModel.SizeId);
+            return Json(new { statusCode = result.statusCode, description = result.description });
+        }
+        catch (Exception ex)
+        {
+            return BadRequest(new { statusCode = 500, description = "Ошибка при удалении: " + ex.Message });
+        }
     }
+
 }

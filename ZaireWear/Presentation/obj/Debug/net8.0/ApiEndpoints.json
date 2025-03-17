@@ -11,38 +11,6 @@
   },
   {
     "ContainingType": "ZaireWear.Controllers.BasketController",
-    "Method": "UpdateCart",
-    "RelativePath": "Basket",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "updatedProducts",
-        "Type": "System.Collections.Generic.List\u00601[[Business.ViewModels.Basket.BasketUpdateVM, Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
-        "IsRequired": true
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ZaireWear.Controllers.BasketController",
-    "Method": "Delete",
-    "RelativePath": "Basket",
-    "HttpMethod": "POST",
-    "IsController": true,
-    "Order": 0,
-    "Parameters": [
-      {
-        "Name": "id",
-        "Type": "System.Int32",
-        "IsRequired": false
-      }
-    ],
-    "ReturnTypes": []
-  },
-  {
-    "ContainingType": "ZaireWear.Controllers.BasketController",
     "Method": "AddProduct",
     "RelativePath": "Basket/AddProduct",
     "HttpMethod": "POST",
@@ -68,6 +36,38 @@
         "Name": "quantity",
         "Type": "System.Int32",
         "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZaireWear.Controllers.BasketController",
+    "Method": "Delete",
+    "RelativePath": "Basket/Delete",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "deleteModel",
+        "Type": "Business.ViewModels.Basket.BasketDeleteVM",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "ZaireWear.Controllers.BasketController",
+    "Method": "UpdateCart",
+    "RelativePath": "Basket/UpdateCart",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updatedProducts",
+        "Type": "System.Collections.Generic.List\u00601[[Business.ViewModels.Basket.BasketUpdateVM, Business, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "IsRequired": true
       }
     ],
     "ReturnTypes": []

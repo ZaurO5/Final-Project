@@ -48,6 +48,12 @@
             </div>
         }
     </div>
+        @if (!Model.BasketProducts.Any())
+        {
+            <div class="empty-basket-message">
+                Your basket list is empty.
+            </div>
+        }
 
     <div class="basket-actions">
         @{
@@ -70,7 +76,7 @@
             Update All
         </button>
         <button class="checkout-btn">Checkout</button>
-        <a asp-controller="Wishlist" asp-action="Index">
+        <a asp-controller="Favorites" asp-action="Index">
             <button class="favorites-btn">Go to Favorites</button>
         </a>
     </div>

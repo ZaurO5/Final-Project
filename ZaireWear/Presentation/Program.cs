@@ -66,6 +66,7 @@ builder.Services.AddScoped<IOrderRepository, OrderRepository>();
 builder.Services.AddScoped<IOrderProductRepository, OrderProductRepository>();
 builder.Services.AddScoped<IBasketProductRepository, BasketProductRepository>();
 builder.Services.AddScoped<IBasketRepository, BasketRepository>();
+builder.Services.AddScoped<IFavoriteProductRepository, FavoriteProductRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 
 #endregion
@@ -79,6 +80,7 @@ builder.Services.AddScoped<IProductService, Business.Services.Concrete.ProductSe
 builder.Services.AddScoped<IAccountService, Business.Services.Concrete.AccountService>();
 builder.Services.AddScoped<IPaymentService, PaymentService>();
 builder.Services.AddScoped<IBasketService, BasketService>();
+builder.Services.AddScoped<IFavoritesService, FavoritesService>();
 builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
 builder.Services.AddSingleton<IUrlHelperFactory, UrlHelperFactory>();
 builder.Services.AddHttpContextAccessor();

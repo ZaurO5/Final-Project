@@ -79,14 +79,62 @@
                     </div>
                 </form>
 
-                <form asp-controller="Favorites" asp-action="AddToFavorites" method="post">
+                <form asp-controller="Favorites" asp-action="AddToFavorites" method="post" class="favorites-form">
                     <input type="hidden" name="productId" value="@Model.Id" />
                     <div class="actions" style="margin-top: 1rem;">
-                        <button type="submit" class="btn add-to-favorites">
+                        <button type="submit"
+                                class="btn add-to-favorites"
+                                style="padding: 10px 20px;
+                       background-color: pink;
+                       border: 1px solid #ddd;
+                       color: #333;
+                       border-radius: 4px;
+                       transition: all 0.3s ease;">
+                            <i class="far fa-heart" style="margin-right: 8px;"></i>
                             Add to Favorites
                         </button>
                     </div>
                 </form>
+
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        $('.favorites-form').submit(function(e) {
+                            e.preventDefault();
+
+                            $.ajax({
+                                url: $(this).attr('action'),
+                                method: 'POST',
+                                data: $(this).serialize(),
+                                success: function(response) {
+                                    showMessage(response.message, 'success');
+                                },
+                                error: function(xhr) {
+                                    showMessage(xhr.responseJSON.message, 'error');
+                                }
+                            });
+                        });
+
+                        function showMessage(text, type) {
+                            const messageDiv = $('<div>')
+                                .text(text)
+                                .css({
+                                    'position': 'fixed',
+                                    'top': '20px',
+                                    'right': '20px',
+                                    'padding': '15px 25px',
+                                    'border-radius': '4px',
+                                    'color': '#fff',
+                                    'background': type === 'success' ? '#28a745' : '#dc3545',
+                                    'box-shadow': '0 2px 10px rgba(0,0,0,0.1)',
+                                    'z-index': '1000'
+                                })
+                                .fadeIn();
+
+                            $('body').append(messageDiv);
+                            setTimeout(() => messageDiv.fadeOut(), 3000);
+                        }
+                    });
+                </script>
             </div>
         </div>
     </div>

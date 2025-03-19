@@ -128,16 +128,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFza2V0XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/User/OneDrive/Desktop/Final-Project/ZaireWear/Presentation/Views/Basket/Wishlist.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFza2V0XFdpc2hsaXN0LmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/User/OneDrive/Desktop/Final-Project/ZaireWear/Presentation/Views/Catalog/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0YWxvZ1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/OneDrive/Desktop/Final-Project/ZaireWear/Presentation/Views/Catalog/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0YWxvZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/User/OneDrive/Desktop/Final-Project/ZaireWear/Presentation/Views/Favorites/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmF2b3JpdGVzXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/User/OneDrive/Desktop/Final-Project/ZaireWear/Presentation/Views/Home/AboutUs.cshtml]

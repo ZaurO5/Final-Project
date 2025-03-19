@@ -116,6 +116,8 @@ app.MapControllerRoute(
 
 StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe")["SecretKey"];
 
+
+
 app.Run();
 
 #endregion

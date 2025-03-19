@@ -20,5 +20,15 @@ namespace ZaireWear.Controllers
             model.Sliders = model.Sliders.Where(s => s.IsActive).ToList();
             return View(model);
         }
+
+        public IActionResult AboutUs()
+        {
+            return View();
+        }
+
+        public IActionResult ContactUs()
+        {
+            return View();
+        }
     }
 }

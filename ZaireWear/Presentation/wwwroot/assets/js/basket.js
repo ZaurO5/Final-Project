@@ -217,9 +217,41 @@
     function updateTotalPrice() {
         let total = 0;
         $('.basket-wrapper').each(function () {
-            const price = parseFloat($(this).find('.basket-item-price').text().replace('$', ''));
+            const priceText = $(this).find('.basket-item-price').text();
+            const price = parseFloat(priceText.replace(/[^0-9.]/g, ''));
             total += price;
         });
         $('.total-price span').text('$' + total.toFixed(2));
     }
+
+    $(document).on('click', '.checkout-btn', function (e) {
+        e.preventDefault();
+        const $btn = $(this);
+        $btn.prop('disabled', true).html('<i class="fa fa-spinner fa-spin"></i> Processing...');
+
+        if ($('.basket-wrapper').length === 0) {
+            showMessage('.basket-messages', 'Your basket is empty', 'error');
+            $btn.prop('disabled', false).text('Checkout');
+            return;
+        }
+
+        $.post('/Payment/Pay')
+            .done(function (response) {
+                if (response && response.url) {
+                    window.location.href = response.url;
+                } else {
+                    showMessage('.basket-messages', 'Failed to get payment URL', 'error');
+                }
+            })
+            .fail(function (xhr) {
+                const errorMsg = xhr.responseJSON?.description ||
+                    xhr.statusText ||
+                    'Payment processing failed';
+                showMessage('.basket-messages', errorMsg, 'error');
+            })
+            .always(() => {
+                $btn.prop('disabled', false).text('Checkout');
+            });
+    });
+
 });

@@ -33402,8 +33402,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ihh0a49m8i</Fingerprint>
-      <Integrity>hkLsU897xGgeMqWxf1Tdb3pXNu1ZV/6tmi1hnlvQVmQ=</Integrity>
+      <Fingerprint>2dyooixqtp</Fingerprint>
+      <Integrity>9vMcvnx+2B4UCHBqz5iQ8Egg2NmcIpJ6xYVja/Itb8o=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\css\main.css'))</OriginalItemSpec>
@@ -33690,8 +33690,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>y8iu83kllx</Fingerprint>
-      <Integrity>4iuULQgsFdIJ6L/3PoE97PuFpaupLa140Fpadg/hD4I=</Integrity>
+      <Fingerprint>uyn34rsvx9</Fingerprint>
+      <Integrity>FuycpfGOywQ9q0pzmd9+tsyl6Yb3Cflhan1M3y9uWEI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\assets\js\basket.js'))</OriginalItemSpec>

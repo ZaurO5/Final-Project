@@ -29,6 +29,7 @@ namespace Data.Contexts
         public DbSet<FavoriteProduct> FavoriteProducts { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<OrderProduct> OrderProducts { get; set; }
+        public DbSet<ContactMessage> ContactMessages { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

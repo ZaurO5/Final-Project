@@ -1,4 +1,6 @@
-﻿<style>
+﻿@using Core.Entities
+@model ContactMessage
+<style>
     body {
         font-family: 'Arial', sans-serif;
         margin: 0;
@@ -73,7 +75,7 @@
         <div class="contact-info">
             <div class="info-card">
                 <h3>Visit Us</h3>
-                <p>123 Fashion Avenue<br>Style District, ST 98765</p>
+                <p>123 Webstreet, Tech City<br>CodeLand, ST 56789</p>
             </div>
 
             <div class="info-card">
@@ -83,15 +85,36 @@
 
             <div class="info-card">
                 <h3>Email Us</h3>
-                <p>support@zairewear.com<br>Response within 24 hours</p>
+                <p>Demomail@gmail.Com<br>Response within 24 hours</p>
             </div>
         </div>
 
-        <form class="contact-form">
+        <form class="contact-form" asp-controller="Contact" asp-action="Submit" method="post">
+            @Html.AntiForgeryToken()
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            @if (TempData["SuccessMessage"] != null)
+            {
+                <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+            }
+
             <h2>Send Message</h2>
-            <input type="text" class="form-input" placeholder="Your Name" required>
-            <input type="email" class="form-input" placeholder="Your Email" required>
-            <textarea class="form-input" rows="5" placeholder="Your Message" required></textarea>
+
+            <div class="form-group">
+                <input asp-for="Name" class="form-input" placeholder="Your Name">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <input asp-for="Email" class="form-input" placeholder="Your Email">
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <textarea asp-for="Content" class="form-input" rows="5" placeholder="Your Message"></textarea>
+                <span asp-validation-for="Content" class="text-danger"></span>
+            </div>
+
             <button type="submit" class="submit-btn">Send Message</button>
         </form>
     </div>

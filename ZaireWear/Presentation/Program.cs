@@ -10,7 +10,6 @@ using Data.Contexts;
 using Data.Repositories.Abstract;
 using Data.Repositories.Concrete;
 using Data.UnitOfWork;
-using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.Routing;

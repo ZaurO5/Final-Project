@@ -1,11 +1,7 @@
 ﻿using Business.Services.Abstract;
-using Business.Utilities.Stripe;
 using Business.ViewModels.Basket;
-using Business.ViewModels.Request;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Options;
-using Stripe.Checkout;
 
 namespace ZaireWear.Controllers;
 
@@ -43,7 +39,7 @@ public class BasketController : Controller
         }
         catch (Exception ex)
         {
-            return BadRequest(new { statusCode = 500, description = "Произошла ошибка на сервере: " + ex.Message });
+            return BadRequest(new { statusCode = 500, description = "error on server: " + ex.Message });
         }
     }
 
@@ -57,7 +53,7 @@ public class BasketController : Controller
         }
         catch (Exception ex)
         {
-            return BadRequest(new { statusCode = 500, description = "Ошибка при обновлении: " + ex.Message });
+            return BadRequest(new { statusCode = 500, description = "error while updating: " + ex.Message });
         }
     }
 
@@ -71,7 +67,7 @@ public class BasketController : Controller
         }
         catch (Exception ex)
         {
-            return BadRequest(new { statusCode = 500, description = "Ошибка при удалении: " + ex.Message });
+            return BadRequest(new { statusCode = 500, description = "error while deleting: " + ex.Message });
         }
     }
 

@@ -1,4 +1,5 @@
 ﻿using Business.ViewModels.Basket;
+
 namespace Business.Services.Abstract;
 
 public interface IBasketService

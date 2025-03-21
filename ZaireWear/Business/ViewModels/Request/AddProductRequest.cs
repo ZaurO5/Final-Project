@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Business.ViewModels.Request;
+﻿namespace Business.ViewModels.Request;
 public class AddProductRequest
 {
     public int ProductId { get; set; }

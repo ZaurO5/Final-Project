@@ -2,45 +2,39 @@
 using Data.Contexts;
 using Data.Repositories.Abstract;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Data.Repositories.Concrete
+namespace Data.Repositories.Concrete;
+
+public class FavoriteProductRepository : IFavoriteProductRepository
 {
-    public class FavoriteProductRepository : IFavoriteProductRepository
+    private readonly AppDbContext _context;
+
+    public FavoriteProductRepository(AppDbContext context)
     {
-        private readonly AppDbContext _context;
+        _context = context;
+    }
 
-        public FavoriteProductRepository(AppDbContext context)
-        {
-            _context = context;
-        }
+    public async Task<FavoriteProduct> GetByUserAndProductAsync(string userId, int productId)
+    {
+        return await _context.FavoriteProducts
+            .FirstOrDefaultAsync(fp => fp.UserId == userId && fp.ProductId == productId);
+    }
 
-        public async Task<FavoriteProduct> GetByUserAndProductAsync(string userId, int productId)
-        {
-            return await _context.FavoriteProducts
-                .FirstOrDefaultAsync(fp => fp.UserId == userId && fp.ProductId == productId);
-        }
+    public async Task AddAsync(FavoriteProduct favoriteProduct)
+    {
+        await _context.FavoriteProducts.AddAsync(favoriteProduct);
+    }
 
-        public async Task AddAsync(FavoriteProduct favoriteProduct)
-        {
-            await _context.FavoriteProducts.AddAsync(favoriteProduct);
-        }
+    public void Remove(FavoriteProduct favoriteProduct)
+    {
+        _context.FavoriteProducts.Remove(favoriteProduct);
+    }
 
-        public void Remove(FavoriteProduct favoriteProduct)
-        {
-            _context.FavoriteProducts.Remove(favoriteProduct);
-        }
-
-        public async Task<List<FavoriteProduct>> GetByUserIdAsync(string userId)
-        {
-            return await _context.FavoriteProducts
-                .Include(fp => fp.Product)
-                .Where(fp => fp.UserId == userId)
-                .ToListAsync();
-        }
+    public async Task<List<FavoriteProduct>> GetByUserIdAsync(string userId)
+    {
+        return await _context.FavoriteProducts
+            .Include(fp => fp.Product)
+            .Where(fp => fp.UserId == userId)
+            .ToListAsync();
     }
 }

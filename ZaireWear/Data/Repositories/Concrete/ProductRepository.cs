@@ -4,52 +4,51 @@ using Data.Repositories.Abstract;
 using Data.Repositories.Base;
 using Microsoft.EntityFrameworkCore;
 
-namespace Data.Repositories.Concrete
+namespace Data.Repositories.Concrete;
+
+public class ProductRepository : BaseRepository<Product>, IProductRepository
 {
-    public class ProductRepository : BaseRepository<Product>, IProductRepository
+    private readonly AppDbContext _context;
+
+    public ProductRepository(AppDbContext context) : base(context)
     {
-        private readonly AppDbContext _context;
+        _context = context;
+    }
 
-        public ProductRepository(AppDbContext context) : base(context)
-        {
-            _context = context;
-        }
+    public async Task<List<Product>> GetAllWithDetailsAsync()
+    {
+        return await _context.Products
+            .Include(p => p.ProductCategories).ThenInclude(pc => pc.Category)
+            .Include(p => p.ProductColors).ThenInclude(pc => pc.Color)
+            .Include(p => p.ProductSizes).ThenInclude(ps => ps.Size)
+            .ToListAsync();
+    }
 
-        public async Task<List<Product>> GetAllWithDetailsAsync()
-        {
-            return await _context.Products
-                .Include(p => p.ProductCategories).ThenInclude(pc => pc.Category)
-                .Include(p => p.ProductColors).ThenInclude(pc => pc.Color)
-                .Include(p => p.ProductSizes).ThenInclude(ps => ps.Size)
-                .ToListAsync();
-        }
+    public async Task<Product> GetByIdWithDetailsAsync(int id)
+    {
+        return await _context.Products
+            .Include(p => p.ProductCategories).ThenInclude(pc => pc.Category)
+            .Include(p => p.ProductColors).ThenInclude(pc => pc.Color)
+            .Include(p => p.ProductSizes).ThenInclude(ps => ps.Size)
+            .FirstOrDefaultAsync(p => p.Id == id);
+    }
 
-        public async Task<Product> GetByIdWithDetailsAsync(int id)
-        {
-            return await _context.Products
-                .Include(p => p.ProductCategories).ThenInclude(pc => pc.Category)
-                .Include(p => p.ProductColors).ThenInclude(pc => pc.Color)
-                .Include(p => p.ProductSizes).ThenInclude(ps => ps.Size)
-                .FirstOrDefaultAsync(p => p.Id == id);
-        }
+    public async Task AddAsync(Product product)
+    {
+        await _context.Products.AddAsync(product);
+        await _context.SaveChangesAsync();
+    }
 
-        public async Task AddAsync(Product product)
-        {
-            await _context.Products.AddAsync(product);
-            await _context.SaveChangesAsync();
-        }
-
-        public async Task<Product> GetByIdAsync(int id)
-        {
-            return await _context.Products
-                .Include(p => p.BasketProducts)
-                .Include(p => p.ProductColors) // Include the collection
-                    .ThenInclude(pc => pc.Color) // Then include Color from ProductColors
-                .Include(p => p.FavoriteProducts)
-                .Include(p => p.ProductCategories)
-                .Include(p => p.ProductSizes)
-                    .ThenInclude(ps => ps.Size)
-                .FirstOrDefaultAsync(p => p.Id == id);
-        }
+    public async Task<Product> GetByIdAsync(int id)
+    {
+        return await _context.Products
+            .Include(p => p.BasketProducts)
+            .Include(p => p.ProductColors) // Include the collection
+                .ThenInclude(pc => pc.Color) // Then include Color from ProductColors
+            .Include(p => p.FavoriteProducts)
+            .Include(p => p.ProductCategories)
+            .Include(p => p.ProductSizes)
+                .ThenInclude(ps => ps.Size)
+            .FirstOrDefaultAsync(p => p.Id == id);
     }
 }

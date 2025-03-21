@@ -1,22 +1,21 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace ZaireWear.Controllers
+namespace ZaireWear.Controllers;
+
+public class LoginController : Controller
 {
-    public class LoginController : Controller
+    public IActionResult Index()
     {
-        public IActionResult Index()
-        {
-            return View();
-        }
+        return View();
+    }
 
-        public IActionResult ForgotPassword()
-        {
-            return View();
-        }
+    public IActionResult ForgotPassword()
+    {
+        return View();
+    }
 
-        public IActionResult Register()
-        {
-            return View();
-        }
+    public IActionResult Register()
+    {
+        return View();
     }
 }

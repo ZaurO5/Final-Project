@@ -1870,9 +1870,7 @@ wwwroot\assets\images\sliders\4d56f209-d847-422b-ac12-4a588afa0944_fashion-Ecomm
 wwwroot\assets\images\sliders\87bec0de-63fa-4e3c-94e4-2bcd007bae21_fashion-websites.jpg
 wwwroot\assets\images\ZaireWearLogo.png
 wwwroot\assets\js\basket.js
-wwwroot\assets\js\colorandsizeselect.js
 wwwroot\assets\js\dropdown.js
-wwwroot\assets\js\quantity.js
 wwwroot\assets\js\slideshow.js
 wwwroot\assets\scss\Base\_reset.scss
 wwwroot\assets\scss\Base\_typography.scss

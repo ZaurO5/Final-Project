@@ -1,5 +1,4 @@
-﻿using Core.Constants;
-using Core.Constants.Enums;
+﻿using Core.Constants.Enums;
 
 namespace Core.Entities;
 

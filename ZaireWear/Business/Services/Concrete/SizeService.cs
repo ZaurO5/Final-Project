@@ -11,155 +11,154 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Business.Services.Concrete
+namespace Business.Services.Concrete;
+
+public class SizeService : ISizeService
 {
-    public class SizeService : ISizeService
+    private readonly ISizeRepository _sizeRepository;
+    private readonly IUnitOfWork _unitOfWork;
+    private readonly ModelStateDictionary _modelState;
+
+    public SizeService(
+        ISizeRepository sizeRepository,
+        IUnitOfWork unitOfWork,
+        IActionContextAccessor actionContextAccessor)
     {
-        private readonly ISizeRepository _sizeRepository;
-        private readonly IUnitOfWork _unitOfWork;
-        private readonly ModelStateDictionary _modelState;
+        _sizeRepository = sizeRepository;
+        _unitOfWork = unitOfWork;
+        _modelState = actionContextAccessor.ActionContext.ModelState;
+    }
 
-        public SizeService(
-            ISizeRepository sizeRepository,
-            IUnitOfWork unitOfWork,
-            IActionContextAccessor actionContextAccessor)
+    public async Task<SizeIndexVM> GetAllAsync()
+    {
+        try
         {
-            _sizeRepository = sizeRepository;
-            _unitOfWork = unitOfWork;
-            _modelState = actionContextAccessor.ActionContext.ModelState;
+            var sizes = await _sizeRepository.GetAllAsync();
+            return new SizeIndexVM { Sizes = sizes };
         }
-
-        public async Task<SizeIndexVM> GetAllAsync()
+        catch (Exception ex)
         {
-            try
-            {
-                var sizes = await _sizeRepository.GetAllAsync();
-                return new SizeIndexVM { Sizes = sizes };
-            }
-            catch (Exception ex)
-            {
-                _modelState.AddModelError(string.Empty, "Error retrieving sizes");
-                return new SizeIndexVM { Sizes = new List<Size>() };
-            }
+            _modelState.AddModelError(string.Empty, "Error retrieving sizes");
+            return new SizeIndexVM { Sizes = new List<Size>() };
         }
+    }
 
-        public async Task<Size> GetByIdAsync(int id)
+    public async Task<Size> GetByIdAsync(int id)
+    {
+        try
         {
-            try
+            return await _sizeRepository.GetByIdAsync(id);
+        }
+        catch (Exception ex)
+        {
+            _modelState.AddModelError(string.Empty, "Error retrieving size");
+            return null;
+        }
+    }
+
+    public async Task<bool> CreateAsync(SizeCreateVM model)
+    {
+        if (!_modelState.IsValid) return false;
+
+        try
+        {
+            var existingSize = await _sizeRepository.GetByNameAsync(model.Name);
+            if (existingSize != null)
             {
-                return await _sizeRepository.GetByIdAsync(id);
+                _modelState.AddModelError("Name", "Size already exists");
+                return false;
             }
-            catch (Exception ex)
+
+            var newSize = new Size
             {
-                _modelState.AddModelError(string.Empty, "Error retrieving size");
+                Name = model.Name,
+                CreatedAt = DateTime.Now
+            };
+
+            await _sizeRepository.CreateAsync(newSize);
+            await _unitOfWork.CommitAsync();
+            return true;
+        }
+        catch (Exception ex)
+        {
+            _modelState.AddModelError(string.Empty, "Error creating size");
+            return false;
+        }
+    }
+
+    public async Task<SizeUpdateVM> UpdateAsync(int id)
+    {
+        try
+        {
+            var size = await _sizeRepository.GetByIdAsync(id);
+            if (size == null)
+            {
+                _modelState.AddModelError(string.Empty, "Size not found");
                 return null;
             }
+
+            return new SizeUpdateVM { Name = size.Name };
         }
-
-        public async Task<bool> CreateAsync(SizeCreateVM model)
+        catch (Exception ex)
         {
-            if (!_modelState.IsValid) return false;
+            _modelState.AddModelError(string.Empty, "Error retrieving size");
+            return null;
+        }
+    }
 
-            try
+    public async Task<bool> UpdateAsync(int id, SizeUpdateVM model)
+    {
+        if (!_modelState.IsValid) return false;
+
+        try
+        {
+            var size = await _sizeRepository.GetByIdAsync(id);
+            if (size == null)
             {
-                var existingSize = await _sizeRepository.GetByNameAsync(model.Name);
-                if (existingSize != null)
-                {
-                    _modelState.AddModelError("Name", "Size already exists");
-                    return false;
-                }
-
-                var newSize = new Size
-                {
-                    Name = model.Name,
-                    CreatedAt = DateTime.Now
-                };
-
-                await _sizeRepository.CreateAsync(newSize);
-                await _unitOfWork.CommitAsync();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                _modelState.AddModelError(string.Empty, "Error creating size");
+                _modelState.AddModelError(string.Empty, "Size not found");
                 return false;
             }
-        }
 
-        public async Task<SizeUpdateVM> UpdateAsync(int id)
-        {
-            try
+            var existingSize = await _sizeRepository.GetByNameAsync(model.Name);
+            if (existingSize != null && existingSize.Id != id)
             {
-                var size = await _sizeRepository.GetByIdAsync(id);
-                if (size == null)
-                {
-                    _modelState.AddModelError(string.Empty, "Size not found");
-                    return null;
-                }
-
-                return new SizeUpdateVM { Name = size.Name };
-            }
-            catch (Exception ex)
-            {
-                _modelState.AddModelError(string.Empty, "Error retrieving size");
-                return null;
-            }
-        }
-
-        public async Task<bool> UpdateAsync(int id, SizeUpdateVM model)
-        {
-            if (!_modelState.IsValid) return false;
-
-            try
-            {
-                var size = await _sizeRepository.GetByIdAsync(id);
-                if (size == null)
-                {
-                    _modelState.AddModelError(string.Empty, "Size not found");
-                    return false;
-                }
-
-                var existingSize = await _sizeRepository.GetByNameAsync(model.Name);
-                if (existingSize != null && existingSize.Id != id)
-                {
-                    _modelState.AddModelError("Name", "Size already exists");
-                    return false;
-                }
-
-                size.Name = model.Name;
-                size.ModifiedAt = DateTime.Now;
-
-                _sizeRepository.Update(size);
-                await _unitOfWork.CommitAsync();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                _modelState.AddModelError(string.Empty, "Error updating size");
+                _modelState.AddModelError("Name", "Size already exists");
                 return false;
             }
+
+            size.Name = model.Name;
+            size.ModifiedAt = DateTime.Now;
+
+            _sizeRepository.Update(size);
+            await _unitOfWork.CommitAsync();
+            return true;
         }
-
-        public async Task<bool> DeleteAsync(int id)
+        catch (Exception ex)
         {
-            try
-            {
-                var size = await _sizeRepository.GetByIdAsync(id);
-                if (size == null)
-                {
-                    _modelState.AddModelError(string.Empty, "Size not found");
-                    return false;
-                }
+            _modelState.AddModelError(string.Empty, "Error updating size");
+            return false;
+        }
+    }
 
-                _sizeRepository.Delete(size);
-                await _unitOfWork.CommitAsync();
-                return true;
-            }
-            catch (Exception ex)
+    public async Task<bool> DeleteAsync(int id)
+    {
+        try
+        {
+            var size = await _sizeRepository.GetByIdAsync(id);
+            if (size == null)
             {
-                _modelState.AddModelError(string.Empty, "Error deleting size");
+                _modelState.AddModelError(string.Empty, "Size not found");
                 return false;
             }
+
+            _sizeRepository.Delete(size);
+            await _unitOfWork.CommitAsync();
+            return true;
+        }
+        catch (Exception ex)
+        {
+            _modelState.AddModelError(string.Empty, "Error deleting size");
+            return false;
         }
     }
 }

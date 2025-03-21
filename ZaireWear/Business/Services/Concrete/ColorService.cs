@@ -5,167 +5,161 @@ using Data.Repositories.Abstract;
 using Data.UnitOfWork;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Business.Services.Concrete
+namespace Business.Services.Concrete;
+
+public class ColorService : IColorService
 {
-    public class ColorService : IColorService
+    private readonly IColorRepository _colorRepository;
+    private readonly IUnitOfWork _unitOfWork;
+    private readonly ModelStateDictionary _modelState;
+
+    public ColorService(
+        IColorRepository colorRepository,
+        IUnitOfWork unitOfWork,
+        IActionContextAccessor actionContextAccessor)
     {
-        private readonly IColorRepository _colorRepository;
-        private readonly IUnitOfWork _unitOfWork;
-        private readonly ModelStateDictionary _modelState;
+        _colorRepository = colorRepository;
+        _unitOfWork = unitOfWork;
+        _modelState = actionContextAccessor.ActionContext.ModelState;
+    }
 
-        public ColorService(
-            IColorRepository colorRepository,
-            IUnitOfWork unitOfWork,
-            IActionContextAccessor actionContextAccessor)
+    public async Task<ColorIndexVM> GetAllAsync()
+    {
+        try
         {
-            _colorRepository = colorRepository;
-            _unitOfWork = unitOfWork;
-            _modelState = actionContextAccessor.ActionContext.ModelState;
+            var colors = await _colorRepository.GetAllAsync();
+            return new ColorIndexVM { Colors = colors };
         }
-
-        public async Task<ColorIndexVM> GetAllAsync()
+        catch (Exception ex)
         {
-            try
-            {
-                var colors = await _colorRepository.GetAllAsync();
-                return new ColorIndexVM { Colors = colors };
-            }
-            catch (Exception ex)
-            {
-                _modelState.AddModelError(string.Empty, "Error retrieving colors");
-                return new ColorIndexVM { Colors = new List<Color>() };
-            }
+            _modelState.AddModelError(string.Empty, "Error retrieving colors");
+            return new ColorIndexVM { Colors = new List<Color>() };
         }
+    }
 
-        public async Task<Color> GetByIdAsync(int id)
+    public async Task<Color> GetByIdAsync(int id)
+    {
+        try
         {
-            try
+            return await _colorRepository.GetByIdAsync(id);
+        }
+        catch (Exception ex)
+        {
+            _modelState.AddModelError(string.Empty, "Error retrieving color");
+            return null;
+        }
+    }
+
+    public async Task<bool> CreateAsync(ColorCreateVM model)
+    {
+        if (!_modelState.IsValid) return false;
+
+        try
+        {
+            var existingColor = await _colorRepository.GetByNameAsync(model.Name);
+            if (existingColor != null)
             {
-                return await _colorRepository.GetByIdAsync(id);
+                _modelState.AddModelError("Name", "Color already exists");
+                return false;
             }
-            catch (Exception ex)
+
+            var newColor = new Color
             {
-                _modelState.AddModelError(string.Empty, "Error retrieving color");
+                Name = model.Name,
+                HexCode = model.HexCode,
+                CreatedAt = DateTime.Now
+            };
+
+            await _colorRepository.CreateAsync(newColor);
+            await _unitOfWork.CommitAsync();
+            return true;
+        }
+        catch (Exception ex)
+        {
+            _modelState.AddModelError(string.Empty, "Error creating color");
+            return false;
+        }
+    }
+
+    public async Task<ColorUpdateVM> UpdateAsync(int id)
+    {
+        try
+        {
+            var color = await _colorRepository.GetByIdAsync(id);
+            if (color == null)
+            {
+                _modelState.AddModelError(string.Empty, "Color not found");
                 return null;
             }
+
+            return new ColorUpdateVM
+            {
+                Name = color.Name,
+                HexCode = color.HexCode
+            };
         }
-
-        public async Task<bool> CreateAsync(ColorCreateVM model)
+        catch (Exception ex)
         {
-            if (!_modelState.IsValid) return false;
+            _modelState.AddModelError(string.Empty, "Error retrieving color");
+            return null;
+        }
+    }
 
-            try
+    public async Task<bool> UpdateAsync(int id, ColorUpdateVM model)
+    {
+        if (!_modelState.IsValid) return false;
+
+        try
+        {
+            var color = await _colorRepository.GetByIdAsync(id);
+            if (color == null)
             {
-                var existingColor = await _colorRepository.GetByNameAsync(model.Name);
-                if (existingColor != null)
-                {
-                    _modelState.AddModelError("Name", "Color already exists");
-                    return false;
-                }
-
-                var newColor = new Color
-                {
-                    Name = model.Name,
-                    HexCode = model.HexCode,
-                    CreatedAt = DateTime.Now
-                };
-
-                await _colorRepository.CreateAsync(newColor);
-                await _unitOfWork.CommitAsync();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                _modelState.AddModelError(string.Empty, "Error creating color");
+                _modelState.AddModelError(string.Empty, "Color not found");
                 return false;
             }
-        }
 
-        public async Task<ColorUpdateVM> UpdateAsync(int id)
-        {
-            try
+            var existingColor = await _colorRepository.GetByNameAsync(model.Name);
+            if (existingColor != null && existingColor.Id != id)
             {
-                var color = await _colorRepository.GetByIdAsync(id);
-                if (color == null)
-                {
-                    _modelState.AddModelError(string.Empty, "Color not found");
-                    return null;
-                }
-
-                return new ColorUpdateVM
-                {
-                    Name = color.Name,
-                    HexCode = color.HexCode
-                };
-            }
-            catch (Exception ex)
-            {
-                _modelState.AddModelError(string.Empty, "Error retrieving color");
-                return null;
-            }
-        }
-
-        public async Task<bool> UpdateAsync(int id, ColorUpdateVM model)
-        {
-            if (!_modelState.IsValid) return false;
-
-            try
-            {
-                var color = await _colorRepository.GetByIdAsync(id);
-                if (color == null)
-                {
-                    _modelState.AddModelError(string.Empty, "Color not found");
-                    return false;
-                }
-
-                var existingColor = await _colorRepository.GetByNameAsync(model.Name);
-                if (existingColor != null && existingColor.Id != id)
-                {
-                    _modelState.AddModelError("Name", "Color already exists");
-                    return false;
-                }
-
-                color.Name = model.Name;
-                color.HexCode = model.HexCode;
-                color.ModifiedAt = DateTime.Now;
-
-                _colorRepository.Update(color);
-                await _unitOfWork.CommitAsync();
-                return true;
-            }
-            catch (Exception ex)
-            {
-                _modelState.AddModelError(string.Empty, "Error updating color");
+                _modelState.AddModelError("Name", "Color already exists");
                 return false;
             }
+
+            color.Name = model.Name;
+            color.HexCode = model.HexCode;
+            color.ModifiedAt = DateTime.Now;
+
+            _colorRepository.Update(color);
+            await _unitOfWork.CommitAsync();
+            return true;
         }
-
-        public async Task<bool> DeleteAsync(int id)
+        catch (Exception ex)
         {
-            try
-            {
-                var color = await _colorRepository.GetByIdAsync(id);
-                if (color == null)
-                {
-                    _modelState.AddModelError(string.Empty, "Color not found");
-                    return false;
-                }
+            _modelState.AddModelError(string.Empty, "Error updating color");
+            return false;
+        }
+    }
 
-                _colorRepository.Delete(color);
-                await _unitOfWork.CommitAsync();
-                return true;
-            }
-            catch (Exception ex)
+    public async Task<bool> DeleteAsync(int id)
+    {
+        try
+        {
+            var color = await _colorRepository.GetByIdAsync(id);
+            if (color == null)
             {
-                _modelState.AddModelError(string.Empty, "Error deleting color");
+                _modelState.AddModelError(string.Empty, "Color not found");
                 return false;
             }
+
+            _colorRepository.Delete(color);
+            await _unitOfWork.CommitAsync();
+            return true;
+        }
+        catch (Exception ex)
+        {
+            _modelState.AddModelError(string.Empty, "Error deleting color");
+            return false;
         }
     }
 }

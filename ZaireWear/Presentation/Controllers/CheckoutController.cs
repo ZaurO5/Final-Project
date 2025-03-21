@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Presentation.Controllers;
+namespace ZaireWear.Controllers;
 
 [Authorize]
 public class CheckoutController : Controller

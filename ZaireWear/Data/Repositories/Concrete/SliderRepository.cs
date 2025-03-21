@@ -2,17 +2,15 @@
 using Data.Contexts;
 using Data.Repositories.Abstract;
 using Data.Repositories.Base;
-using Microsoft.EntityFrameworkCore;
 
-namespace Data.Repositories.Concrete
+namespace Data.Repositories.Concrete;
+
+public class SliderRepository : BaseRepository<Slider>, ISliderRepository
 {
-    public class SliderRepository : BaseRepository<Slider>, ISliderRepository
-    {
-        private readonly AppDbContext _context;
+    private readonly AppDbContext _context;
 
-        public SliderRepository(AppDbContext context) : base(context)
-        {
-            _context = context;
-        }
+    public SliderRepository(AppDbContext context) : base(context)
+    {
+        _context = context;
     }
 }

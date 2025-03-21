@@ -1,10 +1,13 @@
-﻿using Business.Utilities.File;
+﻿using Business.Services.Abstract;
+using Business.Utilities.File;
 using Business.ViewModels.Slider;
 using Core.Entities;
 using Data.Repositories.Abstract;
 using Data.UnitOfWork;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+
+namespace Business.Services.Concrete;
 
 public class SliderService : ISliderService
 {

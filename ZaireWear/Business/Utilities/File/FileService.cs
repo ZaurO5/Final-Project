@@ -1,62 +1,59 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
-using System;
-using System.IO;
 
-namespace Business.Utilities.File
+namespace Business.Utilities.File;
+
+public class FileService : IFileService
 {
-    public class FileService : IFileService
+    private readonly IWebHostEnvironment _webHostEnvironment;
+
+    public FileService(IWebHostEnvironment webHostEnvironment)
     {
-        private readonly IWebHostEnvironment _webHostEnvironment;
+        _webHostEnvironment = webHostEnvironment;
+    }
 
-        public FileService(IWebHostEnvironment webHostEnvironment)
+    public string Upload(IFormFile file, string folder, string oldFileName = null)
+    {
+        var fileName = $"{Guid.NewGuid()}_{file.FileName}";
+        var folderPath = Path.Combine(_webHostEnvironment.WebRootPath, folder);
+
+        if (!Directory.Exists(folderPath))
         {
-            _webHostEnvironment = webHostEnvironment;
+            Directory.CreateDirectory(folderPath);
         }
 
-        public string Upload(IFormFile file, string folder, string oldFileName = null)
+        if (!string.IsNullOrEmpty(oldFileName))
         {
-            var fileName = $"{Guid.NewGuid()}_{file.FileName}";
-            var folderPath = Path.Combine(_webHostEnvironment.WebRootPath, folder);
-
-            if (!Directory.Exists(folderPath))
-            {
-                Directory.CreateDirectory(folderPath);
-            }
-
-            if (!string.IsNullOrEmpty(oldFileName))
-            {
-                Delete(folder, oldFileName);
-            }
-
-            var filePath = Path.Combine(folderPath, fileName);
-
-            using (var fileStream = new FileStream(filePath, FileMode.Create, FileAccess.ReadWrite))
-            {
-                file.CopyTo(fileStream);
-            }
-
-            return fileName;
+            Delete(folder, oldFileName);
         }
 
-        public void Delete(string folder, string fileName)
-        {
-            var filePath = Path.Combine(_webHostEnvironment.WebRootPath, folder, fileName);
+        var filePath = Path.Combine(folderPath, fileName);
 
-            if (System.IO.File.Exists(filePath))
-            {
-                System.IO.File.Delete(filePath);
-            }
+        using (var fileStream = new FileStream(filePath, FileMode.Create, FileAccess.ReadWrite))
+        {
+            file.CopyTo(fileStream);
         }
 
-        public bool IsImage(string contentType)
-        {
-            return contentType.Contains("image/");
-        }
+        return fileName;
+    }
 
-        public bool IsTrueSize(long length, long maxSize = 500)
+    public void Delete(string folder, string fileName)
+    {
+        var filePath = Path.Combine(_webHostEnvironment.WebRootPath, folder, fileName);
+
+        if (System.IO.File.Exists(filePath))
         {
-            return length / 1024 < maxSize;
+            System.IO.File.Delete(filePath);
         }
+    }
+
+    public bool IsImage(string contentType)
+    {
+        return contentType.Contains("image/");
+    }
+
+    public bool IsTrueSize(long length, long maxSize = 500)
+    {
+        return length / 1024 < maxSize;
     }
 }

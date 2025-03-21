@@ -54,7 +54,6 @@ builder.Services.AddSingleton(emailConfiguration);
 builder.Services.AddScoped<IEmailService, EmailService>();
 #endregion
 
-
 #region Repositories
 builder.Services.AddScoped<ISliderRepository, SliderRepository>();
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();

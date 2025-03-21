@@ -1,0 +1,2 @@
+C:\Users\User\OneDrive\Desktop\Final-Project\ZaireWear\Presentation\wwwroot\assets\js\colorandsizeselect.js
+C:\Users\User\OneDrive\Desktop\Final-Project\ZaireWear\Presentation\wwwroot\assets\js\quantity.js

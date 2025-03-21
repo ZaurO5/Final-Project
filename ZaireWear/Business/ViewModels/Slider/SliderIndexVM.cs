@@ -1,7 +1,6 @@
-﻿namespace Business.ViewModels.Slider
+﻿namespace Business.ViewModels.Slider;
+
+public class SliderIndexVM
 {
-    public class SliderIndexVM
-    {
-        public List<Core.Entities.Slider> Sliders { get; set; }
-    }
+    public List<Core.Entities.Slider> Sliders { get; set; }
 }

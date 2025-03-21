@@ -5,161 +5,156 @@ using Data.Repositories.Abstract;
 using Data.UnitOfWork;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Business.Services.Concrete
+namespace Business.Services.Concrete;
+
+public class CategoryService : ICategoryService
 {
-    public class CategoryService : ICategoryService
-    {
-        private readonly ICategoryRepository _categoryRepository;
-        private readonly IUnitOfWork _unitOfWork;
-        private readonly ModelStateDictionary _modelState;
+    private readonly ICategoryRepository _categoryRepository;
+    private readonly IUnitOfWork _unitOfWork;
+    private readonly ModelStateDictionary _modelState;
 
-        public CategoryService(ICategoryRepository categoryRepository,
-                               IUnitOfWork unitOfWork,
-                               IActionContextAccessor actionContextAccessor)
+    public CategoryService(ICategoryRepository categoryRepository,
+                           IUnitOfWork unitOfWork,
+                           IActionContextAccessor actionContextAccessor)
+    {
+        _categoryRepository = categoryRepository;
+        _unitOfWork = unitOfWork;
+        _modelState = actionContextAccessor.ActionContext.ModelState;
+    }
+
+        public async Task<CategoryIndexVM> GetAllAsync()
         {
-            _categoryRepository = categoryRepository;
-            _unitOfWork = unitOfWork;
-            _modelState = actionContextAccessor.ActionContext.ModelState;
+            try
+            {
+                var categories = await _categoryRepository.GetAllAsync();
+                return new CategoryIndexVM { Categories = categories };
+            }
+            catch (Exception ex)
+            {
+                _modelState.AddModelError(string.Empty, "Error retrieving categories");
+                return new CategoryIndexVM { Categories = new List<Category>() };
+            }
         }
 
-            public async Task<CategoryIndexVM> GetAllAsync()
+        public async Task<Category> GetByIdAsync(int id)
+        {
+            try
             {
-                try
-                {
-                    var categories = await _categoryRepository.GetAllAsync();
-                    return new CategoryIndexVM { Categories = categories };
-                }
-                catch (Exception ex)
-                {
-                    _modelState.AddModelError(string.Empty, "Error retrieving categories");
-                    return new CategoryIndexVM { Categories = new List<Category>() };
-                }
+                return await _categoryRepository.GetByIdAsync(id);
+            }
+            catch (Exception ex)
+            {
+                _modelState.AddModelError(string.Empty, "Error retrieving category");
+                return null;
+            }
+        }
+
+    public async Task<bool> CreateAsync(CategoryCreateVM model)
+    {
+        if (!_modelState.IsValid) return false;
+
+        try
+        {
+            var existingCategory = await _categoryRepository.GetByNameAsync(model.Name);
+            if (existingCategory != null)
+            {
+                _modelState.AddModelError("Name", "Category already exists");
+                return false;
             }
 
-            public async Task<Category> GetByIdAsync(int id)
+            var newCategory = new Category
             {
-                try
+                Name = model.Name,
+                CreatedAt = DateTime.Now
+            };
+
+            await _categoryRepository.CreateAsync(newCategory);
+            await _unitOfWork.CommitAsync();
+            return true;
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error creating category: {ex.Message}");
+            _modelState.AddModelError(string.Empty, "Error creating category");
+            return false;
+        }
+    }
+
+    public async Task<CategoryUpdateVM> UpdateAsync(int id)
+        {
+            try
+            {
+                var category = await _categoryRepository.GetByIdAsync(id);
+                if (category == null)
                 {
-                    return await _categoryRepository.GetByIdAsync(id);
-                }
-                catch (Exception ex)
-                {
-                    _modelState.AddModelError(string.Empty, "Error retrieving category");
+                    _modelState.AddModelError(string.Empty, "Category not found");
                     return null;
                 }
-            }
 
-        public async Task<bool> CreateAsync(CategoryCreateVM model)
+                return new CategoryUpdateVM { Name = category.Name };
+            }
+            catch (Exception ex)
+            {
+                _modelState.AddModelError(string.Empty, "Error retrieving category");
+                return null;
+            }
+    }
+
+        public async Task<bool> UpdateAsync(int id, CategoryUpdateVM model)
         {
             if (!_modelState.IsValid) return false;
 
             try
             {
+                var category = await _categoryRepository.GetByIdAsync(id);
+                if (category == null)
+                {
+                    _modelState.AddModelError(string.Empty, "Category not found");
+                    return false;
+                }
+
                 var existingCategory = await _categoryRepository.GetByNameAsync(model.Name);
-                if (existingCategory != null)
+                if (existingCategory != null && existingCategory.Id != id)
                 {
                     _modelState.AddModelError("Name", "Category already exists");
                     return false;
                 }
 
-                var newCategory = new Category
-                {
-                    Name = model.Name,
-                    CreatedAt = DateTime.Now
-                };
+                category.Name = model.Name;
+                category.ModifiedAt = DateTime.Now;
 
-                await _categoryRepository.CreateAsync(newCategory);
+                _categoryRepository.Update(category);
                 await _unitOfWork.CommitAsync();
                 return true;
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"Error creating category: {ex.Message}");
-                _modelState.AddModelError(string.Empty, "Error creating category");
+                _modelState.AddModelError(string.Empty, "Error updating category");
                 return false;
             }
         }
 
-        public async Task<CategoryUpdateVM> UpdateAsync(int id)
+        public async Task<bool> DeleteAsync(int id)
+        {
+            try
             {
-                try
+                var category = await _categoryRepository.GetByIdAsync(id);
+                if (category == null)
                 {
-                    var category = await _categoryRepository.GetByIdAsync(id);
-                    if (category == null)
-                    {
-                        _modelState.AddModelError(string.Empty, "Category not found");
-                        return null;
-                    }
-
-                    return new CategoryUpdateVM { Name = category.Name };
-                }
-                catch (Exception ex)
-                {
-                    _modelState.AddModelError(string.Empty, "Error retrieving category");
-                    return null;
-                }
-            }
-
-            public async Task<bool> UpdateAsync(int id, CategoryUpdateVM model)
-            {
-                if (!_modelState.IsValid) return false;
-
-                try
-                {
-                    var category = await _categoryRepository.GetByIdAsync(id);
-                    if (category == null)
-                    {
-                        _modelState.AddModelError(string.Empty, "Category not found");
-                        return false;
-                    }
-
-                    var existingCategory = await _categoryRepository.GetByNameAsync(model.Name);
-                    if (existingCategory != null && existingCategory.Id != id)
-                    {
-                        _modelState.AddModelError("Name", "Category already exists");
-                        return false;
-                    }
-
-                    category.Name = model.Name;
-                    category.ModifiedAt = DateTime.Now;
-
-                    _categoryRepository.Update(category);
-                    await _unitOfWork.CommitAsync();
-                    return true;
-                }
-                catch (Exception ex)
-                {
-                    _modelState.AddModelError(string.Empty, "Error updating category");
+                    _modelState.AddModelError(string.Empty, "Category not found");
                     return false;
                 }
-            }
 
-            public async Task<bool> DeleteAsync(int id)
+                _categoryRepository.Delete(category);
+                await _unitOfWork.CommitAsync();
+                return true;
+            }
+            catch (Exception ex)
             {
-                try
-                {
-                    var category = await _categoryRepository.GetByIdAsync(id);
-                    if (category == null)
-                    {
-                        _modelState.AddModelError(string.Empty, "Category not found");
-                        return false;
-                    }
-
-                    _categoryRepository.Delete(category);
-                    await _unitOfWork.CommitAsync();
-                    return true;
-                }
-                catch (Exception ex)
-                {
-                    _modelState.AddModelError(string.Empty, "Error deleting category");
-                    return false;
-                }
+                _modelState.AddModelError(string.Empty, "Error deleting category");
+                return false;
             }
-    }
- }
+        }
+}
+

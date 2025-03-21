@@ -1,5 +1,5 @@
 ﻿using Business.ViewModels.Slider;
-
+namespace Business.Services.Abstract;
 public interface ISliderService
 {
     Task<SliderIndexVM> GetAllAsync();

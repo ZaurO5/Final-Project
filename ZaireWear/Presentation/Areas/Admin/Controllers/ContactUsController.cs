@@ -1,12 +1,10 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
-using System.Threading.Tasks;
 using Business.ViewModels.ContactMessage;
 using Data.Contexts;
-using Core.Entities;
 
+namespace Presentation.Areas.Admin.Controllers;
 
 [Area("Admin")]
 [Authorize(Roles = "Admin")]
@@ -19,6 +17,8 @@ public class ContactUsController : Controller
     {
         _context = context;
     }
+
+    #region Read
 
     public async Task<IActionResult> Index(int page = 1)
     {
@@ -47,6 +47,9 @@ public class ContactUsController : Controller
         return View(messages);
     }
 
+    #endregion
+
+    #region ToggleReadStatus
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> ToggleReadStatus(int id)
@@ -60,6 +63,10 @@ public class ContactUsController : Controller
         return Ok(new { newStatus = message.IsRead });
     }
 
+    #endregion
+
+    #region Delete
+
     [HttpPost]
     [ValidateAntiForgeryToken]
     public async Task<IActionResult> Delete(int id)
@@ -72,4 +79,6 @@ public class ContactUsController : Controller
 
         return Ok();
     }
+
+    #endregion
 }

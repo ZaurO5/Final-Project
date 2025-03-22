@@ -21,7 +21,7 @@ var builder = WebApplication.CreateBuilder(args);
 #region Builder
 
 builder.Services.AddControllersWithViews();
-builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(
+builder.Services.AddDbContext<AppDbContext>(x => x.UseNpgsql(
     builder.Configuration.GetConnectionString("Default"),
     x => x.MigrationsAssembly("Data")));
 builder.Services.AddSingleton(builder.Environment);
@@ -52,6 +52,7 @@ builder.Services.Configure<DataProtectionTokenProviderOptions>(options =>
 var emailConfiguration = builder.Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>();
 builder.Services.AddSingleton(emailConfiguration);
 builder.Services.AddScoped<IEmailService, EmailService>();
+
 #endregion
 
 #region Repositories
@@ -100,23 +101,27 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
+// Миграция и сидинг при запуске
 using (var scope = app.Services.CreateScope())
 {
-    var userManager = scope.ServiceProvider.GetService<UserManager<User>>();
-    var roleManager = scope.ServiceProvider.GetService<RoleManager<IdentityRole>>();
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<AppDbContext>();
+    await context.Database.MigrateAsync();
+
+    var userManager = services.GetRequiredService<UserManager<User>>();
+    var roleManager = services.GetRequiredService<RoleManager<IdentityRole>>();
     await DbInitializer.Seed(userManager, roleManager);
 }
 
 app.MapControllerRoute(
     name: "areas",
     pattern: "{area:exists}/{controller=Dashboard}/{action=Index}/{id?}");
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe")["SecretKey"];
-
-
 
 app.Run();
 

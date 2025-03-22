@@ -280,3 +280,5 @@ C:\Users\User\OneDrive\Desktop\Final-Project\ZaireWear\Presentation\obj\Debug\ne
 C:\Users\User\OneDrive\Desktop\Final-Project\ZaireWear\Presentation\obj\Debug\net8.0\Presentation.genruntimeconfig.cache
 C:\Users\User\OneDrive\Desktop\Final-Project\ZaireWear\Presentation\obj\Debug\net8.0\ref\Presentation.dll
 C:\Users\User\OneDrive\Desktop\Final-Project\ZaireWear\Presentation\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\User\OneDrive\Desktop\Final-Project\ZaireWear\Presentation\bin\Debug\net8.0\Npgsql.dll
+C:\Users\User\OneDrive\Desktop\Final-Project\ZaireWear\Presentation\bin\Debug\net8.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll

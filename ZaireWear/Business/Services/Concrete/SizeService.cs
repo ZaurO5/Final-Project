@@ -72,7 +72,7 @@ public class SizeService : ISizeService
             var newSize = new Size
             {
                 Name = model.Name,
-                CreatedAt = DateTime.Now
+                CreatedAt = DateTime.UtcNow
             };
 
             await _sizeRepository.CreateAsync(newSize);
@@ -127,7 +127,7 @@ public class SizeService : ISizeService
             }
 
             size.Name = model.Name;
-            size.ModifiedAt = DateTime.Now;
+            size.ModifiedAt = DateTime.UtcNow;
 
             _sizeRepository.Update(size);
             await _unitOfWork.CommitAsync();

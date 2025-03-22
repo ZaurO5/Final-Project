@@ -68,7 +68,7 @@ public class ColorService : IColorService
             {
                 Name = model.Name,
                 HexCode = model.HexCode,
-                CreatedAt = DateTime.Now
+                CreatedAt = DateTime.UtcNow
             };
 
             await _colorRepository.CreateAsync(newColor);
@@ -128,7 +128,7 @@ public class ColorService : IColorService
 
             color.Name = model.Name;
             color.HexCode = model.HexCode;
-            color.ModifiedAt = DateTime.Now;
+            color.ModifiedAt = DateTime.UtcNow;
 
             _colorRepository.Update(color);
             await _unitOfWork.CommitAsync();

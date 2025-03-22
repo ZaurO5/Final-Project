@@ -66,7 +66,7 @@ public class CategoryService : ICategoryService
             var newCategory = new Category
             {
                 Name = model.Name,
-                CreatedAt = DateTime.Now
+                CreatedAt = DateTime.UtcNow
             };
 
             await _categoryRepository.CreateAsync(newCategory);
@@ -122,7 +122,7 @@ public class CategoryService : ICategoryService
                 }
 
                 category.Name = model.Name;
-                category.ModifiedAt = DateTime.Now;
+                category.ModifiedAt = DateTime.UtcNow;
 
                 _categoryRepository.Update(category);
                 await _unitOfWork.CommitAsync();

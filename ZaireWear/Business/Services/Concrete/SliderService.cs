@@ -65,7 +65,7 @@ public class SliderService : ISliderService
                 ImagePath = "/assets/images/sliders/" + imagePath,
                 Order = model.Order,
                 IsActive = true,
-                CreatedAt = DateTime.Now
+                CreatedAt = DateTime.UtcNow
             };
 
             await _sliderRepository.CreateAsync(slider);
@@ -136,7 +136,7 @@ public class SliderService : ISliderService
             slider.Title = model.Title;
             slider.Subtitle = model.Subtitle;
             slider.Order = model.Order;
-            slider.ModifiedAt = DateTime.Now;
+            slider.ModifiedAt = DateTime.UtcNow;
 
             _sliderRepository.Update(slider);
             await _unitOfWork.CommitAsync();

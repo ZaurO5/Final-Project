@@ -62,7 +62,7 @@ public class SliderService : ISliderService
             {
                 Title = model.Title,
                 Subtitle = model.Subtitle,
-                ImagePath = "/assets/images/sliders/" + imagePath,
+                ImagePath = imagePath,
                 Order = model.Order,
                 IsActive = true,
                 CreatedAt = DateTime.UtcNow
@@ -129,8 +129,8 @@ public class SliderService : ISliderService
                 var oldFileName = Path.GetFileName(slider.ImagePath);
                 _fileService.Delete("assets/images/sliders", oldFileName);
 
-                var newFileName = _fileService.Upload(model.ImagePath, "assets/images/sliders");
-                slider.ImagePath = "/assets/images/sliders/" + newFileName;
+                var newImagePath = _fileService.Upload(model.ImagePath, "assets/images/sliders");
+                slider.ImagePath = newImagePath;
             }
 
             slider.Title = model.Title;
@@ -148,6 +148,7 @@ public class SliderService : ISliderService
             return false;
         }
     }
+
 
     public async Task<bool> DeleteAsync(int id)
     {
@@ -173,4 +174,5 @@ public class SliderService : ISliderService
             return false;
         }
     }
+
 }

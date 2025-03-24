@@ -9,6 +9,7 @@
 {
     <div class="alert alert-danger">@TempData["Error"]</div>
 }
+
 <div class="auth-wrapper">
     <div class="auth-container">
         <form asp-action="Login" method="post" class="auth-form">
@@ -16,11 +17,11 @@
             <h3 class="auth-title">Login</h3>
             <div class="auth-input-group">
                 <input asp-for="Email" type="text" placeholder="Email Address" class="auth-input">
-                <span asp-validation-for="Email" class="text-danger"></span>
+                <span asp-validation-for="Email" style="color: black;"></span>
             </div>
             <div class="auth-input-group">
                 <input asp-for="Password" type="password" placeholder="Password" class="auth-input">
-                <span asp-validation-for="Password" class="text-danger"></span>
+                <span asp-validation-for="Password" style="color: black;"></span>
             </div>
             <button type="submit" class="auth-button">Confirm</button>
             <div class="auth-links">

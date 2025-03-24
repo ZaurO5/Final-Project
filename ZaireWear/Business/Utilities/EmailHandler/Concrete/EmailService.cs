@@ -13,10 +13,10 @@ public class EmailService : IEmailService
         _emailConfiguration = emailConfiguration;
     }
 
-    public void SendMessage(Message message)
+    public async Task SendMessageAsync(Message message)
     {
         var emailMessage = CreateEmailMessage(message);
-        Send(emailMessage);
+        await SendAsync(emailMessage);
     }
 
     private MimeMessage CreateEmailMessage(Message message)
@@ -29,13 +29,13 @@ public class EmailService : IEmailService
         return emailMessage;
     }
 
-    private void Send(MimeMessage message)
+    private async Task SendAsync(MimeMessage message)
     {
         using var client = new SmtpClient();
-        client.Connect(_emailConfiguration.SmtpServer, _emailConfiguration.Port, true);
+        await client.ConnectAsync(_emailConfiguration.SmtpServer, _emailConfiguration.Port, true);
         client.AuthenticationMechanisms.Remove("XOAUTH2");
-        client.Authenticate(_emailConfiguration.Username, _emailConfiguration.Password);
-        client.Send(message);
-        client.Disconnect(true);
+        await client.AuthenticateAsync(_emailConfiguration.Username, _emailConfiguration.Password);
+        await client.SendAsync(message);
+        await client.DisconnectAsync(true);
     }
 }

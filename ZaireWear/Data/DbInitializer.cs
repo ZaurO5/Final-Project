@@ -40,7 +40,8 @@ namespace Data
                     UserName = "admin@app.com",
                     Email = "admin@app.com",
                     FirstName = "Super",
-                    LastName = "Admin"
+                    LastName = "Admin",
+                    EmailConfirmed = true
                 };
 
                 var result = await userManager.CreateAsync(user, "Admin123!");

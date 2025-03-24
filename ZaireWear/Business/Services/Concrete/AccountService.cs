@@ -18,27 +18,25 @@ public class AccountService : IAccountService
     private readonly UserManager<User> _userManager;
     private readonly SignInManager<User> _signInManager;
     private readonly IEmailService _emailService;
+    private readonly LinkGenerator _linkGenerator;
     private readonly IHttpContextAccessor _httpContextAccessor;
-    private readonly IActionContextAccessor _actionContextAccessor;
 
     public AccountService(
         UserManager<User> userManager,
         SignInManager<User> signInManager,
         IEmailService emailService,
-        IHttpContextAccessor httpContextAccessor,
-        IActionContextAccessor actionContextAccessor)
+        LinkGenerator linkGenerator,
+        IHttpContextAccessor httpContextAccessor)
     {
         _userManager = userManager;
         _signInManager = signInManager;
         _emailService = emailService;
+        _linkGenerator = linkGenerator;
         _httpContextAccessor = httpContextAccessor;
-        _actionContextAccessor = actionContextAccessor;
     }
 
     public async Task<bool> RegisterAsync(AccountRegisterVM model)
     {
-        if (!_actionContextAccessor.ActionContext.ModelState.IsValid) return false;
-
         var user = new User
         {
             Email = model.Email,
@@ -48,31 +46,28 @@ public class AccountService : IAccountService
         };
 
         var result = await _userManager.CreateAsync(user, model.Password);
-        if (!result.Succeeded)
-        {
-            foreach (var error in result.Errors)
-            {
-                _actionContextAccessor.ActionContext.ModelState.AddModelError(string.Empty, error.Description);
-            }
-            return false;
-        }
+        if (!result.Succeeded) return false;
 
         var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
-        var urlHelper = new UrlHelper(_actionContextAccessor.ActionContext);
-        var url = urlHelper.Action("ConfirmEmail", "Account", new { token, email = user.Email }, _httpContextAccessor.HttpContext.Request.Scheme);
+        var url = _linkGenerator.GetUriByAction(
+            "ConfirmEmail",
+            "Account",
+            new { token, email = user.Email },
+            scheme: _httpContextAccessor.HttpContext.Request.Scheme,
+            host: _httpContextAccessor.HttpContext.Request.Host);
 
-        _emailService.SendMessage(new Message(new List<string> { user.Email }, "Email Confirmation", url));
+        await _emailService.SendMessageAsync(new Message(
+            new List<string> { user.Email },
+            "Confirm Your Email",
+            $"Please confirm your email by clicking this link: {url}"));
+
         return true;
     }
 
     public async Task<bool> ConfirmEmail(string email, string token)
     {
         var user = await _userManager.FindByEmailAsync(email);
-        if (user == null)
-        {
-            _actionContextAccessor.ActionContext.ModelState.AddModelError(string.Empty, "User not found.");
-            return false;
-        }
+        if (user == null) return false;
 
         var result = await _userManager.ConfirmEmailAsync(user, token);
         return result.Succeeded;
@@ -80,39 +75,33 @@ public class AccountService : IAccountService
 
     public async Task<(bool IsSucceeded, string? returnUrl)> LoginAsync(AccountLoginVM model)
     {
-        if (!_actionContextAccessor.ActionContext.ModelState.IsValid) return (false, null);
-
         var user = await _userManager.FindByEmailAsync(model.Email);
-        if (user is null)
-        {
-            _actionContextAccessor.ActionContext.ModelState.AddModelError(string.Empty, "Wrong Email or Password");
-            return (false, null);
-        }
+        if (user == null) return (false, null);
 
         var result = await _signInManager.PasswordSignInAsync(user, model.Password, false, false);
-        if (!result.Succeeded)
-        {
-            _actionContextAccessor.ActionContext.ModelState.AddModelError(string.Empty, "Wrong Email or Password");
-            return (false, null);
-        }
-
-        return (true, "/Home/Index");
+        return result.Succeeded ? (true, model.ReturnUrl ?? "/Home/Index") : (false, null);
     }
 
-    public async Task LogoutAsync() => await _signInManager.SignOutAsync();
+    public Task LogoutAsync() => _signInManager.SignOutAsync();
 
     public async Task<bool> ForgetPasswordAsync(ForgetPasswordVM model)
     {
-        if (!_actionContextAccessor.ActionContext.ModelState.IsValid) return false;
-
         var user = await _userManager.FindByEmailAsync(model.Email);
         if (user == null) return false;
 
         var token = await _userManager.GeneratePasswordResetTokenAsync(user);
-        var urlHelper = new UrlHelper(_actionContextAccessor.ActionContext);
-        var url = urlHelper.Action("ResetPassword", "Account", new { token, email = user.Email }, _httpContextAccessor.HttpContext.Request.Scheme);
+        var url = _linkGenerator.GetUriByAction(
+            "ResetPassword",
+            "Account",
+            new { token, email = user.Email },
+            scheme: _httpContextAccessor.HttpContext.Request.Scheme,
+            host: _httpContextAccessor.HttpContext.Request.Host);
 
-        _emailService.SendMessage(new Message(new List<string> { user.Email }, "Reset Password", url));
+        await _emailService.SendMessageAsync(new Message(
+            new List<string> { user.Email },
+            "Password Reset Request",
+            $"Reset your password by clicking this link: {url}"));
+
         return true;
     }
 
@@ -121,10 +110,7 @@ public class AccountService : IAccountService
         var user = await _userManager.FindByEmailAsync(model.Email);
         if (user == null)
         {
-            return IdentityResult.Failed(new IdentityError
-            {
-                Description = "User not found"
-            });
+            return IdentityResult.Failed(new IdentityError { Description = "User not found" });
         }
 
         return await _userManager.ResetPasswordAsync(user, model.Token, model.NewPassword);

@@ -16,43 +16,53 @@ public class AccountController : Controller
     [HttpPost]
     public async Task<IActionResult> Register(AccountRegisterVM model)
     {
+        if (!ModelState.IsValid) return View(model);
+
         if (await _accountService.RegisterAsync(model))
         {
-            TempData["Success"] = "Registration successful! Please check your email.";
+            TempData["Success"] = "Registered successfully! Please check your email to confirm.";
             return RedirectToAction("Login");
         }
-        TempData["Error"] = "Registration failed. Please correct the errors.";
+
+        TempData["Error"] = "Registration failed. Please try again.";
         return View(model);
     }
 
     [HttpGet]
     public async Task<IActionResult> ConfirmEmail(string email, string token)
     {
+        if (string.IsNullOrEmpty(email) || string.IsNullOrEmpty(token))
+        {
+            TempData["Error"] = "Invalid email confirmation link.";
+            return RedirectToAction("Login");
+        }
+
         if (await _accountService.ConfirmEmail(email, token))
         {
-            TempData["Success"] = "Email confirmed successfully!";
-            return RedirectToAction(nameof(Login));
+            TempData["Success"] = "Email confirmed successfully! You can now log in.";
+            return RedirectToAction("Login");
         }
-        TempData["Error"] = "Email confirmation failed.";
-        return RedirectToAction(nameof(Login));
+
+        TempData["Error"] = "Email confirmation failed. Please try again.";
+        return RedirectToAction("Login");
     }
 
     [HttpGet]
-    public IActionResult Login(string? returnUrl = null)
-    {
-        ViewBag.ReturnUrl = returnUrl;
-        return View();
-    }
+    public IActionResult Login(string? returnUrl = null) => View(new AccountLoginVM { ReturnUrl = returnUrl });
 
     [HttpPost]
     public async Task<IActionResult> Login(AccountLoginVM model)
     {
+        if (!ModelState.IsValid) return View(model);
+
         var (isSucceeded, returnUrl) = await _accountService.LoginAsync(model);
         if (isSucceeded)
         {
-            return RedirectToAction("Index", "Home");
+            TempData["Success"] = "Logged in successfully!";
+            return Redirect(returnUrl);
         }
-        TempData["Error"] = "Invalid login attempt.";
+
+        TempData["Error"] = "Login failed. Invalid email or password.";
         return View(model);
     }
 
@@ -60,6 +70,7 @@ public class AccountController : Controller
     public async Task<IActionResult> Logout()
     {
         await _accountService.LogoutAsync();
+        TempData["Success"] = "Logged out successfully!";
         return RedirectToAction("Index", "Home");
     }
 
@@ -69,17 +80,21 @@ public class AccountController : Controller
     [HttpPost]
     public async Task<IActionResult> ForgetPassword(ForgetPasswordVM model)
     {
+        if (!ModelState.IsValid) return View(model);
+
         if (await _accountService.ForgetPasswordAsync(model))
         {
-            TempData["Success"] = "Password reset instructions sent to your email.";
+            TempData["Success"] = "Password reset link has been sent to your email.";
             return RedirectToAction("Login");
         }
-        TempData["Error"] = "Error processing your request.";
+
+        TempData["Error"] = "Failed to send reset link. Please check your email address.";
         return View(model);
     }
 
     [HttpGet]
-    public IActionResult ResetPassword(string token, string email) => View(new ResetPasswordVM { Token = token, Email = email });
+    public IActionResult ResetPassword(string token, string email)
+        => View(new ResetPasswordVM { Token = token, Email = email });
 
     [HttpPost]
     public async Task<IActionResult> ResetPassword(ResetPasswordVM model)
@@ -89,14 +104,11 @@ public class AccountController : Controller
         var result = await _accountService.ResetPassword(model);
         if (result.Succeeded)
         {
-            TempData["Success"] = "Password reset successfully!";
+            TempData["Success"] = "Password has been reset successfully! Please log in.";
             return RedirectToAction("Login");
         }
 
-        foreach (var error in result.Errors)
-        {
-            ModelState.AddModelError(string.Empty, error.Description);
-        }
+        TempData["Error"] = "Password reset failed. Invalid token or email.";
         return View(model);
     }
 }

@@ -38,7 +38,6 @@ builder.Services.AddIdentity<User, IdentityRole>(options =>
     options.Password.RequireNonAlphanumeric = true;
     options.Lockout.MaxFailedAccessAttempts = 3;
     options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
-
     options.Tokens.PasswordResetTokenProvider = TokenOptions.DefaultProvider;
 })
 .AddEntityFrameworkStores<AppDbContext>()
@@ -52,6 +51,8 @@ builder.Services.Configure<DataProtectionTokenProviderOptions>(options =>
 var emailConfiguration = builder.Configuration.GetSection("EmailConfiguration").Get<EmailConfiguration>();
 builder.Services.AddSingleton(emailConfiguration);
 builder.Services.AddScoped<IEmailService, EmailService>();
+
+builder.Services.AddHttpContextAccessor();
 
 #endregion
 
@@ -67,7 +68,6 @@ builder.Services.AddScoped<IBasketProductRepository, BasketProductRepository>();
 builder.Services.AddScoped<IBasketRepository, BasketRepository>();
 builder.Services.AddScoped<IFavoriteProductRepository, FavoriteProductRepository>();
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-
 #endregion
 
 #region Services
@@ -83,7 +83,6 @@ builder.Services.AddScoped<IFavoritesService, FavoritesService>();
 builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
 builder.Services.AddSingleton<IUrlHelperFactory, UrlHelperFactory>();
 builder.Services.AddHttpContextAccessor();
-
 #endregion 
 
 #region App
@@ -101,7 +100,6 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-// Миграция и сидинг при запуске
 using (var scope = app.Services.CreateScope())
 {
     var services = scope.ServiceProvider;
@@ -124,5 +122,4 @@ app.MapControllerRoute(
 StripeConfiguration.ApiKey = builder.Configuration.GetSection("Stripe")["SecretKey"];
 
 app.Run();
-
 #endregion

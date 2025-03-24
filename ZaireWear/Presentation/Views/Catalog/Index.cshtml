@@ -1,10 +1,8 @@
 ﻿@using Business.ViewModels.Catalog
 @model CatalogIndexVM
 
-<!-- Catalog -->
 <main class="catalog-page">
     <div class="container py-5">
-        <!-- Search Bar in Center -->
         <form method="get" asp-action="Index" class="search-container text-center mb-4">
             <div class="input-group justify-content-center rounded-pill" style="max-width: 600px;">
                 <input type="text"
@@ -27,7 +25,6 @@
             </div>
         </form>
         <div class="row">
-            <!-- Sidebar: Categories -->
             <aside class="col-lg-3">
                 <h4 class="mb-3">Categories</h4>
                 <ul class="list-group mb-4">
@@ -49,14 +46,13 @@
                 </ul>
             </aside>
 
-            <!-- Products -->
             <main class="col-lg-9">
                 <div class="row row-cols-1 row-cols-md-3 g-4">
                     @foreach (var product in Model.Products)
                     {
                         <div class="col product-card">
                             <a asp-controller="Catalog" asp-action="Details" asp-route-id="@product.Id" class="card">
-                                <img src="@product.ImagePath" class="card-img-top" alt="@product.Title">
+                                <img src="~/@product.ImagePath" class="card-img-top" alt="@product.Title">
                                 <div class="card-body">
                                     <h5 class="card-title">@product.Title</h5>
                                     <p class="card-price">@product.Price.ToString("0.##")$</p>
@@ -70,7 +66,6 @@
                 {
                     <nav aria-label="Page navigation" class="mt-4" style="background-color: transparent">
                         <ul class="pagination justify-content-center gap-2" style="background-color: transparent">
-                            <!-- Previous Button -->
                             <li class="page-item @(ViewBag.CurrentPage == 1 ? "disabled" : "")">
                                 <a class="page-link border-0 bg-transparent text-dark"
                                    asp-action="Index"
@@ -82,14 +77,12 @@
                                 </a>
                             </li>
 
-                            <!-- Current Page Info -->
                             <li class="page-item disabled">
                                 <span class="page-link border-0 bg-transparent text-dark">
                                     @ViewBag.CurrentPage / @ViewBag.TotalPages
                                 </span>
                             </li>
 
-                            <!-- Next Button -->
                             <li class="page-item @(ViewBag.CurrentPage == ViewBag.TotalPages ? "disabled" : "")">
                                 <a class="page-link border-0 bg-transparent text-dark"
                                    asp-action="Index"
@@ -107,4 +100,3 @@
         </div>
     </div>
 </main>
-<!-- Catalog End -->

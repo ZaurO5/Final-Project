@@ -3,5 +3,5 @@
 namespace Business.Utilities.EmailHandler.Abstract;
 public interface IEmailService
 {
-    void SendMessage(Message message);
+    Task SendMessageAsync(Message message);
 }

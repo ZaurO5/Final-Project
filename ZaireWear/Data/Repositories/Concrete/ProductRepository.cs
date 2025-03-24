@@ -43,8 +43,8 @@ public class ProductRepository : BaseRepository<Product>, IProductRepository
     {
         return await _context.Products
             .Include(p => p.BasketProducts)
-            .Include(p => p.ProductColors) // Include the collection
-                .ThenInclude(pc => pc.Color) // Then include Color from ProductColors
+            .Include(p => p.ProductColors)
+                .ThenInclude(pc => pc.Color)
             .Include(p => p.FavoriteProducts)
             .Include(p => p.ProductCategories)
             .Include(p => p.ProductSizes)

@@ -13,7 +13,7 @@
                             @foreach (var slider in Model.Sliders)
                             {
                                 <div class="slide" data-title="@slider.Title" data-subtitle="@slider.Subtitle">
-                                    <img src="@Url.Content(slider.ImagePath)" alt="Slide">
+                                    <img src="~/@slider.ImagePath" alt="Slide">
                                 </div>
                             }
                         </div>

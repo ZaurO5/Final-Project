@@ -12,30 +12,23 @@ public class FileService : IFileService
         _webHostEnvironment = webHostEnvironment;
     }
 
-    public string Upload(IFormFile file, string folder, string oldFileName = null)
+    public string Upload(IFormFile file, string folder)
     {
         var fileName = $"{Guid.NewGuid()}_{file.FileName}";
         var folderPath = Path.Combine(_webHostEnvironment.WebRootPath, folder);
-
         if (!Directory.Exists(folderPath))
         {
             Directory.CreateDirectory(folderPath);
         }
-
-        if (!string.IsNullOrEmpty(oldFileName))
-        {
-            Delete(folder, oldFileName);
-        }
-
         var filePath = Path.Combine(folderPath, fileName);
-
         using (var fileStream = new FileStream(filePath, FileMode.Create, FileAccess.ReadWrite))
         {
             file.CopyTo(fileStream);
         }
 
-        return fileName;
+        return Path.Combine(folder, fileName).Replace("\\", "/");
     }
+
 
     public void Delete(string folder, string fileName)
     {

@@ -97,7 +97,7 @@ public class ProductService : IProductService
                 Title = model.Title,
                 Price = model.Price,
                 Description = model.Description,
-                ImagePath = "/assets/images/products/" + imagePath,
+                ImagePath = imagePath,
                 StockCount = model.StockCount,
                 Gender = model.Gender,
                 ProductCategories = new List<ProductCategories>(),
@@ -193,8 +193,8 @@ public class ProductService : IProductService
                 var oldFileName = Path.GetFileName(product.ImagePath);
                 _fileService.Delete("assets/images/products", oldFileName);
 
-                var newFileName = _fileService.Upload(model.ImagePath, "assets/images/products");
-                product.ImagePath = "/assets/images/products/" + newFileName;
+                var newImagePath = _fileService.Upload(model.ImagePath, "assets/images/products");
+                product.ImagePath = newImagePath;
             }
 
             product.Title = model.Title;

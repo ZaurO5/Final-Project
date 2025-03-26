@@ -24,11 +24,11 @@ public class AddRoleToUserHandler : IRequestHandler<AddRoleToUserCommand, Respon
 
 	public async Task<Response> Handle(AddRoleToUserCommand request, CancellationToken cancellationToken)
 	{
-		var result = await new AddRoleToUserCommandValidator().ValidateAsync(request);
-		if (result != null)
-			throw new ValidationException(result.Errors);
+        var result = await new AddRoleToUserCommandValidator().ValidateAsync(request);
+        if (!result.IsValid)
+            throw new ValidationException(result.Errors);
 
-		var user = await _userManager.FindByIdAsync(request.UserId);
+        var user = await _userManager.FindByIdAsync(request.UserId);
 		if (user is null)
 			throw new NotFoundException("User is not found");
 

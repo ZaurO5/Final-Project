@@ -1,4 +1,5 @@
-﻿using Business.Wrappers;
+﻿using Business.Features.UserRole.Commands.AddRoleToUser;
+using Business.Wrappers;
 using Core.Exceptions;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
@@ -24,11 +25,11 @@ public class RemoveRoleFromUserHandler : IRequestHandler<RemoveRoleFromUserComma
 
 	public async Task<Response> Handle(RemoveRoleFromUserCommand request, CancellationToken cancellationToken)
 	{
-		var result = await new RemoveRoleFromUserCommandValidator().ValidateAsync(request);
-		if (result != null)
-			throw new ValidationException(result.Errors);
+        var result = await new RemoveRoleFromUserCommandValidator().ValidateAsync(request);
+        if (!result.IsValid)
+            throw new ValidationException(result.Errors);
 
-		var user = await _userManager.FindByIdAsync(request.UserId);
+        var user = await _userManager.FindByIdAsync(request.UserId);
 		if (user is null)
 			throw new NotFoundException("User is not found");
 

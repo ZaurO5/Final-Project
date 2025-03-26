@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Presentation</name>
+    </assembly>
+    <members>
+        <member name="M:Presentation.Controllers.AuthController.RegisterAsync(Business.Features.Auth.Commands.AuthRegister.AuthRegisterCommand)">
+            <summary>
+            User registration
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:Presentation.Controllers.AuthController.LoginAsync(Business.Features.Auth.Commands.AuthLogin.AuthLoginCommand)">
+            <summary>
+            User login
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:Presentation.Controllers.RoleController.GetAllRolesAsync">
+            <summary>
+            Roles list
+            </summary>
+        </member>
+        <member name="M:Presentation.Controllers.UserController.GetAllUsersAsync">
+            <summary>
+            Users list
+            </summary>
+        </member>
+        <member name="M:Presentation.Controllers.UserRoleController.AddRoleToUserAsync(Business.Features.UserRole.Commands.AddRoleToUser.AddRoleToUserCommand)">
+            <summary>
+            Adding role to user
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:Presentation.Controllers.UserRoleController.RemoveRoleFromUserAsync(Business.Features.UserRole.Commands.RemoveRoleFromUser.RemoveRoleFromUserCommand)">
+            <summary>
+            Deleting role from user
+            </summary>
+            <param name="request"></param>
+        </member>
+    </members>
+</doc>

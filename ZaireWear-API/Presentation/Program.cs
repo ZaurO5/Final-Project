@@ -1,4 +1,5 @@
 using Business.Extensions;
+using Business.MappingProfiles;
 using Core.Entities;
 using Data.Contexts;
 using Data.UnitOfWork;
@@ -72,6 +73,13 @@ builder.Services.AddAuthentication(options => {
 
 builder.Services.Configure<RouteOptions>(options => options.LowercaseUrls = true);
 
+builder.Services.AddAutoMapper(x =>
+{
+    //x.AddProfile<ProductMappingProfile>();
+    x.AddProfile<UserRoleMappingProfile>();
+    x.AddProfile<UserMappingProfile>();
+    x.AddProfile<RoleMappingProfile>();
+});
 
 #region Repositories
 
@@ -80,12 +88,6 @@ builder.Services.Configure<RouteOptions>(options => options.LowercaseUrls = true
 
 builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddApplicationExtensions();
-
-Log.Logger = new LoggerConfiguration()
-             .ReadFrom.Configuration(builder.Configuration)
-             .CreateLogger();
-
-builder.Services.AddSerilog();
 
 var app = builder.Build();
 

@@ -2,8 +2,6 @@
 using Business.Features.Role.Queries.GetAllRoles;
 using Business.Wrappers;
 using MediatR;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Presentation.Controllers

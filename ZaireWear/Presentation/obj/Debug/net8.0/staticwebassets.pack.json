@@ -7489,6 +7489,10 @@
       "PackagePath": "staticwebassets\\assets\\images\\products\\4caf7564-2a8b-4fd9-857a-e3fd0f4b4d38_T-ShirtW.jpg"
     },
     {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\images\\products\\632b790d-c1ef-437c-9d9b-e7dbd384d5fb_ShirtProduct.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\632b790d-c1ef-437c-9d9b-e7dbd384d5fb_ShirtProduct.jpg"
+    },
+    {
       "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\images\\products\\653c3a2b-af93-4a8d-8ddb-3d722be292a1_SweatShirtW.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\products\\653c3a2b-af93-4a8d-8ddb-3d722be292a1_SweatShirtW.jpg"
     },
@@ -7511,6 +7515,10 @@
     {
       "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\images\\products\\963073df-12ba-414e-8a61-da7af676ead3_Jacket.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\products\\963073df-12ba-414e-8a61-da7af676ead3_Jacket.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\images\\products\\b810656b-3807-47c4-a491-01f2ecb79727_Jacket.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\products\\b810656b-3807-47c4-a491-01f2ecb79727_Jacket.jpg"
     },
     {
       "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\images\\products\\cf56d7ce-027e-4bff-a822-f40adb7e5b39_SweatShirtW.jpg",
@@ -7537,6 +7545,10 @@
       "PackagePath": "staticwebassets\\assets\\images\\products\\ea630068-8d68-4873-96b3-34b698e4aab2_T-Shirt.jpg"
     },
     {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\images\\sliders\\018b6762-8423-4a71-9413-d068d50c394a_012ef79872a46b707edc17ac369008d6.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\sliders\\018b6762-8423-4a71-9413-d068d50c394a_012ef79872a46b707edc17ac369008d6.jpg"
+    },
+    {
       "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\images\\sliders\\086ebb70-adb0-4c64-b544-f1695ce518ab_SweatShirtW.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\sliders\\086ebb70-adb0-4c64-b544-f1695ce518ab_SweatShirtW.jpg"
     },
@@ -7557,6 +7569,10 @@
       "PackagePath": "staticwebassets\\assets\\images\\sliders\\5d80c8b3-1364-4103-8e53-efd77611e497_Jacket.jpg"
     },
     {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\images\\sliders\\771e6217-86b0-4cfd-8122-03db16dd439b_fashion-websites.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\sliders\\771e6217-86b0-4cfd-8122-03db16dd439b_fashion-websites.jpg"
+    },
+    {
       "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\images\\sliders\\87bec0de-63fa-4e3c-94e4-2bcd007bae21_fashion-websites.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\sliders\\87bec0de-63fa-4e3c-94e4-2bcd007bae21_fashion-websites.jpg"
     },
@@ -7567,6 +7583,10 @@
     {
       "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\images\\sliders\\ad7d4b49-2e61-43c1-ba6a-cb598289aa7c_fashion-Ecommerce1.jpg",
       "PackagePath": "staticwebassets\\assets\\images\\sliders\\ad7d4b49-2e61-43c1-ba6a-cb598289aa7c_fashion-Ecommerce1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\images\\sliders\\e05af35b-3b92-4101-b6a8-f6f01b4c5324_fashion-Ecommerce1.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\sliders\\e05af35b-3b92-4101-b6a8-f6f01b4c5324_fashion-Ecommerce1.jpg"
     },
     {
       "Id": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\wwwroot\\assets\\js\\basket.js",

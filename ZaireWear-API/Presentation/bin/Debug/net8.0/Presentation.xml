@@ -16,6 +16,24 @@
             </summary>
             <param name="request"></param>
         </member>
+        <member name="M:Presentation.Controllers.AuthController.ConfirmEmail(Business.Features.Auth.Commands.AuthConfirm.AuthConfirmEmailCommand)">
+            <summary>
+            Confirm user's email
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:Presentation.Controllers.AuthController.ForgetPassword(Business.Features.Auth.Commands.AuthForget.AuthForgetPasswordCommand)">
+            <summary>
+            Send a password reset link
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:Presentation.Controllers.AuthController.ResetPassword(Business.Features.Auth.Commands.AuthReset.AuthResetPasswordCommand)">
+            <summary>
+            Reset user's password
+            </summary>
+            <param name="request"></param>
+        </member>
         <member name="M:Presentation.Controllers.RoleController.GetAllRolesAsync">
             <summary>
             Roles list

@@ -5,6 +5,7 @@ using Business.Services.EmailHandler.Concrete;
 using Business.Services.EmailHandler.Models;
 using Core.Entities;
 using Data.Contexts;
+using Data.Repositories.Category;
 using Data.UnitOfWork;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -96,6 +97,7 @@ builder.Services.Configure<RouteOptions>(options => options.LowercaseUrls = true
 
 builder.Services.AddAutoMapper(x =>
 {
+    x.AddProfile<CategoryMappingProfile>();
     //x.AddProfile<ProductMappingProfile>();
     x.AddProfile<UserRoleMappingProfile>();
     x.AddProfile<UserMappingProfile>();
@@ -104,6 +106,8 @@ builder.Services.AddAutoMapper(x =>
 
 #region Repositories
 
+builder.Services.AddScoped<ICategoryReadRepository, CategoryReadRepository>();
+builder.Services.AddScoped<ICategoryWriteRepository, CategoryWriteRepository>();
 
 #endregion
 
@@ -119,6 +123,8 @@ builder.Services.AddScoped<IEmailService, EmailService>();
 
 var app = builder.Build();
 
+app.UseMiddleware<CustomExceptionMiddleware>();
+
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -130,8 +136,6 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
-
-app.UseMiddleware<CustomExceptionMiddleware>();
 
 using (var scope = app.Services.CreateScope())
 {

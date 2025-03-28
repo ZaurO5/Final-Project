@@ -110,7 +110,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -127,19 +127,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Utilities\\EmailHandler\\Concrete\\EmailService.cs",
-              "RelativeDocumentMoniker": "Business\\Utilities\\EmailHandler\\Concrete\\EmailService.cs",
-              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Utilities\\EmailHandler\\Concrete\\EmailService.cs",
-              "RelativeToolTip": "Business\\Utilities\\EmailHandler\\Concrete\\EmailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T22:40:29.553Z",
-              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -162,9 +149,22 @@
               "RelativeDocumentMoniker": "Presentation\\Program.cs",
               "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Presentation\\Program.cs",
               "RelativeToolTip": "Presentation\\Program.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAACgAAABNAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACoAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-27T12:14:44.779Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "EmailService.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Utilities\\EmailHandler\\Concrete\\EmailService.cs",
+              "RelativeDocumentMoniker": "Business\\Utilities\\EmailHandler\\Concrete\\EmailService.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear\\Business\\Utilities\\EmailHandler\\Concrete\\EmailService.cs",
+              "RelativeToolTip": "Business\\Utilities\\EmailHandler\\Concrete\\EmailService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T22:40:29.553Z",
               "EditorCaption": ""
             },
             {

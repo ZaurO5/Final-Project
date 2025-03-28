@@ -69,6 +69,36 @@
             Roles list
             </summary>
         </member>
+        <member name="M:Presentation.Controllers.SizesController.GetAllAsync">
+            <summary>
+            Sizes List
+            </summary>
+        </member>
+        <member name="M:Presentation.Controllers.SizesController.GetByIdAsync(System.Int32)">
+            <summary>
+            Get size by ID
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:Presentation.Controllers.SizesController.CreateSizeAsync(Business.Features.Size.Commands.CreateSize.CreateSizeCommand)">
+            <summary>
+            Create new size
+            </summary>
+            <param name="request"></param>
+        </member>
+        <member name="M:Presentation.Controllers.SizesController.UpdateSizeAsync(System.Int32,Business.Features.Size.Commands.UpdateSize.UpdateSizeCommand)">
+            <summary>
+            Update existing size
+            </summary>
+            <param name="id"></param>
+            <param name="request">Updated size data</param>
+        </member>
+        <member name="M:Presentation.Controllers.SizesController.DeleteSizeAsync(System.Int32)">
+            <summary>
+            Delete size
+            </summary>
+            <param name="id">Size identifier</param>
+        </member>
         <member name="M:Presentation.Controllers.UserController.GetAllUsersAsync">
             <summary>
             Users list

@@ -6,6 +6,7 @@ using Business.Services.EmailHandler.Models;
 using Core.Entities;
 using Data.Contexts;
 using Data.Repositories.Category;
+using Data.Repositories.Color;
 using Data.Repositories.Size;
 using Data.UnitOfWork;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -98,6 +99,7 @@ builder.Services.Configure<RouteOptions>(options => options.LowercaseUrls = true
 
 builder.Services.AddAutoMapper(x =>
 {
+    x.AddProfile<ColorMappingProfile>();
     x.AddProfile<SizeMappingProfile>();     
     x.AddProfile<CategoryMappingProfile>();
     //x.AddProfile<ProductMappingProfile>();
@@ -112,6 +114,8 @@ builder.Services.AddScoped<ICategoryReadRepository, CategoryReadRepository>();
 builder.Services.AddScoped<ICategoryWriteRepository, CategoryWriteRepository>();
 builder.Services.AddScoped<ISizeReadRepository, SizeReadRepository>();
 builder.Services.AddScoped<ISizeWriteRepository, SizeWriteRepository>();
+builder.Services.AddTransient<IColorReadRepository, ColorReadRepository>();
+builder.Services.AddTransient<IColorWriteRepository, ColorWriteRepository>();
 
 #endregion
 

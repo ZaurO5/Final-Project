@@ -1,7 +1,172 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7476A130-0EF6-474F-B4DA-146C30A57CC4}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7476A130-0EF6-474F-B4DA-146C30A57CC4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\color\\queries\\getcolor\\getcolorquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\color\\queries\\getcolor\\getcolorquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\color\\dtos\\colordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\color\\dtos\\colordto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7476A130-0EF6-474F-B4DA-146C30A57CC4}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\presentation\\controllers\\colorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7476A130-0EF6-474F-B4DA-146C30A57CC4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\colorcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7476A130-0EF6-474F-B4DA-146C30A57CC4}|Presentation\\Presentation.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\presentation\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7476A130-0EF6-474F-B4DA-146C30A57CC4}|Presentation\\Presentation.csproj|solutionrelative:presentation\\controllers\\categorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A5D49A-FADF-461E-958C-14B53C1D8D29}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\data\\repositories\\color\\icolorreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09A5D49A-FADF-461E-958C-14B53C1D8D29}|Data\\Data.csproj|solutionrelative:data\\repositories\\color\\icolorreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A5D49A-FADF-461E-958C-14B53C1D8D29}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\data\\repositories\\color\\icolorwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09A5D49A-FADF-461E-958C-14B53C1D8D29}|Data\\Data.csproj|solutionrelative:data\\repositories\\color\\icolorwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A5D49A-FADF-461E-958C-14B53C1D8D29}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\data\\repositories\\color\\colorwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09A5D49A-FADF-461E-958C-14B53C1D8D29}|Data\\Data.csproj|solutionrelative:data\\repositories\\color\\colorwriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A5D49A-FADF-461E-958C-14B53C1D8D29}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\data\\repositories\\color\\colorreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09A5D49A-FADF-461E-958C-14B53C1D8D29}|Data\\Data.csproj|solutionrelative:data\\repositories\\color\\colorreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\mappingprofiles\\colormappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\mappingprofiles\\colormappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\color\\queries\\getcolor\\getcolorhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\color\\queries\\getcolor\\getcolorhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\color\\queries\\getallcolors\\getallcolorshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\color\\queries\\getallcolors\\getallcolorshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\color\\queries\\getallcolors\\getallcolorsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\color\\queries\\getallcolors\\getallcolorsquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\category\\queries\\getcategory\\getcategoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\category\\queries\\getcategory\\getcategoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\category\\queries\\getallcategories\\getallcategorieshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\category\\queries\\getallcategories\\getallcategorieshandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\color\\commands\\updatecolor\\updatecolorhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\color\\commands\\updatecolor\\updatecolorhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\category\\commands\\updatecategory\\updatecategoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\category\\commands\\updatecategory\\updatecategoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\color\\commands\\updatecolor\\updatecolorcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\color\\commands\\updatecolor\\updatecolorcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\color\\commands\\createcolor\\createcolorcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\color\\commands\\createcolor\\createcolorcommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\category\\commands\\updatecategory\\updatecategorycommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\category\\commands\\updatecategory\\updatecategorycommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\color\\commands\\deletecolor\\deletecolorhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\color\\commands\\deletecolor\\deletecolorhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\category\\commands\\deletecategory\\deletecategoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\category\\commands\\deletecategory\\deletecategoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\category\\commands\\createcategory\\createcategoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\category\\commands\\createcategory\\createcategoryhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\color\\commands\\createcolor\\createcolorhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\color\\commands\\createcolor\\createcolorhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\size\\commands\\createsize\\createsizehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\size\\commands\\createsize\\createsizehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\category\\commands\\createcategory\\createcategorycommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\category\\commands\\createcategory\\createcategorycommandvalidator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\category\\queries\\getcategory\\getcategoryquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\category\\queries\\getcategory\\getcategoryquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\category\\queries\\getallcategories\\getallcategoriesquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\category\\queries\\getallcategories\\getallcategoriesquery.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\color\\commands\\updatecolor\\updatecolorcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\color\\commands\\updatecolor\\updatecolorcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\color\\commands\\deletecolor\\deletecolorcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\color\\commands\\deletecolor\\deletecolorcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\color\\commands\\createcolor\\createcolorcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\color\\commands\\createcolor\\createcolorcommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\mappingprofiles\\categorymappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\mappingprofiles\\categorymappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\mappingprofiles\\userrolemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\mappingprofiles\\userrolemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\mappingprofiles\\usermappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\mappingprofiles\\usermappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\mappingprofiles\\sizemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\mappingprofiles\\sizemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\mappingprofiles\\rolemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\mappingprofiles\\rolemappingprofile.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A5D49A-FADF-461E-958C-14B53C1D8D29}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\data\\repositories\\category\\icategoryreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09A5D49A-FADF-461E-958C-14B53C1D8D29}|Data\\Data.csproj|solutionrelative:data\\repositories\\category\\icategoryreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A5D49A-FADF-461E-958C-14B53C1D8D29}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\data\\repositories\\category\\categoryreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09A5D49A-FADF-461E-958C-14B53C1D8D29}|Data\\Data.csproj|solutionrelative:data\\repositories\\category\\categoryreadrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\business\\features\\category\\commands\\createcategory\\createcategorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{9C193FB4-520E-47FF-B8FB-A6F267F04E61}|Business\\Business.csproj|solutionrelative:business\\features\\category\\commands\\createcategory\\createcategorycommand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{09A5D49A-FADF-461E-958C-14B53C1D8D29}|Data\\Data.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\data\\repositories\\category\\categorywriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{09A5D49A-FADF-461E-958C-14B53C1D8D29}|Data\\Data.csproj|solutionrelative:data\\repositories\\category\\categorywriterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F8848C11-FFB8-487C-AD18-99AD81128EA0}|Core\\Core.csproj|c:\\users\\user\\onedrive\\desktop\\final-project\\zairewear-api\\core\\entities\\color.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F8848C11-FFB8-487C-AD18-99AD81128EA0}|Core\\Core.csproj|solutionrelative:core\\entities\\color.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +174,36 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 8,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "GetColorHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Queries\\GetColor\\GetColorHandler.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Color\\Queries\\GetColor\\GetColorHandler.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Queries\\GetColor\\GetColorHandler.cs",
+              "RelativeToolTip": "Business\\Features\\Color\\Queries\\GetColor\\GetColorHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:25:28.071Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "GetCategoryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Category\\Queries\\GetCategory\\GetCategoryHandler.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Category\\Queries\\GetCategory\\GetCategoryHandler.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Category\\Queries\\GetCategory\\GetCategoryHandler.cs",
+              "RelativeToolTip": "Business\\Features\\Category\\Queries\\GetCategory\\GetCategoryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:15:45.993Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
@@ -26,6 +219,513 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ColorController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Presentation\\Controllers\\ColorController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\ColorController.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Presentation\\Controllers\\ColorController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\ColorController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFYAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:26:08.072Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CategoryController.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Presentation\\Controllers\\CategoryController.cs",
+              "RelativeDocumentMoniker": "Presentation\\Controllers\\CategoryController.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Presentation\\Controllers\\CategoryController.cs",
+              "RelativeToolTip": "Presentation\\Controllers\\CategoryController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:16:59.61Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Presentation\\Program.cs",
+              "RelativeDocumentMoniker": "Presentation\\Program.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Presentation\\Program.cs*",
+              "RelativeToolTip": "Presentation\\Program.cs*",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAAAHIAAABGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:34:36.125Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ColorDto.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Dtos\\ColorDto.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Color\\Dtos\\ColorDto.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Dtos\\ColorDto.cs",
+              "RelativeToolTip": "Business\\Features\\Color\\Dtos\\ColorDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:12:09.431Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "GetColorQuery.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Queries\\GetColor\\GetColorQuery.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Color\\Queries\\GetColor\\GetColorQuery.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Queries\\GetColor\\GetColorQuery.cs",
+              "RelativeToolTip": "Business\\Features\\Color\\Queries\\GetColor\\GetColorQuery.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAsAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:06:43.411Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IColorReadRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Data\\Repositories\\Color\\IColorReadRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\Color\\IColorReadRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Data\\Repositories\\Color\\IColorReadRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\Color\\IColorReadRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwBAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:27:02.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IColorWriteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Data\\Repositories\\Color\\IColorWriteRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\Color\\IColorWriteRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Data\\Repositories\\Color\\IColorWriteRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\Color\\IColorWriteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:27:27.623Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ColorWriteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Data\\Repositories\\Color\\ColorWriteRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\Color\\ColorWriteRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Data\\Repositories\\Color\\ColorWriteRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\Color\\ColorWriteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:26:48.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ColorReadRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Data\\Repositories\\Color\\ColorReadRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\Color\\ColorReadRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Data\\Repositories\\Color\\ColorReadRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\Color\\ColorReadRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:26:37.011Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ColorMappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\MappingProfiles\\ColorMappingProfile.cs",
+              "RelativeDocumentMoniker": "Business\\MappingProfiles\\ColorMappingProfile.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\MappingProfiles\\ColorMappingProfile.cs",
+              "RelativeToolTip": "Business\\MappingProfiles\\ColorMappingProfile.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABIAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:25:47Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "GetAllColorsHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Queries\\GetAllColors\\GetAllColorsHandler.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Color\\Queries\\GetAllColors\\GetAllColorsHandler.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Queries\\GetAllColors\\GetAllColorsHandler.cs",
+              "RelativeToolTip": "Business\\Features\\Color\\Queries\\GetAllColors\\GetAllColorsHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:25:12.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "GetAllColorsQuery.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Queries\\GetAllColors\\GetAllColorsQuery.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Color\\Queries\\GetAllColors\\GetAllColorsQuery.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Queries\\GetAllColors\\GetAllColorsQuery.cs",
+              "RelativeToolTip": "Business\\Features\\Color\\Queries\\GetAllColors\\GetAllColorsQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:06:11.189Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "GetAllCategoriesHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Category\\Queries\\GetAllCategories\\GetAllCategoriesHandler.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Category\\Queries\\GetAllCategories\\GetAllCategoriesHandler.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Category\\Queries\\GetAllCategories\\GetAllCategoriesHandler.cs",
+              "RelativeToolTip": "Business\\Features\\Category\\Queries\\GetAllCategories\\GetAllCategoriesHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:15:38.884Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "UpdateColorHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Commands\\UpdateColor\\UpdateColorHandler.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Color\\Commands\\UpdateColor\\UpdateColorHandler.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Commands\\UpdateColor\\UpdateColorHandler.cs",
+              "RelativeToolTip": "Business\\Features\\Color\\Commands\\UpdateColor\\UpdateColorHandler.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:24:33.283Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "UpdateCategoryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Category\\Commands\\UpdateCategory\\UpdateCategoryHandler.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Category\\Commands\\UpdateCategory\\UpdateCategoryHandler.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Category\\Commands\\UpdateCategory\\UpdateCategoryHandler.cs",
+              "RelativeToolTip": "Business\\Features\\Category\\Commands\\UpdateCategory\\UpdateCategoryHandler.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAAwCIAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:15:27.806Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "UpdateColorCommandValidator.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Commands\\UpdateColor\\UpdateColorCommandValidator.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Color\\Commands\\UpdateColor\\UpdateColorCommandValidator.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Commands\\UpdateColor\\UpdateColorCommandValidator.cs",
+              "RelativeToolTip": "Business\\Features\\Color\\Commands\\UpdateColor\\UpdateColorCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:11:27.988Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "CreateColorCommandValidator.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Commands\\CreateColor\\CreateColorCommandValidator.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Color\\Commands\\CreateColor\\CreateColorCommandValidator.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Commands\\CreateColor\\CreateColorCommandValidator.cs",
+              "RelativeToolTip": "Business\\Features\\Color\\Commands\\CreateColor\\CreateColorCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:11:09.527Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "UpdateCategoryCommandValidator.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Category\\Commands\\UpdateCategory\\UpdateCategoryCommandValidator.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Category\\Commands\\UpdateCategory\\UpdateCategoryCommandValidator.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Category\\Commands\\UpdateCategory\\UpdateCategoryCommandValidator.cs",
+              "RelativeToolTip": "Business\\Features\\Category\\Commands\\UpdateCategory\\UpdateCategoryCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:28:54.024Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "DeleteColorHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Commands\\DeleteColor\\DeleteColorHandler.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Color\\Commands\\DeleteColor\\DeleteColorHandler.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Commands\\DeleteColor\\DeleteColorHandler.cs",
+              "RelativeToolTip": "Business\\Features\\Color\\Commands\\DeleteColor\\DeleteColorHandler.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAAACgAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:24:52.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "DeleteCategoryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Category\\Commands\\DeleteCategory\\DeleteCategoryHandler.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Category\\Commands\\DeleteCategory\\DeleteCategoryHandler.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Category\\Commands\\DeleteCategory\\DeleteCategoryHandler.cs",
+              "RelativeToolTip": "Business\\Features\\Category\\Commands\\DeleteCategory\\DeleteCategoryHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:15:20.688Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "CreateCategoryHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Category\\Commands\\CreateCategory\\CreateCategoryHandler.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Category\\Commands\\CreateCategory\\CreateCategoryHandler.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Category\\Commands\\CreateCategory\\CreateCategoryHandler.cs",
+              "RelativeToolTip": "Business\\Features\\Category\\Commands\\CreateCategory\\CreateCategoryHandler.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACwAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:14:40.809Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CreateColorHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Commands\\CreateColor\\CreateColorHandler.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Color\\Commands\\CreateColor\\CreateColorHandler.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Commands\\CreateColor\\CreateColorHandler.cs",
+              "RelativeToolTip": "Business\\Features\\Color\\Commands\\CreateColor\\CreateColorHandler.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAzwDQAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:22:14.743Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "CreateSizeHandler.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Size\\Commands\\CreateSize\\CreateSizeHandler.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Size\\Commands\\CreateSize\\CreateSizeHandler.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Size\\Commands\\CreateSize\\CreateSizeHandler.cs",
+              "RelativeToolTip": "Business\\Features\\Size\\Commands\\CreateSize\\CreateSizeHandler.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAzwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:40:21.097Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "CreateCategoryCommandValidator.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Category\\Commands\\CreateCategory\\CreateCategoryCommandValidator.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Category\\Commands\\CreateCategory\\CreateCategoryCommandValidator.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Category\\Commands\\CreateCategory\\CreateCategoryCommandValidator.cs",
+              "RelativeToolTip": "Business\\Features\\Category\\Commands\\CreateCategory\\CreateCategoryCommandValidator.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:21:03.109Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "GetCategoryQuery.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Category\\Queries\\GetCategory\\GetCategoryQuery.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Category\\Queries\\GetCategory\\GetCategoryQuery.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Category\\Queries\\GetCategory\\GetCategoryQuery.cs",
+              "RelativeToolTip": "Business\\Features\\Category\\Queries\\GetCategory\\GetCategoryQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:37:39.522Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "GetAllCategoriesQuery.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Category\\Queries\\GetAllCategories\\GetAllCategoriesQuery.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Category\\Queries\\GetAllCategories\\GetAllCategoriesQuery.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Category\\Queries\\GetAllCategories\\GetAllCategoriesQuery.cs",
+              "RelativeToolTip": "Business\\Features\\Category\\Queries\\GetAllCategories\\GetAllCategoriesQuery.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:37:38.409Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "UpdateColorCommand.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Commands\\UpdateColor\\UpdateColorCommand.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Color\\Commands\\UpdateColor\\UpdateColorCommand.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Commands\\UpdateColor\\UpdateColorCommand.cs",
+              "RelativeToolTip": "Business\\Features\\Color\\Commands\\UpdateColor\\UpdateColorCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:04:46.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "DeleteColorCommand.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Commands\\DeleteColor\\DeleteColorCommand.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Color\\Commands\\DeleteColor\\DeleteColorCommand.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Commands\\DeleteColor\\DeleteColorCommand.cs",
+              "RelativeToolTip": "Business\\Features\\Color\\Commands\\DeleteColor\\DeleteColorCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:05:16.84Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "CreateColorCommand.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Commands\\CreateColor\\CreateColorCommand.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Color\\Commands\\CreateColor\\CreateColorCommand.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Color\\Commands\\CreateColor\\CreateColorCommand.cs",
+              "RelativeToolTip": "Business\\Features\\Color\\Commands\\CreateColor\\CreateColorCommand.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:03:52.59Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "CategoryMappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\MappingProfiles\\CategoryMappingProfile.cs",
+              "RelativeDocumentMoniker": "Business\\MappingProfiles\\CategoryMappingProfile.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\MappingProfiles\\CategoryMappingProfile.cs",
+              "RelativeToolTip": "Business\\MappingProfiles\\CategoryMappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:16:54.602Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "UserRoleMappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\MappingProfiles\\UserRoleMappingProfile.cs",
+              "RelativeDocumentMoniker": "Business\\MappingProfiles\\UserRoleMappingProfile.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\MappingProfiles\\UserRoleMappingProfile.cs",
+              "RelativeToolTip": "Business\\MappingProfiles\\UserRoleMappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:34:19.515Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "UserMappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\MappingProfiles\\UserMappingProfile.cs",
+              "RelativeDocumentMoniker": "Business\\MappingProfiles\\UserMappingProfile.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\MappingProfiles\\UserMappingProfile.cs",
+              "RelativeToolTip": "Business\\MappingProfiles\\UserMappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:34:17.628Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "RoleMappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\MappingProfiles\\RoleMappingProfile.cs",
+              "RelativeDocumentMoniker": "Business\\MappingProfiles\\RoleMappingProfile.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\MappingProfiles\\RoleMappingProfile.cs",
+              "RelativeToolTip": "Business\\MappingProfiles\\RoleMappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:34:15.786Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "SizeMappingProfile.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\MappingProfiles\\SizeMappingProfile.cs",
+              "RelativeDocumentMoniker": "Business\\MappingProfiles\\SizeMappingProfile.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\MappingProfiles\\SizeMappingProfile.cs",
+              "RelativeToolTip": "Business\\MappingProfiles\\SizeMappingProfile.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:34:15.14Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "ICategoryReadRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Data\\Repositories\\Category\\ICategoryReadRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\Category\\ICategoryReadRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Data\\Repositories\\Category\\ICategoryReadRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\Category\\ICategoryReadRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:13:29.069Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "CategoryReadRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Data\\Repositories\\Category\\CategoryReadRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\Category\\CategoryReadRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Data\\Repositories\\Category\\CategoryReadRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\Category\\CategoryReadRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:13:07.873Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "CreateCategoryCommand.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Category\\Commands\\CreateCategory\\CreateCategoryCommand.cs",
+              "RelativeDocumentMoniker": "Business\\Features\\Category\\Commands\\CreateCategory\\CreateCategoryCommand.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Business\\Features\\Category\\Commands\\CreateCategory\\CreateCategoryCommand.cs",
+              "RelativeToolTip": "Business\\Features\\Category\\Commands\\CreateCategory\\CreateCategoryCommand.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:10:17.977Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "CategoryWriteRepository.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Data\\Repositories\\Category\\CategoryWriteRepository.cs",
+              "RelativeDocumentMoniker": "Data\\Repositories\\Category\\CategoryWriteRepository.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Data\\Repositories\\Category\\CategoryWriteRepository.cs",
+              "RelativeToolTip": "Data\\Repositories\\Category\\CategoryWriteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T23:13:21.426Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Color.cs",
+              "DocumentMoniker": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Core\\Entities\\Color.cs",
+              "RelativeDocumentMoniker": "Core\\Entities\\Color.cs",
+              "ToolTip": "C:\\Users\\User\\OneDrive\\Desktop\\Final-Project\\ZaireWear-API\\Core\\Entities\\Color.cs",
+              "RelativeToolTip": "Core\\Entities\\Color.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-28T22:03:19.357Z",
+              "EditorCaption": ""
             }
           ]
         },
